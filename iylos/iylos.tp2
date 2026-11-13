@@ -16,9 +16,9 @@ README ~iylos/iylos_readme.html~
 // Iylos NPC Mod
 // --------------------------------------------
 // Component setup
-BEGIN ~Iylos NPC for BGII:ToB~
-  REQUIRE_FILE ~data/25dialog.bif~ ~ToB is not installed! Please install the Throne of Bhaal expansion before installing Iylos.~
-  REQUIRE_FILE ~data/25scripts.bif~ ~ToB is not installed! Please install the Throne of Bhaal expansion before installing Iylos.~
+BEGIN ~伊洛斯 NPC（博德之门 II：巴尔王座）~
+  REQUIRE_FILE ~data/25dialog.bif~ ~未安装巴尔王座！请先安装巴尔王座资料片，再安装伊洛斯。~
+  REQUIRE_FILE ~data/25scripts.bif~ ~未安装巴尔王座！请先安装巴尔王座资料片，再安装伊洛斯。~
 
     
     // Adds custom IsValidForPartyDialogue state used throughout Iylos
@@ -55,170 +55,170 @@ BEGIN ~Iylos NPC for BGII:ToB~
 
     // Copying items
     COPY ~iylos/items/lk#iamul.itm~ ~override~ // Amulet of Tranquillity
-      SAY NAME1 ~Amulet of Tranquillity~
-      SAY NAME2 ~Amulet of Tranquillity~
-      SAY UNIDENTIFIED_DESC ~This grey, very faintly blue crystal is set onto a necklace which Iylos wears around his neck. You notice in battle, or when in an argument, he touches it absently and seems to calm- whether this is due to some magical effect or not, you can't be sure. Iylos tells you it was given to him by Balthazar, who leads the Monastery in Amkethran, upon his graduation when he began his travels.
+      SAY NAME1 ~宁静护符~
+      SAY NAME2 ~宁静护符~
+      SAY UNIDENTIFIED_DESC ~这枚灰色、泛着极淡蓝光的晶体嵌在一条项链上，伊洛斯把它戴在颈间。你注意到在战斗中，或在争执时，他会无意识地触摸它，似乎就平静下来——这是否是某种魔法效果，你无法确定。伊洛斯告诉你，这是他在毕业、开始游历时，由阿姆凯斯兰修道院的领袖巴尔萨扎赠予他的。
     
-    It seems it can also cast Sanctuary, though when you try to do so, it doesn't work. Iylos mentions that it was, as many of his possessions, specially created for him and will not respond to others.
+    它似乎还能施放「庇护」，不过你若试着自己使用，它并不起效。伊洛斯提到，它和他许多物品一样，是专为他造的，不会回应别人。
     
-    This amulet is only wearable by Iylos.~
-      SAY DESC ~This grey, very faintly blue crystal is set onto a necklace which Iylos wears around his neck. You notice in battle, or when in an argument, he touches it absently and seems to calm- whether this is due to some magical effect or not, you can't be sure. Iylos tells you it was given to him by Balthazar, who leads the Monastery in Amkethran, upon his graduation when he began his travels.
+    这枚护符只有伊洛斯能佩戴。~
+      SAY DESC ~这枚灰色、泛着极淡蓝光的晶体嵌在一条项链上，伊洛斯把它戴在颈间。你注意到在战斗中，或在争执时，他会无意识地触摸它，似乎就平静下来——这是否是某种魔法效果，你无法确定。伊洛斯告诉你，这是他在毕业、开始游历时，由阿姆凯斯兰修道院的领袖巴尔萨扎赠予他的。
     
-    It seems it can also cast Sanctuary, though when you try to do so it doesn't work. Iylos mentions that it was, as many of his possessions, specially created for himself and will not respond to others.
+    它似乎还能施放「庇护」，不过你若试着自己使用，它并不起效。伊洛斯提到，它和他许多物品一样，是专为他造的，不会回应别人。
     
-    This amulet is only wearable by Iylos.~
+    这枚护符只有伊洛斯能佩戴。~
     
     COPY ~iylos/items/lk#ibelt.itm~ ~override~ // Belt of Storage
-      SAY NAME1 ~Belt of Storage~
-      SAY NAME2 ~Belt of Storage~
-      SAY UNIDENTIFIED_DESC ~This belt consists of a series of small compartments which can hold several small items each, more often than not potions, scrolls, notes and the like. This particular belt has a curious design of a scorpion stitched into its front in gold thread. Iylos mentions that within those threads lies a minor enchantment which enlargens the compartments a little to allow slightly bigger objects to fit in, and though there is a limit to the amount of items it can hold, he has never completely filled it.~
-      SAY DESC ~This belt consists of a series of small compartments which can hold several small items each, more often than not potions, scrolls, notes and the like. This particular belt has a curious design of a scorpion stitched into its front in gold thread. Iylos mentions that within those threads lies a minor enchantment which enlargens the compartments a little to allow slightly bigger objects to fit in, and though there is a limit to the amount of items it can hold, he has never completely filled it.~
+      SAY NAME1 ~储物腰带~
+      SAY NAME2 ~储物腰带~
+      SAY UNIDENTIFIED_DESC ~这条腰带上有一连串小隔间，每格能放几件小物，多是药水、卷轴、便条之类。这一条腰带正面用金线绣着一只蝎子，图案颇古怪。伊洛斯说那些线里藏着一个微弱附魔，能把隔间扩得稍大一些，好塞进略大点的东西；虽说能装的东西有上限，他却从没把它装满过。~
+      SAY DESC ~这条腰带上有一连串小隔间，每格能放几件小物，多是药水、卷轴、便条之类。这一条腰带正面用金线绣着一只蝎子，图案颇古怪。伊洛斯说那些线里藏着一个微弱附魔，能把隔间扩得稍大一些，好塞进略大点的东西；虽说能装的东西有上限，他却从没把它装满过。~
     
     COPY ~iylos/items/lk#ibelt.sto~ ~override~
     
     COPY ~iylos/items/lk#iboot.itm~ ~override~ // Boots of the Nomad
-      SAY NAME1 ~Boots of the Nomad~
-      SAY NAME2 ~Boots of the Nomad~
-      SAY UNIDENTIFIED_DESC ~The Boots of the Nomad were created by an old Enchanter who found travelling to be far too wearing, and after several disastrous failures with transportation spells decided to look into creating boots which would provide comfort and speed to the wearer. He succeeded, and eventually sold his design to several young Elven enchanters who proceeded to expand upon his idea and refine the techniques used to enchant the boots. Footwear such as these are often found on the feet of nomadic wanderers and sages.
+      SAY NAME1 ~游牧者之靴~
+      SAY NAME2 ~游牧者之靴~
+      SAY UNIDENTIFIED_DESC ~游牧者之靴由一位老附魔师所造。他觉得旅行实在太耗人，在几次传送法术惨败之后，便决定研究出一种能给穿戴者带来舒适与速度的靴子。他成功了，后来把设计卖给了几位年轻的精灵附魔师，他们又在他的点子上加以扩展、改良了给靴子附魔的手艺。这类鞋履常见于游牧的漂泊者和贤者脚上。
 
-    These particular boots were given to Iylos as a reward for saving a small Elven village from an attack by giant scorpions called 'Stingers', which it appears he fended off single handedly. It has several magical symbols inscribed upon the heel, and also on the side is a message written in elven, which when deciphered reads: 'Speed and comfort are the requisites of travel, and with the wind at your back you will go far.'
+    这一双靴子是伊洛斯救下一座小精灵村落、使其免遭名为「毒刺」的巨型蝎群袭击后所得的奖赏——看来是他独力击退了它们。靴跟刻着几个魔法符号，侧面还有一段精灵文，辨读出来是：「迅捷与舒适乃旅行之要，风在背后，你便走得远。」
     
-    These boots were enchanted specially for Iylos, and as such are only usable by him.~
-      SAY DESC ~The Boots of the Nomad were created by an old Enchanter who found travelling to be far too wearing, and after several disastrous failures with transportation spells, decided to look into creating boots which would provide comfort and speed to the wearer. He succeeded, and eventually sold his design to several young Elven enchanters who proceeded to expand upon his idea and refine the techniques used to enchant the boots. Footwear such as these are often found on the feet of nomadic wanderers and sages.
+    这双靴子是专为伊洛斯附魔的，因此只有他能用。~
+      SAY DESC ~游牧者之靴由一位老附魔师所造。他觉得旅行实在太耗人，在几次传送法术惨败之后，便决定研究出一种能给穿戴者带来舒适与速度的靴子。他成功了，后来把设计卖给了几位年轻的精灵附魔师，他们又在他的点子上加以扩展、改良了给靴子附魔的手艺。这类鞋履常见于游牧的漂泊者和贤者脚上。
     
-    These particular boots were given to Iylos as a reward for saving a small Elven village from an attack by giant scorpions called 'Stingers', which it appears he fended off single handedly. It has several magical symbols inscribed upon the heel, and also on the side is a message written in elven, which when deciphered reads: 'Speed and comfort are the requisites of travel, and with the wind at your back you will go far.'
+    这一双靴子是伊洛斯救下一座小精灵村落、使其免遭名为「毒刺」的巨型蝎群袭击后所得的奖赏——看来是他独力击退了它们。靴跟刻着几个魔法符号，侧面还有一段精灵文，辨读出来是：「迅捷与舒适乃旅行之要，风在背后，你便走得远。」
     
-    These boots were enchanted specially for Iylos, and as such are only usable by him.~
+    这双靴子是专为伊洛斯附魔的，因此只有他能用。~
     
     COPY ~iylos/items/lk#ibrac.itm~ ~override~ // Bracers of the Coiling Serpent
-      SAY NAME1 ~Bracers of the Coiling Serpent~
-      SAY NAME2 ~Bracers of the Coiling Serpent~
-      SAY UNIDENTIFIED_DESC ~The Bracers of the Coiling Serpent are a seemingly powerless pair of bracers with a lifelike snake made of silver wrapped around its length. They are said to have been created by a monk who was a little too obsessed with the power being a monk gave him, eventually creating these bracers to try to pull himself back towards the balance for fear he would be lost.
+      SAY NAME1 ~盘蛇护腕~
+      SAY NAME2 ~盘蛇护腕~
+      SAY UNIDENTIFIED_DESC ~盘蛇护腕看似是副毫无力量的护腕，一条栩栩如生的银蛇盘绕其上。据说它出自一位修士之手，那人对自己身为修士所得的力量有些过于着迷，最终造出这副护腕，想把自己拉回平衡，唯恐自己迷失。
     
-    Unfortunately, the Bracers did not help and he fell by the wayside, eventually succombing to disorder and chaos. He was killed in a ritualistic ceremony by several of his previous friends, and it is said he was wearing these bracers when he died.
+    可惜护腕没能帮上忙，他终究堕入歧途，最终屈服于失序与混乱。他被几位旧友在一场仪式中杀死，据说他死时就戴着这副护腕。
     
-    Iylos tells you he acquired these bracers from a recluse in the desert, who he spent quite some time with. They give him speed and precision whilst fighting, helping to both attack and when necessary block the enemy's movements.~
-      SAY DESC ~The Bracers of the Coiling Serpent are a seemingly powerless pair of bracers with a lifelike snake made of silver wrapped around its length. They are said to have been created by a monk who was a little too obsessed with the power being a monk gave him, eventually creating these bracers to try to pull himself back towards the balance for fear he would be lost.
+    伊洛斯告诉你，这副护腕是他从沙漠里一位隐士那里得来的，他曾与那人相处颇久。它们给他在战斗中带来速度与精准，既助他进攻，也能在必要时挡下敌人的动作。~
+      SAY DESC ~盘蛇护腕看似是副毫无力量的护腕，一条栩栩如生的银蛇盘绕其上。据说它出自一位修士之手，那人对自己身为修士所得的力量有些过于着迷，最终造出这副护腕，想把自己拉回平衡，唯恐自己迷失。
     
-    Unfortunately, the Bracers did not help and he fell to the wayside, eventually succombing to disorder and chaos. He was killed in a ritualistic ceremony by several of his previous friends, and it is said he was wearing these bracers when he died.
+    可惜护腕没能帮上忙，他终究堕入歧途，最终屈服于失序与混乱。他被几位旧友在一场仪式中杀死，据说他死时就戴着这副护腕。
     
-    Iylos tells you he acquired these bracers from a recluse in the desert, who he spent quite some time with. They give him speed and precision whilst fighting, helping to both attack and when necessary block the enemy's movements.~
+    伊洛斯告诉你，这副护腕是他从沙漠里一位隐士那里得来的，他曾与那人相处颇久。它们给他在战斗中带来速度与精准，既助他进攻，也能在必要时挡下敌人的动作。~
     
     COPY ~iylos/items/lk#iclck.itm~ ~override~ // Cloak of the Deserts
-      SAY NAME1 ~Cloak of the Deserts~
-      SAY NAME2 ~Cloak of the Deserts~
-      SAY UNIDENTIFIED_DESC ~This is Iylos' cloak, a possession he acquired in his travels in the Anauroch Desert. Though he won't tell you exactly what it does and how he got it, you suspect it may have magical properties. It is incredibly durable, and is made in such a way that it does not restrict his movement whilst providing protection from the harsh desert winds, heat and cold.
+      SAY NAME1 ~沙漠斗篷~
+      SAY NAME2 ~沙漠斗篷~
+      SAY UNIDENTIFIED_DESC ~这是伊洛斯的斗篷，是他在安纳罗克沙漠游历时所得。虽然他不肯告诉你它究竟有什么用处、又是怎么得来的，你猜它可能有魔法属性。它极为耐久，做工使他活动不受拘束，同时能挡沙漠的烈风、酷热与严寒。
     
-    This cloak is only usable by Iylos.~
-      SAY DESC ~This is Iylos' cloak, a possession he acquired in his travels in the Anauroch Desert. Though he won't tell you exactly what it does and how he got it, you suspect it may have magical properties. It is incredibly durable, and is made in such a way that it does not restrict his movement whilst providing protection from the harsh desert winds, heat and cold.
+    这件斗篷只有伊洛斯能用。~
+      SAY DESC ~这是伊洛斯的斗篷，是他在安纳罗克沙漠游历时所得。虽然他不肯告诉你它究竟有什么用处、又是怎么得来的，你猜它可能有魔法属性。它极为耐久，做工使他活动不受拘束，同时能挡沙漠的烈风、酷热与严寒。
     
-    This cloak is only usable by Iylos.~
+    这件斗篷只有伊洛斯能用。~
     
     COPY ~iylos/items/lk#igem1.itm~ ~override~ // Meditative Crystal
-      SAY NAME1 ~Meditative Crystal~
-      SAY NAME2 ~Meditative Crystal~
-      SAY UNIDENTIFIED_DESC ~This small quartz prism was given to Iylos by Balthazar to help him focus whilst meditating, and indeed as Iylos holds it, you see him calm slightly. From what Iylos tells you, it holds a lot of sentimental value to him, for it was Balthazar's personal gift to him when he left the Monastery.
+      SAY NAME1 ~冥想水晶~
+      SAY NAME2 ~冥想水晶~
+      SAY UNIDENTIFIED_DESC ~这枚小小的石英棱柱是巴尔萨扎给伊洛斯的，帮他在冥想时集中精神；伊洛斯握着它时，你确实见他稍稍平静下来。据伊洛斯说，它对他很有纪念意义，因为那是他离开修道院时巴尔萨扎送他的私人礼物。
     
-    When held up to the light, you see small rainbows of colour shine from its surface onto the ground. It is not magical, but could perhaps be used to channel magical energy or focus it.~
-      SAY DESC ~This small quartz prism was given to Iylos by Balthazar to help him focus whilst meditating, and indeed as Iylos holds it you see him calm slightly. From what Iylos tells you, it holds a lot of sentimental value to him, for it was Balthazar's personal gift to him when he left the Monastery.
+    把它举到光下，你能看见小小的彩虹从表面映到地上。它并非魔法之物，但也许能用来引导或汇聚魔法能量。~
+      SAY DESC ~这枚小小的石英棱柱是巴尔萨扎给伊洛斯的，帮他在冥想时集中精神；伊洛斯握着它时，你确实见他稍稍平静下来。据伊洛斯说，它对他很有纪念意义，因为那是他离开修道院时巴尔萨扎送他的私人礼物。
     
-    When held up to the light, you see small rainbows of colour shine from its surface onto the ground. It is not magical, but could perhaps be used to channel magical energy or focus it.~
+    把它举到光下，你能看见小小的彩虹从表面映到地上。它并非魔法之物，但也许能用来引导或汇聚魔法能量。~
     
     COPY ~iylos/items/lk#ihood.itm~ ~override~ // Aegis of the Deserts
-      SAY NAME1 ~Aegis of the Deserts~
-      SAY NAME2 ~Aegis of the Deserts~
-      SAY UNIDENTIFIED_DESC ~This normal seeming hood is imbued with a powerful magic, and was originally created to serve one purpose; protecting the wearer from the harsh desert environment. After some last minute experimentation, Iylos found that it also protected the wearer from gaze attacks such as the stare of a Basilisk and Charm effects. It consists of a simple fabric hood which has a gauzy, filmy piece of fabric attached which can easily be let down to protect the user.
+      SAY NAME1 ~沙漠庇护~
+      SAY NAME2 ~沙漠庇护~
+      SAY UNIDENTIFIED_DESC ~这顶看着寻常的兜帽蕴着强大的魔法，最初是为一个目的而造：保护穿戴者免受严酷沙漠环境的侵害。经过一番最后的试验，伊洛斯发现它还能护住穿戴者免受凝视攻击（如石化蜥蜴的瞪视）和魅惑效果。它由一块简朴的布制兜帽构成，连着一片薄纱般的织物，可以轻易放下护住使用者。
     
-    Iylos usually has it bundled in his belt, and only takes it out when needed - however, when there is the possibility of a Beholder or Medusa in the area, his hand never strays far from its position hovering above his belt.
+    伊洛斯通常把它卷在腰带里，只在需要时才取出——不过，若附近可能有眼魔或美杜莎，他的手就总悬在腰带上方不远处。
     
-    Aegis of the Deserts is only usable by Iylos.~
-      SAY DESC ~This normal seeming hood is imbued with a powerful magic, and was originally created to serve one purpose; protecting the wearer from the harsh desert environment. After some last minute experimentation, Iylos found that it also protected the wearer from gaze attacks such as the stare of a Basilisk and Charm effects. It consists of a simple fabric hood which has a gauzy, filmy piece of fabric attached which can easily be let down to protect the user.
+    沙漠庇护只有伊洛斯能用。~
+      SAY DESC ~这顶看着寻常的兜帽蕴着强大的魔法，最初是为一个目的而造：保护穿戴者免受严酷沙漠环境的侵害。经过一番最后的试验，伊洛斯发现它还能护住穿戴者免受凝视攻击（如石化蜥蜴的瞪视）和魅惑效果。它由一块简朴的布制兜帽构成，连着一片薄纱般的织物，可以轻易放下护住使用者。
     
-    Iylos usually has it bundled in his belt, and only takes it out when needed - however, when there is the possibility of a Beholder or Medusa in the area, his hand never strays far from its position hovering above his belt.
+    伊洛斯通常把它卷在腰带里，只在需要时才取出——不过，若附近可能有眼魔或美杜莎，他的手就总悬在腰带上方不远处。
     
-    Aegis of the Deserts is only usable by Iylos.~
+    沙漠庇护只有伊洛斯能用。~
     
     COPY ~iylos/items/lk#ilet1.itm~ ~override~ // Sealed Letter
-      SAY NAME1 ~Sealed Letter~
-      SAY NAME2 ~Sealed Letter~
-      SAY UNIDENTIFIED_DESC ~As soon as you go to take a look at this letter, Iylos glares at you and tells you that you have no business with his belongings, and to keep your hands to yourself. From what you have seen, it is a scroll with a broken red wax seal upon it, and the word 'Iylos' written atop it. You cannot discern much more without a closer look, which Iylos seems to be reluctant to give.~
-      SAY DESC ~As soon as you go to take a look at this letter, Iylos glares at you and tells you that you have no business with his belongings, and to keep your hands to yourself. From what you have seen, it is a scroll with a broken red wax seal upon it, and the word 'Iylos' written atop it. You cannot discern much more without a closer look, which Iylos seems to be reluctant to give.~
+      SAY NAME1 ~密封信~
+      SAY NAME2 ~密封信~
+      SAY UNIDENTIFIED_DESC ~你刚想去看看这封信，伊洛斯就瞪着你，说他的东西与你无关，让你把手放规矩。从你看到的部分看，那是一卷卷轴，上面一枚红色蜡封已经破了，顶端写着「伊洛斯」一词。不凑近细看，你辨不出更多，而伊洛斯似乎不愿给你这个机会。~
+      SAY DESC ~你刚想去看看这封信，伊洛斯就瞪着你，说他的东西与你无关，让你把手放规矩。从你看到的部分看，那是一卷卷轴，上面一枚红色蜡封已经破了，顶端写着「伊洛斯」一词。不凑近细看，你辨不出更多，而伊洛斯似乎不愿给你这个机会。~
     
     COPY ~iylos/items/lk#ilet2.itm~ ~override~ // Letter from Balthazar
-      SAY NAME1 ~Letter from Balthazar~
-      SAY NAME2 ~Letter from Balthazar~
-      SAY UNIDENTIFIED_DESC ~When you ask about this letter, Iylos carefully deposits it back into his robe and tells you that it was the letter requesting his presence at Amkethran, and that it contains some few details about you and your companions, and a small note to him personally. If pressed, Iylos glares at you and says that it is none of your business.~
-      SAY DESC ~When you ask about this letter, Iylos carefully deposits it back into his robe and tells you that it was the letter requesting his presence at Amkethran, and that it contains some few details about you and your companions, and a small note to him personally. If pressed, Iylos glares at you and says that it is none of your business.~
+      SAY NAME1 ~巴尔萨扎的信~
+      SAY NAME2 ~巴尔萨扎的信~
+      SAY UNIDENTIFIED_DESC ~你问起这封信时，伊洛斯小心地把它收回袍中，说那是召他去阿姆凯斯兰的信，里面有些关于你和同伴的零星细节，以及写给他本人的一小段附言。你若追问，伊洛斯就瞪你一眼，说那不关你的事。~
+      SAY DESC ~你问起这封信时，伊洛斯小心地把它收回袍中，说那是召他去阿姆凯斯兰的信，里面有些关于你和同伴的零星细节，以及写给他本人的一小段附言。你若追问，伊洛斯就瞪你一眼，说那不关你的事。~
     
     COPY ~iylos/items/lk#iring.itm~ ~override~ // Sandstone Ring
-      SAY NAME1 ~Sandstone Ring~
-      SAY NAME2 ~Sandstone Ring~
-      SAY UNIDENTIFIED_DESC ~This smooth ring is warm to the touch, and gives out a faint magical aura. It was carved, Iylos says, from an ancient Netherese artifact found in the Anauroch Desert, and has myriad minor powers. It is simple yet elegant, a golden coloured, thin band which fits Iylos' finger perfectly - but try as you might, it refuses to come off.
+      SAY NAME1 ~砂岩戒指~
+      SAY NAME2 ~砂岩戒指~
+      SAY UNIDENTIFIED_DESC ~这枚光滑的戒指触手温暖，散着微弱的魔法灵光。伊洛斯说，它是由安纳罗克沙漠中发现的一件古代耐色瑞尔器物雕琢而成，有种种微小的力量。它简朴而优雅，一条金色的细环，恰好贴合伊洛斯的手指——可无论你怎么试，它都不肯脱下来。
     
-    It gives Iylos the power of free movement, allowing him to travel safely through a Webbed or vine-filled area without any problems. Its most powerful ability gives Iylos immunity to Time Stop spells, allowing him to act and react to the caster of the spell.~
+    它赋予伊洛斯自由行动之力，让他能安然穿过蛛网或藤蔓丛生的地带而毫无妨碍。它最强的能力是让伊洛斯免疫「时间停止」法术，使他能对施法者行动并作出反应。~
     
     COPY ~iylos/items/lk#irobe.itm~ ~override~ // Monastic Robe
-      SAY NAME1 ~Monastic Robe~
-      SAY NAME2 ~Monastic Robe~
-      SAY UNIDENTIFIED_DESC ~Monastic robes are carefully woven with 2 threads of cotton and 1 thread of magic, so as to protect the wearer from the effects of magic itself. Iylos, as usual, keeps his mouth tightly shut about how he acquired the item, but mentions something about the Monastery - you deduce it was created specially for him. It shimmers faintly at night, and during the day seems to absorb the light slightly, creating a surface which you can't quite focus upon.~
-      SAY DESC ~Monastic robes are carefully woven with 2 threads cotton and 1 thread magic, so as to protect the wearer from the effects of magic itself. Iylos, as usual, keeps his mouth tightly shut about how he acquired the item, but mentions something about the Monastery - you deduce it was created specially for him. It shimmers faintly at night, and during the day seems to absorb the light slightly, creating a surface which you can't quite focus upon.~
+      SAY NAME1 ~修道士长袍~
+      SAY NAME2 ~修道士长袍~
+      SAY UNIDENTIFIED_DESC ~修道士长袍由两缕棉线与一缕魔法之线仔细织成，以保护穿戴者免受魔法本身的影响。伊洛斯照例对自己如何得到此物守口如瓶，只提到修道院的一些事——你推断它是专为他造的。它在夜里泛着微光，白天则似乎稍稍吸收光线，形成一片你难以聚焦的表面。~
+      SAY DESC ~修道士长袍由两缕棉线与一缕魔法之线仔细织成，以保护穿戴者免受魔法本身的影响。伊洛斯照例对自己如何得到此物守口如瓶，只提到修道院的一些事——你推断它是专为他造的。它在夜里泛着微光，白天则似乎稍稍吸收光线，形成一片你难以聚焦的表面。~
     
     
     //Copying images and creatures
     COPY ~iylos/images~ ~override~
     
     COPY ~iylos/creatures/lk#iylos.cre~ ~override~
-      SAY NAME1 ~Iylos~
-      SAY NAME2 ~Iylos~
+      SAY NAME1 ~伊洛斯~
+      SAY NAME2 ~伊洛斯~
       WRITE_EVALUATED_ASCII DIALOG          ~LK#IYLO~ #8
       WRITE_EVALUATED_ASCII DEATHVAR        ~Iylos~ #32
       WRITE_EVALUATED_ASCII SCRIPT_OVERRIDE ~LK#IYLO~ #8
-      SAY BIO ~When asked about his past, IYLOS' face tightens slightly, and he pauses for a moment before speaking. He tells you of his life in the Monastery; of growing up there and how he began training in the monastic way at an early age. As he grew older, he became more and more proficient, and so began to develop his own style of fighting, which he based upon the movement of the Wind Scorpion. Once he had perfected his method, he began to travel, even though he was only 17, urged by the wanderlust that most young people his age experience. He visted many places along the Sword Coast and beyond, but he returned to Amkethran for a brief break before travelling south to the Anauroch desert.
-When he speaks of Anauroch his face seems to light up slightly, and the ghost of a smile flickers around the corner of his lips. He says it quickly became his home, and he spent several years travelling through the area. Eventually, his was recalled to the Monastery and was asked to travel to Saradush to await you, <CHARNAME>.
-Against his will, he adds darkly, before turning away and continuing his contemplation of the sights before you.~
-      SAY MORALE ~Retreat, it seems, has become a necessity!~ [LK#I1]
-      SAY HAPPY ~This does not make me think any better of you, <CHARNAME> - but a good deed is a good deed. We have yet to see if you *mean* it.~ [LK#I2]
-      SAY UNHAPPY_ANNOYED ~And my dubious faith in you is shattered.~ [LK#I3]
-      SAY UNHAPPY_SERIOUS ~I am warning you, <CHARNAME>, if you do such a thing again I cannot promise I will stay any longer in this accursed group of yours.~ [LK#I4]
-      SAY UNHAPPY_BREAKING ~I cannot be party to such evil any longer!~ [LK#I5]
-      SAY LEADER ~I'm sure I will do a better job with this group than you... a wise decision.~ [LK#I6]
-      SAY TIRED ~Humans need rest to keep going. You *do* understand that, don't you?~ [LK#I7]
-      SAY BORED ~Surely you have better things to do than stand around idly taking in the scenery, <CHARNAME>? The war will not wait for you- but I suppose the more blood shed the better, right? Pfah.~ [LK#I8]
-      SAY BATTLE_CRY1 ~Swift as the scorpion, seek a weakness - then attack.~ [LK#I9]
-      SAY BATTLE_CRY2 ~I am a leaf upon the wind, and I will cut through you like water!~ [LK#I10]
-      SAY BATTLE_CRY3 ~Do not anger me, foul beast - you will not live to see the consequences.~ [LK#I11]
-      SAY BATTLE_CRY4 ~Suffer! Suffer as I have, and know the true meaning of pain!~ [LK#I12]
-      SAY DAMAGE ~Ahh!~ [LK#I13]
-      SAY DYING ~Balthazar, I... forgive me.~ [LK#I14]
-      SAY HURT ~Perhaps healing me would be in your best interest, <CHARNAME>, unless you *want* me to faint... or die!~ [LK#I15]
-      SAY AREA_FOREST ~One must always be wary in the forest... so many hidden traps, pitholes and snags. And so many more places for our enemies to hide in.~ [LK#I16]
-      SAY AREA_CITY ~Ah, the city... at least we aren't in Athkatla, or the city of Neverwinter... bah.~ [LK#I17]
-      SAY AREA_DUNGEON ~The archetypal dungeon consists of hallway after hallway of dank, cold darkness. If this is as such, you will find yourself in a position where you might not be able to keep me from leaving you to your fate. (Shiver)~ [LK#I18]
-      SAY AREA_DAY ~(yawn) Another day on the road... another day in which I might be killed - or be the killer.~ [LK#I19]
-      SAY AREA_NIGHT ~Nights in Anauroch were colder than here, but for some reason I feel it more acutely... perhaps I've become accostomed to the heat. No matter.~ [LK#I20]
-      SAY SELECT_COMMON1 ~I am here by command - and I am commanded to do as you ask.~ [LK#I21]
-      SAY SELECT_COMMON2 ~Yes?~ [LK#I22]
-      SAY SELECT_COMMON3 ~I don't need this...~ [LK#I23]
-      SAY SELECT_COMMON4 ~Did you need something, Bhaalspawn?~ [LK#I24]
-      SAY SELECT_COMMON5 ~Perhaps you should ask someone else - I'm hardly feeling inclined to talk.~ [LK#I25]
-      SAY SELECT_COMMON6 ~What part of 'leave me alone' don't you understand?!~ [LK#I26]
-      SAY SELECT_ACTION1 ~I'm not entirely sure that's wise, but if I must.~ [LK#I27]
-      SAY SELECT_ACTION2 ~Since I have no other choice, I will obey.~ [LK#I28]
-      SAY SELECT_ACTION3 ~I'm listening.~ [LK#I29]
-      SAY SELECT_ACTION4 ~Leave me alone!~ [LK#I30]
-      SAY SELECT_ACTION5 ~Why do you suddenly remind me of the elder Monks at the Monastery? Iylos, do this; Iylos, do that...~ [LK#I31]
-      SAY SELECT_ACTION6 ~<CHARNAME>, you are a fool if you cannot do so yourself. Not that I didn't already know that...~ [LK#I32]
-      SAY SELECT_ACTION7 ~For Balthazar... anything.~ [LK#I33]
-      SAY SELECT_RARE1 ~It is strange... I never had any parents, nor siblings. Yet still, I cannot help but feel you are some annoying younger sibling, continually pestering me for my help.~ [LK#I34]
-      SAY SELECT_RARE2 ~I am not your pet *dog*, <CHARNAME>- I only do what you ask in the hopes that it will prove your guilt.~ [LK#I35]
-      SAY CRITICAL_HIT ~Yes!~ [LK#I36]
-      SAY CRITICAL_MISS ~Damn it!~ [LK#I37]
-      SAY TARGET_IMMUNE ~I think a tactical change is necessary - if this doesn't work, something else will!~ [LK#I38]
-      SAY INVENTORY_FULL ~Are you trying to drown me in items, <CHARNAME>? Take some yourself. They're on the ground.~ [LK#I39]
-      SAY PICKED_POCKET ~I would not be party to such *nefarious* behaviour if I didn't have to!~ [LK#I40]
-      SAY HIDDEN_IN_SHADOWS ~Hiding is the cowards option, but if I must...~ [LK#I41]
-      SAY SPELL_DISRUPTED ~Spells are hardly the way to settle disputes- a twirl of the quarterstaff does twice as much damage, and without the effort.~ [LK#I42]
-      SAY SET_A_TRAP ~How pathetic. I'm not entirely sure, but I've somehow set a trap... let us hope it does not explode in our faces.~ [LK#I43]
+      SAY BIO ~问起他的过去时，伊洛斯的脸色微微绷紧，顿了顿才开口。他跟你讲他在修道院的生活；讲他在那儿长大，讲他年幼时便开始修习修道之法。年岁渐长，他愈发精熟，于是开始发展自己的一套战法，以风蝎的动作作为根基。手法一旦完善，他便开始游历，尽管当时才十七岁，被同龄年轻人多半都有的那股漫游之念所驱使。他走过剑湾沿岸许多地方，也去过更远处，但在南下安纳罗克沙漠之前，他先回阿姆凯斯兰作了短暂歇息。
+说起安纳罗克时，他的脸似乎微微亮起来，嘴角掠过一丝笑的影子。他说那里很快就成了他的家，他在那片地方游历了数年。最后，他被召回修道院，受命前往萨拉杜什来等你，<CHARNAME>。
+他阴郁地补了一句：这是违背他意愿的。随后他转过身，继续凝望你面前的景致。~
+      SAY MORALE ~看来撤退已成必要！~ [LK#I1]
+      SAY HAPPY ~这不会让我对你高看一眼，<CHARNAME>——可善行就是善行。你是否*真心*，我们还没见分晓。~ [LK#I2]
+      SAY UNHAPPY_ANNOYED ~我对你那点存疑的信心，碎了。~ [LK#I3]
+      SAY UNHAPPY_SERIOUS ~我警告你，<CHARNAME>，你若再做这种事，我可不敢保证还会待在你这个该死的队伍里。~ [LK#I4]
+      SAY UNHAPPY_BREAKING ~我不能再参与这种邪恶了！~ [LK#I5]
+      SAY LEADER ~我带队肯定比你好……明智的决定。~ [LK#I6]
+      SAY TIRED ~人需要休息才能继续走。你*是*明白这点的吧？~ [LK#I7]
+      SAY BORED ~你肯定有比闲着站着看风景更好的事可做吧，<CHARNAME>？战争不会等你——不过我想血流得越多越好，对吧？呸。~ [LK#I8]
+      SAY BATTLE_CRY1 ~快如蝎子，寻其弱点——再出击。~ [LK#I9]
+      SAY BATTLE_CRY2 ~我是风中的一片叶，我会像水一样切穿你！~ [LK#I10]
+      SAY BATTLE_CRY3 ~别激怒我，恶兽——你活不到看见后果的时候。~ [LK#I11]
+      SAY BATTLE_CRY4 ~痛苦吧！像我一样痛苦，尝尝痛的真意！~ [LK#I12]
+      SAY DAMAGE ~啊！~ [LK#I13]
+      SAY DYING ~巴尔萨扎，我……原谅我。~ [LK#I14]
+      SAY HURT ~治疗我大概符合你的利益，<CHARNAME>，除非你*想*看我昏过去……或者死！~ [LK#I15]
+      SAY AREA_FOREST ~在森林里总得提防……那么多暗藏的陷阱、坑洞和绊根。还有更多地方可供敌人藏身。~ [LK#I16]
+      SAY AREA_CITY ~啊，城里……至少我们不在阿斯卡特拉，也不在无冬城……呸。~ [LK#I17]
+      SAY AREA_DUNGEON ~典型的地牢就是一条接一条阴湿冰冷的走廊。若这里也是这样，你会发现你恐怕拦不住我把你丢给你的命运。（打了个寒噤）~ [LK#I18]
+      SAY AREA_DAY ~（打哈欠）又在路上过一天……又是我可能被杀——或者去杀人的一天。~ [LK#I19]
+      SAY AREA_NIGHT ~安纳罗克的夜比这里更冷，可不知为何我感受得更真切……也许是我习惯了酷热。无所谓。~ [LK#I20]
+      SAY SELECT_COMMON1 ~我奉命而来——奉命按你的要求行事。~ [LK#I21]
+      SAY SELECT_COMMON2 ~嗯？~ [LK#I22]
+      SAY SELECT_COMMON3 ~我不需要这个……~ [LK#I23]
+      SAY SELECT_COMMON4 ~你有事吗，巴尔之子？~ [LK#I24]
+      SAY SELECT_COMMON5 ~也许你该去问别人——我实在没心情说话。~ [LK#I25]
+      SAY SELECT_COMMON6 ~「别烦我」这几个字，你哪部分听不懂？！~ [LK#I26]
+      SAY SELECT_ACTION1 ~我不太确定那是否明智，可若我必须。~ [LK#I27]
+      SAY SELECT_ACTION2 ~既然我别无选择，我会服从。~ [LK#I28]
+      SAY SELECT_ACTION3 ~我在听。~ [LK#I29]
+      SAY SELECT_ACTION4 ~别烦我！~ [LK#I30]
+      SAY SELECT_ACTION5 ~你为什么忽然让我想起修道院里的老修士？伊洛斯，做这个；伊洛斯，做那个……~ [LK#I31]
+      SAY SELECT_ACTION6 ~<CHARNAME>，你自己做不来就是个蠢货。倒不是说我先前不知道……~ [LK#I32]
+      SAY SELECT_ACTION7 ~为了巴尔萨扎……什么都行。~ [LK#I33]
+      SAY SELECT_RARE1 ~说来奇怪……我从没有父母，也没有兄弟姐妹。可我还是忍不住觉得你像个烦人的弟弟或妹妹，不停地缠着我帮忙。~ [LK#I34]
+      SAY SELECT_RARE2 ~我不是你的宠物*狗*，<CHARNAME>——我照你说的做，只是希望能借此证明你的罪。~ [LK#I35]
+      SAY CRITICAL_HIT ~好！~ [LK#I36]
+      SAY CRITICAL_MISS ~该死！~ [LK#I37]
+      SAY TARGET_IMMUNE ~我觉得该换个战术了——若这不管用，还有别的办法！~ [LK#I38]
+      SAY INVENTORY_FULL ~你是想用物品把我淹死吗，<CHARNAME>？你自己也拿些。它们就在地上。~ [LK#I39]
+      SAY PICKED_POCKET ~要不是不得已，我才不参与这种*邪恶*的勾当！~ [LK#I40]
+      SAY HIDDEN_IN_SHADOWS ~躲藏是懦夫的选择，可若我必须……~ [LK#I41]
+      SAY SPELL_DISRUPTED ~法术可不是解决争端的方式——转一圈长棍造成的伤害是它的两倍，还不用费那个劲。~ [LK#I42]
+      SAY SET_A_TRAP ~真可悲。我不太确定，可我不知怎么设了个陷阱……但愿它不会在我们脸上炸开。~ [LK#I43]
     
     
     // Appends
@@ -231,21 +231,21 @@ Against his will, he adds darkly, before turning away and continuing his contemp
 
     // Epilogues
     COPY ~iylos/2da/lk#iylo1.2da~ ~override/lk#iylo1.2da~
-      REPLACE ~99999~ ~After the terrible events surrounding Melissan's death and <CHARNAME>'s heritage, Iylos travelled with <PRO_HIMHER> for several months before determining to spend some more time in Anauroch to gather his thoughts and decide what he wanted to do.  He was not heard from for several years, until he visited <CHARNAME> to ask <PRO_HISHER> help in establishing a Monastic order based somewhere around Baldur's Gate.
-<CHARNAME> suggested the old Gnoll Fortress as a good base, and after visiting the site Iylos decided it was perfect.  After clearing the Fort out and cleaning it up, Iylos thanked <CHARNAME> for <PRO_HISHER> help, and began establishing his own Monastic order--the Order of the Striking Scorpion.  Over time he grew more and more powerful and the Order grew, swelling to become one of the most well-known Monastic Orders on the Sword Coast.  He and his acolytes fought many dangerous enemies, and though there were several near misses Iylos survived.  After many years of teaching young monks, he once more heeded the urgings of wanderlust and began to travel once more.
-It is said he travelled the full length of Faerun and more, gaining several names including 'Iylos the Wanderer', 'Iylos the Swift' and even 'Iylos the Silent'.  Eventually he bade <CHARNAME> one final farewell and left for the Anauroch desert, leaving his earthly belongings with <CHARNAME>.
-He was never heard from again, and though some say he went on to travel the planes and yet others that he travels the desert still, forever searching for something he cannot find, all are fairly sure that he died peacefully in the place which he loved most.~
+      REPLACE ~99999~ ~梅丽珊死后，围绕着那场惨事与<CHARNAME>的血脉，伊洛斯与<PRO_HIMHER>同行了数月，随后决定在安纳罗克再待一阵，理清思绪、定下自己想做什么。此后数年无人听闻他的消息，直到他来访<CHARNAME>，请<PRO_HISHER>帮忙在博德之门一带建立一座修道会。
+<CHARNAME>提议以旧豺狼人堡垒为基址，伊洛斯去看过之后觉得再合适不过。把堡垒清空、收拾干净后，伊洛斯谢过<CHARNAME>的<PRO_HISHER>援手，开始建立自己的修道会——刺蝎骑士团。随着时日，他愈发强大，骑士团也不断壮大，终成为剑湾最知名的修道会之一。他与门徒们对抗过许多危险的敌人，几番险些丧命，但都活了下来。教了多年年轻修士之后，他再次听从漫游之念的催促，重新上路。
+据说他走遍了费伦全境乃至更远，得了好几个名号，如「游历者伊洛斯」「迅捷者伊洛斯」，甚至「沉默者伊洛斯」。最后他向<CHARNAME>作了最后一次告别，前往安纳罗克沙漠，把尘世的财物都留给了<CHARNAME>。
+从此再无人听闻他的消息。有人说他去了别的位面游历，也有人说他仍在沙漠中行走，永远寻着某样他找不到的东西；但所有人都相当确信，他是在自己最爱的地方安然离世的。~
 
     COPY ~iylos/2da/lk#iylo1.2da~ ~override/lk#iylo2.2da~
-      REPLACE ~99999~ ~After the terrible events surrounding Melissan's death and <CHARNAME>'s heritage, Iylos travelled for several months before determining to spend some more time in Anauroch to gather his thoughts.  He was not heard from for several years, until he visited the Amkethran Monastery to ask for help in establishing a Monastic order of his own based somewhere around Baldur's Gate.
-Several suggested he build a Monastery on the border of the Anauroch Desert, an idea which Iylos readily agreed with.  After building the Monastery, Iylos thanked the monks for their help, and began establishing his own Monastic order in the desert--the Order of the Striking Scorpion. He became Master Iylos, and despite his advancing age and supposedly neutral view he fought many battles against evil, surviving many near misses.  His style, the Striking Scorpion, became well-known throughout the Sword Coast and many young men and women began to flock to Amkethran to learn his techniques, and for a time Iylos was content.  Eventually, he once more heeded the urgings of his insatiable wanderlust and began to travel once more.
-It is said he travelled the full length of Faerun and more, and eventually gained several names including 'Iylos the Wanderer', 'Iylos the Swift' and even 'Iylos the Silent'.  He eventually returned to the Monastery to bid one final farewell to his friends and students.  He left for the Anauroch desert, leaving his earthly belongings with several of his most talented students, who went on to become legends themselves.
-He was never heard from again, and though some say he went on to travel the planes and yet others that he travels the desert still, forever searching for something he cannot find, all are fairly sure that he died peacefully in the place which he loved most.~
+      REPLACE ~99999~ ~梅丽珊死后，围绕着那场惨事与<CHARNAME>的血脉，伊洛斯游历了数月，随后决定在安纳罗克再待一阵理清思绪。此后数年无人听闻他的消息，直到他来到阿姆凯斯兰修道院，请求帮助，想在博德之门一带建立自己的修道会。
+有几人建议他把修道院建在安纳罗克沙漠的边缘，伊洛斯欣然赞同。修道院建成后，伊洛斯谢过修士们的帮助，开始在沙漠中建立自己的修道会——刺蝎骑士团。他成了伊洛斯师父；尽管年岁渐长、名义上守中立，他仍与邪恶打过许多仗，几番险些丧命。他那一套「刺蝎」战法在剑湾声名远扬，许多年轻男女开始涌向阿姆凯斯兰学他的技艺，伊洛斯一时颇为满足。最终，他再次听从那股永不餍足的漫游之念，重新上路。
+据说他走遍了费伦全境乃至更远，最终得了好几个名号，如「游历者伊洛斯」「迅捷者伊洛斯」，甚至「沉默者伊洛斯」。他最后回到修道院，向友人与学生作最后一次告别。他前往安纳罗克沙漠，把尘世的财物留给几位最有才华的学生，那些人后来自己也成了传奇。
+从此再无人听闻他的消息。有人说他去了别的位面游历，也有人说他仍在沙漠中行走，永远寻着某样他找不到的东西；但所有人都相当确信，他是在自己最爱的地方安然离世的。~
 
     COPY ~iylos/2da/lk#iylo1.2da~ ~override/lk#iylo3.2da~
-      REPLACE ~99999~ ~After the terrible events surrounding Melissan's death and <CHARNAME>'s heritage, Iylos travelled for several months before determining to spend some more time in Anauroch to gather his thoughts and decide what he wanted to do.  He was not heard from for several years, until he finally returned to Amkethran and the Monastery, where he eventually began to teach the young students there the ways of the monk.  He became Master Iylos, and despite his advancing age and supposedly neutral view he fought many battles against evil, surviving many near misses.  His style, the Striking Scorpion, became well-known throughout the Sword Coast and many young men and women began to flock to Amkethran to learn his techniques, and for a time Iylos was content.
-It was several years later when the seeds of wanderlust began to insinuate themselves within his mind, and he became restless in his relatively complacent life.  Eventually he bade the Monastery farewell and left to travel once more, visiting such places as Rasheman, and the Spine of the World.  Some even speculate that he travelled as far as the Moonshae isles, but whatever happened he eventually returned to the Monastery to bid one final farewell to his friends and students.  He left for the Anauroch desert, leaving his earthly belongings with several of his most talented students, who went on to become legends themselves.
-He was never heard from again, and though some say he went on to travel the planes and yet others that he travels the desert still, forever searching for something he cannot find, all are fairly sure that he died peacefully in the place which he loved most.~
+      REPLACE ~99999~ ~梅丽珊死后，围绕着那场惨事与<CHARNAME>的血脉，伊洛斯游历了数月，随后决定在安纳罗克再待一阵，理清思绪、定下自己想做什么。此后数年无人听闻他的消息，直到他终于回到阿姆凯斯兰与修道院，后来在那里开始教年轻的学子修道之法。他成了伊洛斯师父；尽管年岁渐长、名义上守中立，他仍与邪恶打过许多仗，几番险些丧命。他那一套「刺蝎」战法在剑湾声名远扬，许多年轻男女开始涌向阿姆凯斯兰学他的技艺，伊洛斯一时颇为满足。
+几年之后，漫游之念的种子又悄悄钻进他心里，他在这相对安逸的生活中变得不安。最终他向修道院告别，再次外出游历，去过拉舍曼、世界之脊等地。甚至有人揣测他到过月影群岛，但不管怎样，他最后回到修道院，向友人与学生作最后一次告别。他前往安纳罗克沙漠，把尘世的财物留给几位最有才华的学生，那些人后来自己也成了传奇。
+从此再无人听闻他的消息。有人说他去了别的位面游历，也有人说他仍在沙漠中行走，永远寻着某样他找不到的东西；但所有人都相当确信，他是在自己最爱的地方安然离世的。~
     
     
     // Audio
@@ -292,8 +292,8 @@ He was never heard from again, and though some say he went on to travel the plan
 // --------------------------------------------
 // Extended Content (PIDs & Friendship)
 // --------------------------------------------
-BEGIN ~Install extended content (PID, more interjections, friendship, scenery & plot dialogues)?~
-  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~You need Iylos installed to install his extended content!~
+BEGIN ~安装扩展内容（PID、更多插话、友谊、场景与剧情对话）？~
+  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~你需要先安装伊洛斯，才能安装他的扩展内容！~
     // Override script
     COMPILE ~iylos/extended/lk#iylo.baf~
     COMPILE ~iylos/extended/lk#iylj.d~
@@ -302,37 +302,37 @@ BEGIN ~Install extended content (PID, more interjections, friendship, scenery & 
 // Iylos' Talk Timers
 // --------------------------------------------
 // 15 minutes
-BEGIN ~15 Minutes~
-  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~You need Iylos installed to change the time between his talks!~
-  SUBCOMPONENT ~How much time would you like in between Iylos' PC dialogues?~
+BEGIN ~15 分钟~
+  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~你需要先安装伊洛斯，才能更改他谈话的间隔时间！~
+  SUBCOMPONENT ~你希望伊洛斯的 PC 对话间隔多久？~
     COPY_EXISTING ~gtimes.ids~ ~override/gtimes.ids~
       REPLACE_TEXTUALLY ~3600 IYLOS_TIMER~ ~900 IYLOS_TIMER~
 
 // 20 minutes
-BEGIN ~20 Minutes~
-  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~You need Iylos installed to change the time between his talks!~
-  SUBCOMPONENT ~How much time would you like in between Iylos' PC dialogues?~
+BEGIN ~20 分钟~
+  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~你需要先安装伊洛斯，才能更改他谈话的间隔时间！~
+  SUBCOMPONENT ~你希望伊洛斯的 PC 对话间隔多久？~
     COPY_EXISTING ~gtimes.ids~ ~override/gtimes.ids~
       REPLACE_TEXTUALLY ~3600 IYLOS_TIMER~ ~1200 IYLOS_TIMER~
 
 // 30 minutes
-BEGIN ~30 Minutes~
-  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~You need Iylos installed to change the time between his talks!~
-  SUBCOMPONENT ~How much time would you like in between Iylos' PC dialogues?~
+BEGIN ~30 分钟~
+  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~你需要先安装伊洛斯，才能更改他谈话的间隔时间！~
+  SUBCOMPONENT ~你希望伊洛斯的 PC 对话间隔多久？~
     COPY_EXISTING ~gtimes.ids~ ~override/gtimes.ids~
       REPLACE_TEXTUALLY ~3600 IYLOS_TIMER~ ~1800 IYLOS_TIMER~
 
 // 45 minutes
-BEGIN ~45 Minutes~
-  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~You need Iylos installed to change the time between his talks!~
-  SUBCOMPONENT ~How much time would you like in between Iylos' PC dialogues?~
+BEGIN ~45 分钟~
+  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~你需要先安装伊洛斯，才能更改他谈话的间隔时间！~
+  SUBCOMPONENT ~你希望伊洛斯的 PC 对话间隔多久？~
     COPY_EXISTING ~gtimes.ids~ ~override/gtimes.ids~
       REPLACE_TEXTUALLY ~3600 IYLOS_TIMER~ ~2700 IYLOS_TIMER~
 
 // 60 minutes
-BEGIN ~60 Minutes~
-  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~You need Iylos installed to change the time between his talks!~
-  SUBCOMPONENT ~How much time would you like in between Iylos' PC dialogues?~
+BEGIN ~60 分钟~
+  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~你需要先安装伊洛斯，才能更改他谈话的间隔时间！~
+  SUBCOMPONENT ~你希望伊洛斯的 PC 对话间隔多久？~
     COPY_EXISTING ~gtimes.ids~ ~override/gtimes.ids~
       REPLACE_TEXTUALLY ~3600 IYLOS_TIMER~ ~3600 IYLOS_TIMER~
 
@@ -340,8 +340,8 @@ BEGIN ~60 Minutes~
 // Alternate Iylos portrait by Ilmatar
 // --------------------------------------------
 // Component setup
-BEGIN ~Alternate Iylos portrait by Ilmatar~
-  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~You need Iylos installed to change his portrait!~
+BEGIN ~Ilmatar 制作的伊洛斯备用头像~
+  REQUIRE_COMPONENT ~iylos.tp2~             ~0~ ~你需要先安装伊洛斯，才能更改他的头像！~
 
     COPY ~iylos/alternate portraits/lk#ilml.bmp~ ~override/lk#iyll.bmp~
     COPY ~iylos/alternate portraits/lk#ilmm.bmp~ ~override/lk#iylm.bmp~

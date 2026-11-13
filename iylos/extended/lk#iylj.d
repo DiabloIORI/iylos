@@ -6,414 +6,414 @@ APPEND LK#IYLJ
 // -------------------------------------
 // PC Dialogue 1
   IF WEIGHT #-2 ~Global("LK#IylosTalks","GLOBAL",1) RealGlobalTimerExpired("LK#IylosTalksTimer","GLOBAL")~ PCD1
-    SAY ~I hope you're aware that I'm not here by choice, Bhaalspawn.  I am here to discern your intentions, and your motives.  If I had my way, I would still be in the Anauroch Desert, traveling where I wanted to.~ [LK#I153]  = ~I have no choice in this, much like yourself.  I just thought I should make that clear.~ [LK#I154]
-    ++ ~I understand.~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) IncrementGlobal("LK#IylosHappiness","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD1_1
-    ++ ~Regardless, you will live by MY rules, Monk.  I accepted you into the party on the premise that you would be helpful, and if I find that you are hindering me in any way, you will be gone like a shot.~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD1_2
-    ++ ~You could always disobey your 'orders', whoever they're from.~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) SetGlobal("LK#IylosPCD1","GLOBAL",2)~ + PCD1_3
-    ++ ~My motives?  My motives are none of your concern, Iylos.~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD1_4
-    ++ ~I seek only to help the other Bhaalspawn, and stop this war.  That is all I want.  Are you at least willing to help me towards that cause?~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) IncrementGlobal("LK#IylosHappiness","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD1_5
+    SAY ~我希望你明白，我不是自愿来的，巴尔之子。我来是为了看清你的意图和动机。要是我能作主，我还在安纳罗克沙漠里，想去哪就去哪。~ [LK#I153]  = ~这件事上我跟你一样没有选择。我只是觉得该把这一点说清楚。~ [LK#I154]
+    ++ ~我明白。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) IncrementGlobal("LK#IylosHappiness","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD1_1
+    ++ ~无论如何，你得按*我*的规矩过，修士。我接受你入队，前提是你有用；要是我发现你在任何方面拖累我，你立刻就得走。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD1_2
+    ++ ~你大可以不听你的「命令」，不管那命令来自谁。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) SetGlobal("LK#IylosPCD1","GLOBAL",2)~ + PCD1_3
+    ++ ~我的动机？我的动机与你无关，伊洛斯。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD1_4
+    ++ ~我只想帮助其他的巴尔之子，结束这场战争。我要的就这些。你至少愿意帮我往这个方向去吗？~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) IncrementGlobal("LK#IylosHappiness","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD1_5
   END
 
   IF ~~ PCD1_1
-    SAY ~I'm so terribly glad.  Just as long as you understand that I am not here entirely for your benefit.  Now, shall we continue, or was there something you wished to ask of me?~
+    SAY ~我真是高兴极了。只要你明白我来这里并不全是为了你好。那么，我们继续，还是你有什么想问我的？~
     ++ ~Since you asked...I do want to know something.  Why me?~ + PCD1_11
-    ++ ~Stop the humour, Iylos, it isn't at all amusing.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_12
+    ++ ~别耍嘴皮子，伊洛斯，一点也不好笑。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_12
     ++ ~How would you react if I *were* evil, Iylos?~ + PCD1_13
     ++ ~No, there wasn't.~ + PCD1_14
     ++ ~Not really; was there anything more you wished to ask *me*?~ + PCD1_16
   END
 
   IF ~~ PCD1_2
-    SAY ~Of course, <CHARNAME>.  It is your party, after all.  As long as what you ask me to do is not morally ambivalent or nefarious, of course.~ = ~And as long as you understand that I am not here entirely for your benefit.  Now, shall we continue, or was there something you wished to ask of me?~
+    SAY ~当然，<CHARNAME>。毕竟是你的队伍。只要你要我做的事在道德上不含糊、不邪恶，当然。~ = ~只要你明白我来这里并不全是为了你好。那么，我们继续，还是你有什么想问我的？~
     ++ ~Since you asked...I do want to know something.  Why me?~ + PCD1_11
-    ++ ~Stop the humour, Iylos, it isn't at all amusing.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_12
+    ++ ~别耍嘴皮子，伊洛斯，一点也不好笑。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_12
     ++ ~How would you react if I *were* evil, Iylos?~ + PCD1_13
     ++ ~No, there wasn't.~ + PCD1_14
     ++ ~Not really; was there anything more you wished to ask *me*?~ + PCD1_16
   END
 
   IF ~~ PCD1_3
-    SAY ~No.  I have my orders, and I will follow them, regardless of your wishes or whims, <CHARNAME>.  I will not let Balthazar down.~
+    SAY ~不。我有我的命令，我会遵行，不管你愿不愿意、高不高兴，<CHARNAME>。我不会让巴尔萨扎失望。~
     ++ ~Balthazar?~ + PCD1_31
-    ++ ~I'm glad we understand each other.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD1_32
-    ++ ~You're very...dedicated.  I admire that particular quality, and I hope it serves you well in...whatever you're doing.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PCD1_32
+    ++ ~很高兴我们彼此明白。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD1_32
+    ++ ~你非常……投入。我佩服这种品质，希望它在……不管你做什么事上都能帮到你。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PCD1_32
     ++ ~Fine.  Shall we continue?~ + PCD1_32
   END
 
   IF ~~ PCD1_4
-    SAY ~They are not *my* concern, but the concern of another, who would know your purpose and intentions.  I do not enjoy acting in such a stead, but I do as I must.~
-    ++ ~You've made it abundantly clear to me that you are not the kind of person I want in my party, Iylos.  Get you gone.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_41
-    ++ ~I don't like others prying into my business, Iylos.  Please inform this person, whoever they are, that I do NOT appreciate such behaviour, and if I ever have the opportunity to meet them, I will not be afraid to tell them so to their face.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD1_42
+    SAY ~那不是*我*的关切，而是另一个人的关切，那人想知道你的目的和意图。我不喜欢扮演这种角色，可我不得不做。~
+    ++ ~你已经够清楚地表明，你不是我想留在队伍里的那种人，伊洛斯。走吧。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_41
+    ++ ~我不喜欢别人探我的私事，伊洛斯。请转告那个人，不管他是谁，我*不*喜欢这种行为；若我有机会见到他，我不怕当面告诉他。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD1_42
     ++ ~Fine.  Shall we continue?~ + PCD1_12
   END
 
   IF ~~ PCD1_5
-    SAY ~To prevent the war?  Yes.  But I do not know if you have any further intentions beyond that.  <CHARNAME>, it is not *my* concern, but the concern of another, who would know your purpose and intentions.  I do not enjoy acting in such a stead, but I do as I must.~
-    ++ ~You've made it abundantly clear to me that you are not the kind of person I want in my party, Iylos.  Get you gone.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_41
-    ++ ~I don't like others prying into my business, Iylos.  Please inform this person, whoever they are, that I do NOT appreciate such behaviour, and if I ever have the opportunity to meet them, I will not be afraid to tell them so to their face.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD1_42
+    SAY ~为了阻止战争？是的。可我不知道你除此之外还有没有别的意图。<CHARNAME>，那不是*我*的关切，而是另一个人的关切，那人想知道你的目的和意图。我不喜欢扮演这种角色，可我不得不做。~
+    ++ ~你已经够清楚地表明，你不是我想留在队伍里的那种人，伊洛斯。走吧。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_41
+    ++ ~我不喜欢别人探我的私事，伊洛斯。请转告那个人，不管他是谁，我*不*喜欢这种行为；若我有机会见到他，我不怕当面告诉他。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD1_42
     ++ ~Whoever this person is, Iylos, they do not have the right to make you do things you don't want to do.~ + PCD1_43
     ++ ~Fine.  Shall we continue?~ + PCD1_12
   END
 
   IF ~~ PCD1_11
-    SAY ~(laugh) Need you even ask, <CHARNAME>?  You are quite possibly the most famous Bhaalspawn alive at this moment, and you don't understand why someone would be interested in your motives?  You have a big future ahead of you; you are one of the most *powerful* Bhaalspawn, due to Irenicus' tampering, some suspect.~
+    SAY ~（笑）还用得着问吗，<CHARNAME>？你此刻很可能是活着的最有名的巴尔之子，你还不明白为什么有人会对你的动机感兴趣？你前途远大；有人猜，因为艾瑞尼卡斯的折腾，你是最*强*的巴尔之子之一。~
     ++ ~Irenicus' tampering?!  His TAMPERING?!  He tortured me!  He almost killed me, time and time again, only to heal me and repeat the process!!~ + PCD1_111
     ++ ~How do you know about that, Iylos?~ + PCD1_112
-    ++ ~I may be powerful, but that isn't the point.  How dare someone invade my privacy like that?  They-you don't have the right!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD1_113
-    ++ ~I didn't realise I was quite so...well known.  Nor the actions of my nemesis.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD1_114
-    ++ ~You know nothing of me.  Whoever this person is, they know nothing of me.  You...no.  Just leave me alone.  I don't care, stay, leave, whatever you wish...just leave me alone.~ EXIT
+    ++ ~我也许强大，可这不是重点。谁竟敢这样侵入我的私事？他们——你没有这个权利！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD1_113
+    ++ ~我没意识到自己这么……这么出名。也没意识到我仇敌的作为。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD1_114
+    ++ ~你对我一无所知。不管那个人是谁，他对我也一无所知。你……不。别烦我。我不在乎，留下、走开，随你……只是别烦我。~ EXIT
     ++ ~But who IS this person, who is so interested in me, Iylos?~ + PCD1_114
   END
 
   IF ~~ PCD1_12
-    SAY ~Whatever you wish, <CHARNAME>.~
+    SAY ~随你，<CHARNAME>。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_13
-    SAY ~It would depend upon the circumstances, I suspect.  If you were evil, I would be forced to take action, but since you assure me this is not the case, I will reserve judgment...for now.~
+    SAY ~我想这要看情形。你若邪恶，我就不得不采取行动；既然你向我保证并非如此，我就先不下判断……暂且。~
     ++ ~The circumstances?  What possible circumstances could there *be*?~ + PCD1_131
     ++ ~Fine.~ + PCD1_12
     ++ ~Well, I am evil.  Deal with it.~ + PCD1_132
-    ++ ~I'm glad we understand each other.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD1_32
+    ++ ~很高兴我们彼此明白。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD1_32
   END
 
   IF ~~ PCD1_14
-    SAY ~Good.~
+    SAY ~好。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_16
-    SAY ~Not as of yet, <CHARNAME>.  But perhaps in future.~
+    SAY ~还没有，<CHARNAME>。不过也许将来会。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_31
-    SAY ~(Damn it...)~ = ~Balthazar is...~ = ~Balthazar is someone I do not wish to speak of at the moment.  Leave me to my thoughts, Bhaalspawn.~
+    SAY ~（该死……）~ = ~巴尔萨扎是……~ = ~巴尔萨扎是此刻我不愿提起的人。让我自己想事情，巴尔之子。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_32
-    SAY ~Thank you, <CHARNAME>.~
+    SAY ~谢谢你，<CHARNAME>。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_41
-    SAY ~You will not be rid of me that simply, Bhaalspawn.  Even if I were to leave the party, I would dog your footsteps and continue watching you.  Would you not prefer to have me here than a mile back, where I cannot aid you in battle?~
-    ++ ~That's blackmail, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_411
-    ++ ~Fine.  Stay.  I don't care, just don't pester me!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_132
+    SAY ~你不会这么轻易摆脱我，巴尔之子。就算我离开队伍，我也会跟着你的脚步继续盯着你。你难道不愿我在这儿，而不是在一里之外、打仗时帮不上你？~
+    ++ ~这是勒索，伊洛斯。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_411
+    ++ ~行。留下。我不在乎，只是别来烦我！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD1_132
     ++ ~Leave.  I don't care if you dog my footsteps, at least you won't be here aggravating me!~ + PCD1_412
     ++ ~Bah, stay if you must.~ + PCD1_132
     ++ ~Leave, and if I find you dogging my footsteps I will not hesitate to take you to justice.~ + PCD1_413
   END
 
   IF ~~ PCD1_42
-    SAY ~That is your prerogative.  I will inform them when I have the chance, I can...assure you.~
+    SAY ~那是你的权利。我一有机会就转告他们，我可以……向你保证。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_43
-    SAY ~Then you obviously do not understand concepts such as 'loyalty', 'reliance' and 'trust'.  I have my orders, and I *will* follow them, regardless of your wishes or whims, <CHARNAME>.  I will not let Balthazar down.~
+    SAY ~那你显然不懂「忠诚」、「依靠」和「信任」这类概念。我有我的命令，我*会*遵行，不管你愿不愿意、高不高兴，<CHARNAME>。我不会让巴尔萨扎失望。~
     ++ ~Balthazar?~ + PCD1_31
     ++ ~I'm glad we understand each other.~ + PCD1_32
-    ++ ~You're very...dedicated.  I admire that particular quality, and I hope it serves you well in...whatever you're doing.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PCD1_32
+    ++ ~你非常……投入。我佩服这种品质，希望它在……不管你做什么事上都能帮到你。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PCD1_32
     ++ ~Fine.  Shall we continue?~ + PCD1_32
   END
 
   IF ~~ PCD1_111
-    SAY ~I apologise, that was...untactful of me.  What happened to you was regretful, and such atrocities should never be forced upon anyone...even a Bhaalspawn.  That does not change the fact that you are famous--infamous, some would say, and that there are many interested in what you stand for.~ = ~Surely you know that by now.  Regardless, the road lies before us, eager to be trodden upon.  Let us oblige, and end this fruitless conversation.~
+    SAY ~我道歉，那是我……不够得体。你的遭遇令人痛惜，这样的暴行不该强加给任何人……哪怕是巴尔之子。可这并不改变你出名——有人说臭名昭著——这一事实，也不改变有许多人关心你代表什么。~ = ~你现在总该知道了。无论如何，路在眼前，等着被踏上去。我们走吧，结束这场无益的谈话。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_112
-    SAY ~I have my sources, <CHARNAME>--indeed, it is common knowledge if you know where to look.~
+    SAY ~我有我的消息来源，<CHARNAME>——只要知道该往哪儿看，这确实是常识。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_113
-    SAY ~From what I have seen, <CHARNAME>, you are not above bending the rules to suit yourself when you require it.~
+    SAY ~依我所见，<CHARNAME>，需要时你并不忌讳把规矩弯一弯来合自己的意。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_114
-    SAY ~As I have said, I would prefer not to invade your privacy; but the circumstances dictate that I do, and for that I apologise.  You are, however, infamous--or famous, whichever you prefer, so you should know there are *many* interested in who you are and what you stand for.~ = ~You should be glad that Balthazar is the one I am aiding, rather than another who might use anything and everything against you.~
+    SAY ~我说过，我宁愿不侵入你的私事；可情势逼我这么做，为此我道歉。不过你确实臭名昭著——或者说有名，随你挑，所以你该知道有*许多人*关心你是谁、你代表什么。~ = ~你该庆幸是我在帮巴尔萨扎，而不是另一个人，那人可能拿任何东西来对付你。~
     ++ ~Balthazar?~ + PCD1_31
     ++ ~I'm glad we understand each other.~ + PCD1_32
-    ++ ~You're very...dedicated.  I admire that particular quality, and I hope it serves you well in...whatever you're doing.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PCD1_32
+    ++ ~你非常……投入。我佩服这种品质，希望它在……不管你做什么事上都能帮到你。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PCD1_32
     ++ ~Fine.  Shall we continue?~ + PCD1_32
   END
 
   IF ~~ PCD1_131
-    SAY ~Many, <CHARNAME>...many.~
+    SAY ~很多，<CHARNAME>……很多。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_132
-    SAY ~<CHARNAME>, you cannot fool me into leaving.  I am not some stupid coward, intent on betrayal at the first opportunity.~
+    SAY ~<CHARNAME>，你骗不走我。我不是那种一有机会就想背叛的蠢懦夫。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_152
-    SAY ~Quite alright.  Shall we go?~ = ~I...no.  Let us go.~
+    SAY ~完全没事。我们走吗？~ = ~我……不。我们走吧。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD1_411
-    SAY ~I do believe some people call it that, yes.  Regardless, I *will* follow my orders and watch you.~
+    SAY ~我相信有些人这么叫，是的。无论如何，我*会*服从命令盯着你。~
     ++ ~Fine.~ + PCD1_132
     ++ ~Leave this party, Iylos.  Even if you do dog my steps, I will not have to deal with *you.*~ + PCD1_412
     ++ ~Just go, Iylos, and if I ever find you near me again I WILL take measures to make sure it does not happen again.~ + PCD1_413
   END
 
   IF ~~ PCD1_412
-    SAY ~That is your prerogative.~
+    SAY ~那是你的权利。~
     IF ~~ DO ~LeaveParty() SetGlobal("LK#IylosJoinedParty","GLOBAL",0) SetGlobal("LK#IylosLeftUnhappy","GLOBAL",1) EscapeAreaMove("AR5500",958,1567,5)~ EXIT
   END
 
   IF ~~ PCD1_413
-    SAY ~That is your prerogative.~
+    SAY ~那是你的权利。~
     IF ~~ DO ~LeaveParty() SetGlobal("LK#IylosJoinedParty","GLOBAL",0) SetGlobal("LK#IylosLeftUnhappy","GLOBAL",1) EscapeAreaMove("AR5500",958,1567,5)~ EXIT
   END
 
 
 // 2nd PC Dialogue
   IF WEIGHT #-2 ~Global("LK#IylosTalks","GLOBAL",3) RealGlobalTimerExpired("LK#IylosTalksTimer","GLOBAL")~ PCD2
-    SAY ~Why do you believe you are here, <CHARNAME>?~ [LK#I155]
-    ++ ~I'm not sure.  Why do you think *you* are here?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD2_1
-    ++ ~To rid the world of evil, obviously.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD2_2
-    ++ ~To stop this damned war.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD2_3
-    ++ ~To help people.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD2_4
-    ++ ~Thats for me to know, Iylos, not you.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD2_5
+    SAY ~你为什么觉得自己在这里，<CHARNAME>？~ [LK#I155]
+    ++ ~我不确定。那*你*为什么觉得自己在这里？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD2_1
+    ++ ~显然是为了清除世上的邪恶。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD2_2
+    ++ ~为了止住这场该死的战争。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD2_3
+    ++ ~为了帮人。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD2_4
+    ++ ~那该我知道，伊洛斯，不是你。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD2_5
   END
 
   IF ~~ PCD2_1
-    SAY ~I am here to serve.~
+    SAY ~我是来效力的。~
     ++ ~Is that all you're here for?~ + PCD2_11
-    ++ ~I don't think so.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_12
+    ++ ~我不这么认为。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_12
     ++ ~I see.~ + PCD2_12
     ++ ~Surely there's something else?~ + PCD2_13
-    ++ ~How pathetic.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_13
+    ++ ~真可悲。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_13
   END
 
   IF ~~ PCD2_2
-    SAY ~A noble cause, <CHARNAME>, if naive.~
-    ++ ~You question the existence of evil?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_21
-    ++ ~Aren't all causes naive, Iylos?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_22
-    ++ ~How dare you?!  Fighting evil is what I *live* for!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_23
+    SAY ~高尚的目标，<CHARNAME>，虽然天真。~
+    ++ ~你怀疑邪恶的存在？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_21
+    ++ ~一切目标不都天真吗，伊洛斯？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_22
+    ++ ~你竟敢？！与邪恶抗争是*我*活下去的理由！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_23
   END
 
   IF ~~ PCD2_3
-    SAY ~A noble cause, <CHARNAME>.  And how do you propose to do that?~
-    ++ ~I'm not entirely sure yet.  I'll find a way.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_31
-    ++ ~By killing everyone else, of course.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_32
-    ++ ~Look, Iylos, this isn't my choice--if I don't, the war will continue to devastate Toril.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_33
-    ++ ~I will find a way--there has to be one.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_13
+    SAY ~高尚的目标，<CHARNAME>。那你打算怎么做？~
+    ++ ~我还不太确定。我会找到办法。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_31
+    ++ ~当然是杀掉其余所有人。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_32
+    ++ ~听着，伊洛斯，这不是我的选择——我不做，战争就会继续毁掉托瑞尔。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_33
+    ++ ~我会找到办法——总得有一个。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_13
   END
 
   IF ~~ PCD2_4
-    SAY ~A noble cause, <CHARNAME>.  But surely you can't help every person who needs it?~
-    ++ ~Of course not; I help as many as I can, but there are always those who are beyond my reach.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_41
+    SAY ~高尚的目标，<CHARNAME>。可你总不能帮到每一个需要帮助的人吧？~
+    ++ ~当然不能；我能帮多少就帮多少，可总有人是我够不到的。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_41
     ++ ~I certainly try.~ + PCD2_42
-    ++ ~Does anyone *care*?  I help those who need it the most, not just every peasant who comes to me begging for gold.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_41
+    ++ ~有谁*在乎*？我帮最需要的人，不是每个跑来讨钱的农人。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_41
   END
 
   IF ~~ PCD2_5
-    SAY ~That is your choice, <CHARNAME>.  My purpose is to serve, if you were going to ask.~
+    SAY ~那是你的选择，<CHARNAME>。如果你要问，我的目的是效力。~
     ++ ~Is that all you're here for?~ + PCD2_11
-    ++ ~I don't think so.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_12
+    ++ ~我不这么认为。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_12
     ++ ~I see.~ + PCD2_12
     ++ ~Surely there's something else?~ + PCD2_13
-    ++ ~How pathetic.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_13
-    ++ ~You believe so?  I know you well enough to say that there is more to you than just serving others.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_12
+    ++ ~真可悲。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_13
+    ++ ~你这么想？我够了解你，敢说你不只是效力他人而已。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_12
   END
 
   IF ~~ PCD2_11
-    SAY ~I believe so.~
+    SAY ~我相信是这样。~
     ++ ~Surely you have some other aspiration, or dream?~ + PCD2_13
-    ++ ~Fair enough.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  EXIT
-    ++ ~Bah, how pathetic.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_12
-    ++ ~You believe so?  I know you well enough to say that there is more to you than just serving others.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_12
+    ++ ~行吧。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  EXIT
+    ++ ~呸，真可悲。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_12
+    ++ ~你这么想？我够了解你，敢说你不只是效力他人而已。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_12
   END
 
   IF ~~ PCD2_12
-    SAY ~You can think whatever you want, <CHARNAME>--you evaded my question, so it is only fair I evade yours, is it not?~
-    ++ ~I see.  If you're going to be like that, there's no point in having a conversation, is there?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
-    ++ ~(laugh) Fair enough.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  EXIT
-    ++ ~Evasion is the soul of courtesy, after all.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_121
-    ++ ~Bah!  It is impossible to hold a sensible conversation with you.  Get you gone!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
+    SAY ~你爱怎么想就怎么想，<CHARNAME>——你回避了我的问题，那我回避你的也公平，不是吗？~
+    ++ ~我明白了。你既然要这样，那就没什么好谈的，是吧？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
+    ++ ~（笑）说得也对。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  EXIT
+    ++ ~说到底，回避是礼貌的精髓。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_121
+    ++ ~呸！跟你没法讲一句明白话。走开！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
   END
 
   IF ~~ PCD2_13
-    SAY ~Perhaps, but you evaded my question--it is only fair that I evade yours.~
-    ++ ~I see.  If you're going to be like that, there's no point in having a conversation, is there?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
-    ++ ~(laugh) Fair enough.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  EXIT
-    ++ ~Evasion is the soul of courtesy, after all.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_121
-    ++ ~Bah!  It is impossible to hold a sensible conversation with you.  Get you gone!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
-    ++ ~You really *are* pathetic, Iylos.  There is more to life than serving others.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_131
+    SAY ~也许吧，可你回避了我的问题——我回避你的才公平。~
+    ++ ~我明白了。你既然要这样，那就没什么好谈的，是吧？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
+    ++ ~（笑）说得也对。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  EXIT
+    ++ ~说到底，回避是礼貌的精髓。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_121
+    ++ ~呸！跟你没法讲一句明白话。走开！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
+    ++ ~你*确实*可悲，伊洛斯。人生不只是效力他人。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_131
   END
 
   IF ~~ PCD2_21
-    SAY ~Not its existence, no; rather the fact that you believe that you can rid the world of it.~
+    SAY ~不是怀疑它存在，不；而是你相信自己能把它从世上清除。~
     ++ ~Why, you think it can't be done?~ + PCD2_211
-    ++ ~Well...at least try my damnedest to.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_23
-    ++ ~I suppose you are right, in a way; but even still, it is my motivation.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_23
-    ++ ~Bah!  It is impossible to hold a sensible conversation with you.  Get you gone!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
+    ++ ~嗯……至少尽我该死的全力去试。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_23
+    ++ ~我想你说得有点道理；可即便如此，那仍是我的动机。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_23
+    ++ ~呸！跟你没法讲一句明白话。走开！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
 
   END
 
   IF ~~ PCD2_22
-    SAY ~(laugh) You have a point, <CHARNAME>.  All causes are naive in some way; the fight against evil is neverending, ceaseless, as evil will always find a way to exist--yet there are continually people who try to 'defeat' it, knowing it is only temporary.  It *does* serve a purpose--it keeps the balance from shifting too much in either direction.~ = ~If only they knew that true perfection lies in balance...the peaceful co-existence of forces.~
-    ++ ~As you said--all causes are naive.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_221
-    ++ ~Point taken.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_222
+    SAY ~（笑）你说到点上了，<CHARNAME>。所有目标在某种意义上天真；与邪恶之争永无休止、连绵不绝，因为邪恶总能找到存在的法子——然而总不断有人试着「击败」它，明知那只是暂时的。它*确实*有其用处——它让平衡不至于倒向任何一边太多。~ = ~要是他们知道真正的完美在于平衡……各种力量的和平共存就好了。~
+    ++ ~如你所说——一切目标都天真。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_221
+    ++ ~说得有理。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_222
     ++ ~Perhaps, but I do not believe so.  One can defeat evil, if one tries hard enough.  One will eventually triumph over the other, it is inevitable.~ + PCD2_223
-    ++ ~Purpose is silly, anyway.  We are here because we want to be here--or need to be.  Our motivation does not really matter.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_224
+    ++ ~目的本来就荒唐。我们在此，因为我们想在此——或必须在此。我们的动机其实无关紧要。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_224
   END
 
   IF ~~ PCD2_23
-    SAY ~(laugh) The fight against evil is neverending, ceaseless, as evil will always exist--yet there are continually people who try to 'defeat' it, knowing it is only temporary.  It *does* serve a purpose--it keeps the balance from shifting too much in either direction.~ = ~If only they knew that true perfection lies in balance...the peaceful co-existence of forces.  If you live for fighting against evil, then you are perhaps more than a little unbalanced.~
-    ++ ~Point taken.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_222
+    SAY ~与邪恶之争永无休止、连绵不绝，因为邪恶总会在——然而总不断有人试着「击败」它，明知那只是暂时的。它*确实*有其用处——它让平衡不至于倒向任何一边太多。~ = ~要是他们知道真正的完美在于平衡……各种力量的和平共存就好了。你若为与邪恶作战而活，那你恐怕不只是有点失衡。~
+    ++ ~说得有理。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_222
     ++ ~Perhaps, but I do not believe so.  One can defeat evil, if one tries hard enough.  One will eventually triumph over the other, it is inevitable.~ + PCD2_223
-    ++ ~Purpose is silly, anyway.  We are here because we want to be here--or need to be.  Our motivation does not really matter.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_224
-    ++ ~Of course I'm *unbalanced*, idiot, I'm a Bhaalspawn!  I have a raging war in my head between what is right and what is easy in my head!  What are you, an imbecile?!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD2_231
-    ++ ~Bah!  Is there any *point* in talking?!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD2_232
+    ++ ~目的本来就荒唐。我们在此，因为我们想在此——或必须在此。我们的动机其实无关紧要。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_224
+    ++ ~我当然*失衡*，蠢货，我是巴尔之子！我脑子里正打着一场激烈的仗，对的是什么、容易的是什么！你是什么，白痴吗？！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD2_231
+    ++ ~呸！说话还有*什么意义*？！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD2_232
   END
 
   IF ~~ PCD2_31
-    SAY ~And perhaps you will, but in my experience there is no way to stop something as large as a war without murder and bloodshed, regardless.  War begets more war.  Murder begets more murder.  There is no way to stop it without more war, and surely that is not what you want?~
-    ++ ~I will do what I must.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_311
+    SAY ~也许你会做到，可依我的经验，要止住像战争这么大的东西，无论如何都少不了谋杀与流血。战争生出更多战争。谋杀生出更多谋杀。不用更多战争就止不住它，而这肯定不是你想要的吧？~
+    ++ ~我该做什么就做什么。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_311
     ++ ~I...I guess not.  But there has to be another way...~ + PCD2_312
-    ++ ~Then I will kill the leaders, and the rest will fall into disarray.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_223
-    ++ ~Well, what do you suggest then, o all knowing monk?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_313
+    ++ ~那我会杀掉首领，其余的自会溃散。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_223
+    ++ ~那你说怎么办，无所不知的修士？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_313
   END
 
   IF ~~ PCD2_32
-    SAY ~That is one way to do it; a disgusting, vile solution to a disgusting, vile reality.  But murder begets more murder, <CHARNAME>; death begets more death.  Surely that is not what you want?~
-    ++ ~I will do what I must.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_311
+    SAY ~那也是一种做法；对一个丑恶可憎的现实，一个丑恶可憎的解法。可谋杀生出更多谋杀，<CHARNAME>；死亡生出更多死亡。这肯定不是你想要的吧？~
+    ++ ~我该做什么就做什么。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_311
     ++ ~I...I guess not.  But there has to be another way...~ + PCD2_312
-    ++ ~Then I will kill the leaders, and the rest will fall into disarray.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_223
-    ++ ~Well, what do you suggest then, o all knowing monk?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_313
+    ++ ~那我会杀掉首领，其余的自会溃散。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_223
+    ++ ~那你说怎么办，无所不知的修士？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD2_313
   END
 
   IF ~~ PCD2_33
-    SAY ~I understand that, <CHARNAME>.  But if you believe that stopping the war is your purpose, you must have a way to do so or you will be running blind.  Are you so ignorant that you don't see that?~
-    ++ ~I'm not ignorant, Iylos.  I know the consequences of walking in blind, but I don't have much choice here.  I've been forced into a role I don't want to play, but the more I evade it, the more I am forced to take an active role in it.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_331
-    ++ ~I will find a way.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_332
+    SAY ~我明白，<CHARNAME>。可你若相信止住战争是你的目的，你必须有做到的法子，否则你就是闭着眼乱跑。你无知到看不出这一点吗？~
+    ++ ~我不无知，伊洛斯。我知道闭着眼走的后果，可我这儿没什么选择。我被逼进一个我不想演的角色，可我越回避，就越被逼着在这事里主动出力。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_331
+    ++ ~我会找到办法。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_332
     ++ ~Perhaps...perhaps I am.  I don't know anymore.~ + PCD2_331
-    ++ ~How dare you?!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_333
+    ++ ~你竟敢？！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_333
   END
 
   IF ~~ PCD2_41
-    SAY ~There are others who cannot be helped, <CHARNAME>, and those who do not *want* to be helped.  When you give to the poor or donate to charity, you may believe you are doing good when in fact it may just be the opposite which is occuring.~
-    ++ ~So what, I shouldn't give money to the poor, or donate to charity?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_341
+    SAY ~有些人帮不了，<CHARNAME>，还有些人*不*想被帮。你施舍穷人、捐给慈善时，也许以为自己行善，实际上发生的恰恰可能是反面。~
+    ++ ~那又怎样，我不该给穷人钱，也不该捐给慈善？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_341
     ++ ~That's a very cynical view, Iylos.~ + PCD2_342
     ++ ~How terrible it must be for you to look out to the world with such a view.~ + PCD2_342
-    ++ ~Of course there are--I give to those who need it, and only if it will actually help them.  I do what I can.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_342
+    ++ ~当然有——我帮那些需要帮助的人，而且只在真能帮上他们时。我做我所能做的。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_342
     ++ ~Are you calling me evil?~ + PCD2_342
   END
 
   IF ~~ PCD2_42
-    SAY ~Fair enough, I suppose.  But when you give to charity, you may believe you are doing good when in fact it may just be the opposite occuring.~
-    ++ ~So what, I shouldn't give money to the poor, or donate to charity?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_341
+    SAY ~我想说得有理。可你捐给慈善时，也许以为自己行善，实际上发生的恰恰可能是反面。~
+    ++ ~那又怎样，我不该给穷人钱，也不该捐给慈善？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_341
     ++ ~That's a very cynical view, Iylos.~ + PCD2_342
     ++ ~How terrible it must be for you to look out to the world with such a view.~ + PCD2_342
-    ++ ~Of course there are--I give to those who need it, and only if it will actually help them.  I do what I can.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_342
+    ++ ~当然有——我帮那些需要帮助的人，而且只在真能帮上他们时。我做我所能做的。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_342
     ++ ~Are you calling me evil?~ + PCD2_342
   END
 
   IF ~~ PCD2_121
-    SAY ~Of course.~
+    SAY ~当然。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_131
-    SAY ~Look, <CHARNAME>, I- I barely know you, so I have no reason to share anything with you.  Perhaps another time.~
+    SAY ~听着，<CHARNAME>，我——我几乎不认识你，所以没理由跟你分享什么。也许改天吧。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_211
-    SAY ~No, it cannot.  The fight against evil is neverending, ceaseless, as evil will always find a way to exist--yet there are continually people who try to 'defeat' it, knowing it is only temporary.  It *does* serve a purpose--it keeps the balance from shifting too much in either direction.~ = ~If only they knew that true perfection lies in balance...the peaceful co-existence of forces.  If you live for fighting against evil, then you are perhaps more than a little unbalanced.~
-    ++ ~Point taken.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_222
+    SAY ~不，不能。与邪恶之争永无休止、连绵不绝，因为邪恶总能找到存在的法子——然而总不断有人试着「击败」它，明知那只是暂时的。它*确实*有其用处——它让平衡不至于倒向任何一边太多。~ = ~要是他们知道真正的完美在于平衡……各种力量的和平共存就好了。你若为与邪恶作战而活，那你恐怕不只是有点失衡。~
+    ++ ~说得有理。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~  + PCD2_222
     ++ ~Perhaps, but I do not believe so.  One can defeat evil, if one tries hard enough.  One will eventually triumph over the other, it is inevitable.~ + PCD2_223
-    ++ ~Purpose is silly, anyway.  We are here because we want to be here--or need to be.  Our motivation does not really matter.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_224
-    ++ ~Of course I'm *unbalanced*, idiot, I'm a Bhaalspawn!  I have a raging war in my head between what is right and what is easy continually in my head!  What are you, an imbecile?!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD2_231
-    ++ ~Bah!  Is there any *point* in talking?!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD2_232
+    ++ ~目的本来就荒唐。我们在此，因为我们想在此——或必须在此。我们的动机其实无关紧要。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_224
+    ++ ~我当然*失衡*，蠢货，我是巴尔之子！我脑子里一直打着一场激烈的仗，对的是什么、容易的是什么！你是什么，白痴吗？！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD2_231
+    ++ ~呸！说话还有*什么意义*？！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD2_232
   END
 
   IF ~~ PCD2_221
-    SAY ~Indeed they are.~
+    SAY ~确实如此。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_222
-    SAY ~Balance isn't always achievable, but we should continually strive toward it.  Even you, <CHARNAME>, even one as turbulent as you can achieve balance if you try hard enough.  Perhaps.~
+    SAY ~平衡并非总能达成，可我们该不断朝它努力。就算是你，<CHARNAME>，就算躁动如你，只要够努力也能达成平衡。也许吧。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_223
-    SAY ~If you believe so.~
+    SAY ~你若这么信。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_224
-    SAY ~Motivation is everything; whether you're forced or not, you must have motivation or you wouldn't continue.~
-    ++ ~Perhaps.~ EXIT
-    ++ ~If that is what you want to think, Iylos.~ EXIT
+    SAY ~动机就是一切；不管你是否被逼，你必须有动机，否则你不会继续。~
+    ++ ~也许吧。~ EXIT
+    ++ ~你若愿意这么想，伊洛斯。~ EXIT
   END
 
   IF ~~ PCD2_231
-    SAY ~Balance isn't always achievable, but we should continually strive toward it.  Even you one as hopeless and turbulent as you can achieve balance if you try hard enough.  Perhaps.  Whether you would even bother trying, of course, is debatable.  Bah.~
+    SAY ~平衡并非总能达成，可我们该不断朝它努力。就算绝望躁动如你，只要够努力也能达成平衡。也许吧。当然，你会不会费这个劲，那就难说了。呸。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_232
-    SAY ~Perhaps not, if you're not going to listen.  (sigh)~
+    SAY ~也许不会，如果你不打算听的话。（叹气）~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_311
-    SAY ~Of course.~
+    SAY ~当然。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_312
-    SAY ~Of course there would be, but it is up to you to find it.~
+    SAY ~当然会有，可找不找得到看你。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_313
-    SAY ~I don't know--you're the leader of this group, Bhaalspawn.  Think for yourself.~
+    SAY ~我不知道——你是这队伍的头儿，巴尔之子。自己想想。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_331
-    SAY ~At least you're willing to admit that, I suppose.  You cannot evade destiny, according to many--I would like to believe we have choice in this life.  Some of us, perhaps...but perhaps not such as you.~
+    SAY ~至少你愿意承认这一点，我想。许多人说人逃不过命运——我倒愿意相信此生我们有得选。有些人也许……可像你这样的，也许没有。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_332
-    SAY ~Perhaps, but it is up to you to find it.~
+    SAY ~也许吧，可找不找得到看你。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_333
-    SAY ~I dare because I must.  You *will* die if you don't know what you're doing--you'll walk in blinded on either side, and someone will come from behind.  Think it through carefully, <CHARNAME>.  Decide on a course of action, and follow it.~
-    ++ ~Perhaps you should take your own advice on occasion, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_3331
-    ++ ~Whatever.~ EXIT
-    ++ ~If you say so.~ EXIT
+    SAY ~我敢，因为我必须。你若不知道自己在做什么，你*会*死——你会闭着眼走到一边，然后有人从背后过来。仔细想清楚，<CHARNAME>。定下一条路，然后走下去。~
+    ++ ~伊洛斯，也许你有时也该听自己的建议。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD2_3331
+    ++ ~随便。~ EXIT
+    ++ ~你这么说就这么吧。~ EXIT
   END
 
   IF ~~ PCD2_341
-    SAY ~I'm not saying that--I'm saying be wary of your actions, for you might not always know the course of what will happen.  Sometimes theory and reality are as fire and water, and will not meld whatever you do or might wish.  Perhaps it is a gritty, dark view, yes; but I do not dwell in the realm of mayhaps and suppositions.~
+    SAY ~我不是那个意思——我是说要当心你的作为，因为你未必总知道会发生什么。有时理论与现实如水火，不管你做什么、想什么，都融不到一处。这看法也许粗粝、阴暗，是的；可我不活在「也许」和「大概」的境里。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_342
-    SAY ~I'm saying be wary of your actions, for you might not always know the course of what will happen.  Sometimes theory and reality are as fire and water, and will not meld whatever you do or might wish.  Perhaps it is cynical, yes; but it is also realistic.  I do not dwell in the realm of mayhaps and suppositions.~
+    SAY ~我是说要当心你的作为，因为你未必总知道会发生什么。有时理论与现实如水火，不管你做什么、想什么，都融不到一处。这也许愤世嫉俗，是的；可它也现实。我不活在「也许」和「大概」的境里。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD2_3331
-    SAY ~Bhaalspawn fool...~
+    SAY ~巴尔之子的蠢货……~
     IF ~~ EXIT
   END
 
@@ -422,98 +422,98 @@ APPEND LK#IYLJ
 // Friendship Dialogues (4)
 // -------------------------------------
   IF  WEIGHT #-2 ~Global("LK#IylosTalks","GLOBAL",5) RealGlobalTimerExpired("LK#IylosTalksTimer","GLOBAL")~ PCD3
-    SAY ~<CHARNAME>, I...I have something I wish to speak to you about.~ [LK#I230]
-    ++ ~Hmm?~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD3_0
-    ++ ~Yes?  Was there something?~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD3_0
-    ++ ~Bah!  Cease staring at me, decrepid fool!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD3_0
+    SAY ~<CHARNAME>，我……我有件事想跟你说。~ [LK#I230]
+    ++ ~嗯？~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD3_0
+    ++ ~怎么了？有什么事？~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD3_0
+    ++ ~呸！别再盯着我，你这衰朽的蠢货！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD3_0
   END
 
   IF ~~ PCD3_0
-    SAY ~I can't help but wonder what I will see when I next turn around to face you...~ [LK#I156]  = ~The <PRO_MANWOMAN>, or the monster.  What do you think it'll be?  A murderer--an innocent who is unable to stop <PRO_HISHER> homicidal urges, or a <PRO_MANWOMAN> fighting for <PRO_HISHER> mind in a battle of wills?~
+    SAY ~我忍不住要想，下次我回头看你时，会看到什么……~ [LK#I156]  = ~是人，还是怪物。你觉得会是什么？一个杀人者——一个止不住自己杀人冲动的无辜者，还是一个在意志之战中为自己心智而战的人？~
     ++ ~What are you talking about, Iylos?~ + PCD3_1
     ++ ~I try, Iylos, I really do...but this time, I just don't understand what the in the *hells* you're talking about.~ + PCD3_1
     ++ ~What?~ + PCD3_1
-    ++ ~Shut up, Iylos.  I don't have time for this.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_2
+    ++ ~闭嘴，伊洛斯。我没功夫听这个。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_2
   END
 
   IF ~~ PCD3_1
-    SAY ~(sigh) You are a monster, <CHARNAME>--your instinct is to kill anything, everything.  I can't help but think that the next time I turn around, you'll be the slayer, murdering some innocent who did naught but exist in your presence.~ = ~There are...ways...to help control your Bhaal essence, to direct it toward the cause of good and not towards evil.  I was told by Balthazar that if you were amiable to his cause, to give you the opportunity to learn some of these techniques.  He taught them to me, and they are in truth simple exercises to help control the mind and calm the spirit.~ = ~I'm debating whether it is worth teaching you, or not- I'm even going so far as to give you the option, when perhaps I should not.~
-    ++ ~I would be glad to learn some of these 'exercises', Iylos, if it will help control this...thing...inside me.  I don't like having the essence of a murderous dead god playing me like a harp.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_11
-    ++ ~Yes!  I mean, of course I would!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_11
-    ++ ~I'm not so sure.  What exactly do these exercises *do*?  Why bother?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_13
-    ++ ~I don't want to learn any of your pathetic 'mental training' techniques.  My mind is just the way I like it, and that's how I'm going to keep it!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD3_12
+    SAY ~（叹气）你是个怪物，<CHARNAME>——你的本能是杀掉一切、任何东西。我忍不住想，下次我回头，你就会是杀戮者，杀掉一个只不过站在你面前的无辜者。~ = ~有……一些法子……能帮你控制巴尔的本质，把它引向善而不是恶。巴尔萨扎跟我说过，你若合他的意，就给你机会学这些技法。他教过我，那其实是帮助控心、平气的简单练习。~ = ~我正在权衡值不值得教你，或者不教——我甚至到了给你选择的余地，而也许我本不该给。~
+    ++ ~我愿意学这些「练习」，伊洛斯，如果它能帮我控制体内这……东西。我不喜欢一个嗜杀的死去之神的本源像弹竖琴一样拨弄我。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_11
+    ++ ~好！我是说，我当然愿意！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_11
+    ++ ~我不太确定。这些练习究竟*做*什么？何必费这个劲？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_13
+    ++ ~我不想学你那些可悲的「心智训练」技法。我的脑子就现在这样挺好，我也要它一直这样！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD3_12
     ++ ~I might be willing to participate in these exercises, but while you're at it, can you teach the rest of Faerun as well?!  Sometimes I think my dark essence is used far too much to explain away something everyone has within them.  The ability to destroy, or to build.~ + PCD3_12
   END
 
   IF ~~ PCD3_2
-    SAY ~You are a monster, <CHARNAME>--your instinct is to kill anything, everything.  I can't help but think that the next time I turn around, you'll be the slayer, murdering some innocent who did naught but exist in your presence.~ = ~There are...ways...to help control your Bhaal essence, to direct it toward the cause of good and not towards evil.  I was told by Balthazar that if you were amiable to his cause, to give you the opportunity to learn some of these techniques.  He taught them to me, and they are in truth simple exercises to help control the mind and calm the spirit.~ = ~I'm debating whether it is worth teaching you, or not- I'm even going so far as to give you the option, when I'm almost certain I should not.  You are a fool, and do not deserve such a chance as I could give you.~
-    ++ ~I would be glad to learn some of these 'exercises', Iylos, if it will help control this...thing...inside me.  I don't like having the essence of a murderous dead god playing me like a harp.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_11
-    ++ ~Yes!  I mean, of course I would!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_11
-    ++ ~I'm not so sure.  What exactly do these exercises *do*?  Why bother?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_13
-    ++ ~I don't want to learn any of your pathetic 'mental training' techniques.  My mind is just the way I like it, and that's how I'm going to keep it!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD3_12
+    SAY ~（叹气）你是个怪物，<CHARNAME>——你的本能是杀掉一切、任何东西。我忍不住想，下次我回头，你就会是杀戮者，杀掉一个只不过站在你面前的无辜者。~ = ~有……一些法子……能帮你控制巴尔的本质，把它引向善而不是恶。巴尔萨扎跟我说过，你若合他的意，就给你机会学这些技法。他教过我，那其实是帮助控心、平气的简单练习。~ = ~我正在权衡值不值得教你，或者不教——我甚至到了给你选择的余地，而我几乎确信我不该给。你是个蠢货，不配得到我能给你的这种机会。~
+    ++ ~我愿意学这些「练习」，伊洛斯，如果它能帮我控制体内这……东西。我不喜欢一个嗜杀的死去之神的本源像弹竖琴一样拨弄我。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_11
+    ++ ~好！我是说，我当然愿意！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_11
+    ++ ~我不太确定。这些练习究竟*做*什么？何必费这个劲？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_13
+    ++ ~我不想学你那些可悲的「心智训练」技法。我的脑子就现在这样挺好，我也要它一直这样！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD3_12
   END
 
   IF ~~ PCD3_11
-    SAY ~I can't for the life of me wonder why.  I will wake you up tomorrow morning, before the sun rises, so I can teach you some of these techniques.~
-    ++ ~Thank you, Iylos.  I would appreciate that...perhaps I can even teach you a few things.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) SetGlobal("BLK#IylosMeditation","GLOBAL",1)~ EXIT
-    ++ ~Fine by me.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~Before sunrise?  How am I supposed to wake up before *sunrise*?  (groan)~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_111
-    ++ ~I'm not sure I want to be taught anything by you, actually...~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_112
+    SAY ~我怎么想也想不出为什么。明早天亮前我会叫醒你，好教你一些技法。~
+    ++ ~谢谢你，伊洛斯。我很感激……也许我甚至能教你几手。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) SetGlobal("BLK#IylosMeditation","GLOBAL",1)~ EXIT
+    ++ ~我没意见。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~天亮前？我怎么可能在*天亮*前醒来？（呻吟）~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_111
+    ++ ~其实我不太确定想让你教我什么……~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_112
   END
 
   IF ~~ PCD3_12
-    SAY ~I am offering you a chance to overcome your heritage!  Are you ignorant, stupid, or do you prefer to revel in the death that it offers you?!~
-    ++ ~Perhaps, but that is *my* choice, not yours.  And I'm choosing to 'give up the opportunity', not you.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD3_112
-    ++ ~Shut up, I'm not *stupid*, I JUST HAVE PROBLEMS!!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD3_121
-    ++ ~Fine, I will agree.  For the time being.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_122
+    SAY ~我是在给你一个克服自身血统的机会！你是无知、愚蠢，还是宁愿沉醉于它给你带来的死亡？！~
+    ++ ~也许吧，可那是*我*的选择，不是你的。我选择「放弃这个机会」，不是你。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD3_112
+    ++ ~闭嘴，我*不*蠢，我只是有问题！！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD3_121
+    ++ ~好，我答应。就眼下而言。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_122
   END
 
   IF ~~ PCD3_13
-    SAY ~They will help you better control your mind, and organise your thoughts.  Balthazar taught them to me so I could show you how to help control or at least influence your Bhaal blood.~
-    ++ ~Okay, I'll do it.  Sunrise tomorrow.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_122
+    SAY ~它们能帮你更好地控制心智、整理思绪。巴尔萨扎教了我，好让我教你如何控制、至少影响你的巴尔之血。~
+    ++ ~好，我做。明天日出。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_122
     ++ ~No thanks.~ + PCD3_112
-    ++ ~Why would I want to do something like that?!  Get lost!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_1121
-    ++ ~Shut up, I'm not *stupid*, I JUST HAVE PROBLEMS!!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD3_122
+    ++ ~我为什么会想做那种事？！走开！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_1121
+    ++ ~闭嘴，我*不*蠢，我只是有问题！！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD3_122
   END
 
   IF ~~ PCD3_111
-    SAY ~I'm sure you'll survive, <CHARNAME>.~
+    SAY ~我相信你能挺过去，<CHARNAME>。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD3_112
-    SAY ~Your choice, but you are missing a valuable opportunity--you aren't a fool, <CHARNAME>.  Surely you can see the merit in this?~
-    ++ ~No, actually, I can't.  Look, Iylos, I just don't want to do it.  End of story.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_1121
-    ++ ~Whatever.  Fine.  I'll do it.~ DO ~SetGlobal("BLK#IylosMeditation","GLOBAL",1)~ + PCD3_122
-    ++ ~Oh, fine...I'll do it, in a reluctant manner, of course!  And I'll pout about it, and sulk!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_1122
-    ++ ~I'm NOT doing it, idiot!  Can't you get that through your thick skull?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_1123
+    SAY ~你的选择，可你正在错失一个宝贵的机会——你不是蠢货，<CHARNAME>。你总该看得出这里的好处吧？~
+    ++ ~不，其实我看不出。听着，伊洛斯，我就是不想做。就这样。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_1121
+    ++ ~随便。行。我做。~ DO ~SetGlobal("BLK#IylosMeditation","GLOBAL",1)~ + PCD3_122
+    ++ ~哦，好吧……我做，当然是勉勉强强地做！我还要为此撅嘴、闹别扭！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_1122
+    ++ ~我*不*做，蠢货！你这颗榆木脑袋就装不进去吗？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_1123
   END
 
   IF ~~ PCD3_121
-    SAY ~If you say so, <CHARNAME>...if you say so.  You're missing a valuable opportunity--you aren't a fool, are you, <CHARNAME>?  Surely you can see the merit in this?~
-    ++ ~No, actually, I can't.  Look, Iylos, I just don't want to do it.  End of story.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_1121
+    SAY ~你这么说就这么吧，<CHARNAME>……你这么说就这么吧。你正在错失一个宝贵的机会——你不是蠢货吧，<CHARNAME>？你总该看得出这里的好处？~
+    ++ ~不，其实我看不出。听着，伊洛斯，我就是不想做。就这样。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_1121
     ++ ~Whatever.  Fine.  I'll do it.~ + PCD3_122
-    ++ ~Oh, fine...I'll do it, in a reluctant manner, of course!  And I'll pout about it, and sulk!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_1122
-    ++ ~I'm NOT doing it, idiot!  Can't you get that through your thick skull?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_1123
+    ++ ~哦，好吧……我做，当然是勉勉强强地做！我还要为此撅嘴、闹别扭！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD3_1122
+    ++ ~我*不*做，蠢货！你这颗榆木脑袋就装不进去吗？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD3_1123
   END
 
   IF ~~ PCD3_122
-    SAY ~Good--tomorrow morning, then.~
+    SAY ~好——那就明天早上。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD3_1121
-    SAY ~How pathetic.~
+    SAY ~真可悲。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD3_1122
-    SAY ~Of course--but you'll survive, I'm sure.  Tomorrow morning, then.~
+    SAY ~当然——可你会挺过去的，我确信。那就明天早上。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD3_1123
-    SAY ~I can't understand why you would throw away such an opportunity--*you* are the simpleton, the idiot, the fool here, <CHARNAME>.  Not me.~
+    SAY ~我不明白你为什么要扔掉这样的机会——*你*才是这里的糊涂蛋、蠢货、傻瓜，<CHARNAME>。不是我。~
     IF ~~ EXIT
   END
 
@@ -521,114 +521,114 @@ APPEND LK#IYLJ
 
 // 4th PC Dialogue (Friendship)
   IF WEIGHT #-2 ~Global("LK#IylosTalks","GLOBAL",7) RealGlobalTimerExpired("LK#IylosTalksTimer","GLOBAL")~ PCD4
-    SAY ~Good morning, <CHARNAME>.  I trust you slept well; are you ready to begin?~ [LK#I157]
-    ++ ~Yes, thank you.  Let's get started.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD4_1
-    ++ ~No...could you please explain exactly what we'll be doing?~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD4_2
-    ++ ~I guess so.~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD4_1
+    SAY ~早上好，<CHARNAME>。我相信你睡得不错；准备开始了吗？~ [LK#I157]
+    ++ ~是的，谢谢。我们开始吧。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD4_1
+    ++ ~不……你能不能先说说我们到底要做什么？~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD4_2
+    ++ ~我想可以。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD4_1
   END
 
   IF ~~ PCD4_1
-    SAY ~Imagine the desert, a vast expanse of yellow sand and blue sky.  Take a deep breath; imagine it is filling your chest, your whole body.  Wait a moment...and breath out.~ [LK#I159]  = ~Take a few more deep breaths, and relax.  Imagine the light of the warm sun infusing you; it starts at the tip of your head, a pleasant, glowing energy.  It spreads to your neck, your shoulders--your arms, your fingertips.~ = ~Feel the breeze on your skin; notice which parts of you are warm, and which are cold.  Feel the light spreading to your heart.  It becomes brighter, the warm glow banishing the darkness.  The light uses your heart as a focus, and radiates back out to your fingers, spreading to your stomach, your legs, your toes.~ = ~Feel the sand beneath your feet, comfortable and inviting.  Let your worries, your doubts, your fears drain down into the earth and away, until all that is left is peace and golden light.~ = ~It shines out from every part of you--nothing can touch you if you do not will it.  You are at peace; you are safe.  Open your eyes.~ = ~The sunrise is beautiful, is it not?  The dusky pinks, mingling with the soft oranges...~ = ~It'll rain later today, <CHARNAME>.  We should get moving.~
-    ++ ~I...I feel the calmest I have in...since I can remember.  Thank you, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) SetGlobal("LK#IylosMeditateAgain","GLOBAL",1)~ + PCD4_11
-    ++ ~The sky is so...so *beautiful*.  I've never really gotten up this early before to appreciate it...~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) SetGlobal("LK#IylosMeditateAgain","GLOBAL",1)~ + PCD4_12
-    ++ ~Well, that was a total waste of time.  I don't feel any different at all.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD4_13
-    ++ ~Wow...what *was* that?  I felt so serene, so at peace--I'm not...I feel almost like Bhaal can't touch me.  Like for once, I'm the one who has the murder in check.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2) SetGlobal("LK#IylosMeditateAgain","GLOBAL",1)~ + PCD4_11
-    ++ ~Wasn't that just a normal meditation?  I've done such things before, and that was no different.  Nonetheless...I do feel a little better.  Thank you.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD4_11
-    ++ ~That was pathetic.  You think a combination of words and dramatic pauses can stop my Bhaal essence from 'taking over' me?  Hah.  A completely wasteful lack of sleep...surely I could have spent it better than *that*.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD4_13
+    SAY ~想象沙漠，一片广大的黄沙与蓝天。深吸一口气；想象它充满你的胸腔、你的全身。等一等……然后呼出去。~ [LK#I159]  = ~再深吸几口气，放松。想象温暖的阳光注入你；它从你头顶开始，是舒服的、发光的能量。它蔓延到你的脖颈、肩膀——你的手臂、指尖。~ = ~感受肌肤上的微风；留意你身上哪些地方暖、哪些地方凉。感受那光蔓延到你的心。它变得更亮，温暖的光把黑暗驱散。光以你的心为焦点，又辐射回你的指尖，漫到你的腹、你的腿、你的脚趾。~ = ~感受脚下的沙，舒适而宜人。让你的忧虑、疑虑、恐惧流进大地、流走，直到只剩下宁静与金色的光。~ = ~它从你身上每一处照出来——只要你不愿意，没有什么能碰你。你安宁；你安全。睁开眼。~ = ~日出很美，不是吗？暗淡的粉，混着柔和的橙……~ = ~今天晚些会下雨，<CHARNAME>。我们该动身了。~
+    ++ ~我……我从记事以来从没这么平静过。谢谢你，伊洛斯。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) SetGlobal("LK#IylosMeditateAgain","GLOBAL",1)~ + PCD4_11
+    ++ ~天空这么……这么*美*。我以前从没这么早起过，来好好看它……~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1) SetGlobal("LK#IylosMeditateAgain","GLOBAL",1)~ + PCD4_12
+    ++ ~嗯，那完全是浪费时间。我一点也没觉得有什么不同。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD4_13
+    ++ ~哇……那*是*什么？我感到那么宁静、那么平和——我不……我几乎觉得巴尔碰不到我。好像头一次，是我把杀戮压住了。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2) SetGlobal("LK#IylosMeditateAgain","GLOBAL",1)~ + PCD4_11
+    ++ ~那不就是普通的冥想吗？我以前做过这种事，没什么不同。不过……我确实觉得好了一点。谢谢你。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD4_11
+    ++ ~真可悲。你以为一串词加几个戏剧性的停顿，就能阻止我的巴尔本质「接管」我？哈。白白少睡一场……我明明能把那时间用得比*那*好得多。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PCD4_13
   END
 
   IF ~~ PCD4_2
-    SAY ~It is a simple meditation, <CHARNAME.  It will not cause you any harm at all, I promise you--Balthazar taught it to me as a young monk, and found that it helped him to bring peace to his conflicted existance.  It helps to calm the mind, still the onslaught of thoughts and emotions, and bring serenity upon you.  Shall we start?~
+    SAY ~这是简单的冥想，<CHARNAME>。它绝不会伤到你，我向你保证——巴尔萨扎还是年轻修士时教过我，他发现这帮他给自己矛盾的存在带来安宁。它有助于平心、止住思绪与情绪的冲击，把宁静带给你。我们开始吗？~
     ++ ~Yes.~ + PCD4_1
-    ++ ~Uh...no, I don't think so.  Sorry.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD4_1131
+    ++ ~呃……不，不做了。抱歉。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD4_1131
   END
 
   IF ~~ PCD4_11
-    SAY ~It is a simple meditation, <CHARNAME>--Balthazar taught it to me as a young monk, finding it helped him bring peace to his conflicted existance.  It helps to calm the mind, still the onslaught of thoughts and emotions, and bring serenity upon you.~
-    ++ ~It worked...incredibly well.  I feel less tense, less...well, less everything.  Bhaal is still there, but it is less insistent...I feel peace.  Can we do it again tomorrow morning?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD4_111
+    SAY ~这是简单的冥想，<CHARNAME>——巴尔萨扎还是年轻修士时教过我，他发现这帮他给自己矛盾的存在带来安宁。它有助于平心、止住思绪与情绪的冲击，把宁静带给你。~
+    ++ ~它起效了……好得出奇。我没那么紧绷，没那么……嗯，什么都没那么了。巴尔还在，可它没那么逼人……我感到平和。明天早上我们还能再做一次吗？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD4_111
     ++ ~It worked quite well.  Shall we get going, as you said?~ + PCD4_112
-    ++ ~Well...it didn't really stop any of those things, but I do feel a bit better.~ ~SetGlobal("LK#IylosMeditateAgain","GLOBAL",1)~  DO ~SetGlobal("LK#IylosMeditateAgain","GLOBAL",1)~ + PCD4_113
-    ++ ~I'm calm, but eh...nothing else.  Thanks anyway.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD4_114
+    ++ ~嗯……它其实没止住那些东西，可我确实觉得好了一点。~ ~SetGlobal("LK#IylosMeditateAgain","GLOBAL",1)~  DO ~SetGlobal("LK#IylosMeditateAgain","GLOBAL",1)~ + PCD4_113
+    ++ ~我平静了，可是呃……别的都没有。还是谢谢你。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD4_114
   END
 
   IF ~~ PCD4_12
-    SAY ~Yes, it is.~
+    SAY ~是的，是这样。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD4_13
-    SAY ~<CHARNAME>, kindly refrain from ever speaking to me again, if you can help it.  If you cannot appreciate the sanctity and serenity of meditation, I cannot appreciate nor side with you.~
+    SAY ~<CHARNAME>，若你能做到，就请从此别再跟我说话。你若领会不了冥想的神圣与宁静，我也领会不了你，也不会站在你这边。~
     IF ~~ DO ~SetGlobal("LK#IylosAngryWithPC","GLOBAL",1)~ EXIT
   END
 
   IF ~~ PCD4_111
-    SAY ~Of course.  I'm glad it helped, <CHARNAME>.~
-    ++ ~You have no idea.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~Thank you, Iylos--I really appreciate it.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD4_1111
-    ++ ~Thanks, I guess.~ EXIT
+    SAY ~当然。我很高兴它帮上了忙，<CHARNAME>。~
+    ++ ~你根本不知道。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~谢谢你，伊洛斯——我真的很感激。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD4_1111
+    ++ ~谢谢，我想。~ EXIT
   END
 
   IF ~~ PCD4_112
-    SAY ~Of course.  I'm glad it helped, <CHARNAME>.~
+    SAY ~当然。我很高兴它帮上了忙，<CHARNAME>。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD4_113
-    SAY ~I'm glad it helped, if only a little.  I'm not surprised; it often takes a lot of practice to meditate properly, but hopefully I can help a little each morning.~
-    ++ ~I'd like that.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    SAY ~我很高兴它帮上了忙，哪怕只有一点。我不意外；要好好冥想通常得练很久，但希望我每天早上都能帮上一点。~
+    ++ ~我愿意。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
     ++ ~Uh...no thanks.  I mean, it was interesting, but I wouldn't want to do that *every* morning.~ + PCD4_1131
-    ++ ~Okay.~ EXIT
-    ++ ~No way.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD4_1131
+    ++ ~好。~ EXIT
+    ++ ~不行。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD4_1131
   END
 
   IF ~~ PCD4_114
-    SAY ~I'm not surprised; it often takes a lot of practice to meditate properly, but hopefully I can help a little each morning.~
-    ++ ~I'd like that.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    SAY ~我不意外；要好好冥想通常得练很久，但希望我每天早上都能帮上一点。~
+    ++ ~我愿意。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
     ++ ~Uh...no thanks.  I mean, it was interesting, but I wouldn't want to do that *every* morning.~ + PCD4_1131
-    ++ ~Okay.~ EXIT
-    ++ ~No way.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD4_1131
+    ++ ~好。~ EXIT
+    ++ ~不行。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCD4_1131
   END
 
   IF ~~ PCD4_1111
-    SAY ~No problem.~
+    SAY ~没问题。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD4_1131
-    SAY ~Your choice, but it could be very beneficial...~
-    ++ ~Alright, fine, I'll do it.  But can we do it a little bit later, perhaps?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD4_11311
-    ++ ~No thanks.~ DO ~SetGlobal("BLK#IylosNoMeditation","GLOBAL",1)~ + PCD4_11312
+    SAY ~你的选择，可它可能很有益……~
+    ++ ~好吧，行，我做。不过能不能稍晚一点？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD4_11311
+    ++ ~不用了。~ DO ~SetGlobal("BLK#IylosNoMeditation","GLOBAL",1)~ + PCD4_11312
   END
 
 
   IF ~~ PCD4_11311
-    SAY ~If you wish.~ [LK#I221]
-    ++ ~Thank you, Iylos.  I'd like that.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD4_1
+    SAY ~随你。~ [LK#I221]
+    ++ ~谢谢你，伊洛斯。我愿意。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PCD4_1
     ++ ~Nah, actually, I've changed my mind.  No thanks.~ + PCD4_11312
   END
 
   IF ~~ PCD4_11312
-    SAY ~<CHARMAME>, you are a fool.~
+    SAY ~<CHARNAME>，你是个蠢货。~
     IF ~~ EXIT
   END
   
 
 // 5th PC Dialogue (Friendship)
   IF WEIGHT #-2 ~Global("LK#IylosTalks","GLOBAL",9) RealGlobalTimerExpired("LK#IylosTalksTimer","GLOBAL")~ PCD5
-    SAY ~<CHARNAME>, I have...something I wish to impart to you.~ [LK#I161]  = ~No!  No, do not say anything.  I do not want to hear it right now.~ [LK#I162]  = ~My actions towards you have been...regrettable.  I have been callous, rude, and unkind, and this is not the way one should treat his companions.~ = ~I did not want to believe you could be human.  I wanted to believe you some monstrous beast in human guise, who would snap momentarily and slaughter every man, woman and child around <PRO_HIMHER>.~ = ~I was wrong.  And I understand if you do not wish me to be in this party anymore, I just wished to tell you that- I, it was not my intention to be so rude to you, nor your companions.~
-    ++ ~Why apologise, Iylos?  It's already forgiven.~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD5_1
-    ++ ~ I kept you with me because you were a good meat-shield, and I...I thought you should know that.  If you'd like to leave, that's okay.~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD5_2
-    ++ ~I see.  Well, that's too bad.  You can leave now, Iylos.~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD5_3
-    ++ ~You can be so stupid sometimes, Iylos, you really can.  (sigh)~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD5_4
+    SAY ~<CHARNAME>，我……有些话想跟你说。~ [LK#I161]  = ~不！不，什么都别说。我现在不想听。~ [LK#I162]  = ~我对你的作为……令人遗憾。我一直冷漠、粗鲁、不友善，而这不是对待同伴该有的方式。~ = ~我不想相信你可能是人。我宁愿相信你是披着人皮的某种怪兽，随时会发作，把<PRO_HIMHER>身边的男女老少统统杀光。~ = ~我错了。你若不愿我再留在这队伍里，我理解，我只是想告诉你——我，我不是有意对你、对你的同伴这样无礼。~
+    ++ ~为什么道歉，伊洛斯？早就原谅了。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD5_1
+    ++ ~我留着你，是因为你是面好肉盾，我……我想你该知道这点。你若想走，也行。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD5_2
+    ++ ~我明白了。那真不巧。你现在可以走了，伊洛斯。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD5_3
+    ++ ~你有时候真蠢，伊洛斯，真的。（叹气）~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD5_4
   END
 
   IF ~~ PCD5_1
-    SAY ~Then let us continue--but still, I made a mistake.  I judged you prematurely, and I would not like to make the mistake again.  I...thank you, <CHARNAME>, for putting up with my behaviour.  Perhaps we can be more cordial in future.~
+    SAY ~那我们继续——可我还是犯了错。我过早评判了你，我不愿再犯同样的错。我……谢谢你，<CHARNAME>，容忍我的态度。也许以后我们能更和气些。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD5_2
-    SAY ~How very droll, <CHARNAME>.~
+    SAY ~真滑稽，<CHARNAME>。~
     ++ ~I wasn't joking.~ + PCD5_21
     ++ ~Thanks.  Your apology is accepted, Iylos, but--I swear, if you try to get me to meditate again, I will start to tear out my hair.~ + PCD5_22
     ++ ~Droll?  Me?  Never.~ + PCD5_23
@@ -636,57 +636,57 @@ APPEND LK#IYLJ
   END
 
   IF ~~ PCD5_3
-    SAY ~If I...must.  Perhaps we shall meet again, <CHARNAME>.~
+    SAY ~如果我……必须的话。也许我们还会再见，<CHARNAME>。~
     IF ~~ DO ~LeaveParty() SetGlobal("LK#IylosJoinedParty","GLOBAL",0) SetGlobal("LK#IylosLeftGood","GLOBAL",1) EscapeAreaMove("AR5500",958,1567,5)~ EXIT
   END
 
   IF ~~ PCD5_4
-    SAY ~Occasionally, yes, I can.  What say you, <CHARNAME>?  Do you accept my apology--even though perhaps it was not the wisest of actions, in retrospect...bah.~
-    ++ ~Apology accepted, Iylos.  Don't worry about it.  We're all a little snarky sometimes.~ EXIT
+    SAY ~偶尔，是的，我会。你说呢，<CHARNAME>？你接受我的道歉吗——虽然回想起来，那也许不是最明智的举动……呸。~
+    ++ ~道歉我接受，伊洛斯。别放在心上。我们有时都有点刻薄。~ EXIT
     ++ ~I can't accept your apology, Iylos, but please stay with the group.  You are rather useful, I'll give you that.~ + PCD5_41
     ++ ~I'm not sure.  Maybe.  Give me some time to think about it.~ + PCD5_42
     ++ ~No.  Just...just leave, Iylos.  Please.~ + PCD5_3
   END
 
   IF ~~ PCD5_21
-    SAY ~I see.  In that case, perhaps I should leave.~
+    SAY ~我明白了。那样的话，也许我该走了。~
     ++ ~No, please stay.  You may be a meatshield, but you're a *good* meatshield!~ + PCD5_41
     ++ ~You can stay.  For now.~ + PCD5_41
     ++ ~Goodbye, then.  Fare thee well!~ + PCD5_3
   END
 
   IF ~~ PCD5_22
-    SAY ~I will...try.  I cannot promise such a feat, however- but surely the lure of meditation will grasp you eventually.~
+    SAY ~我会……试试。可我保证不了——不过冥想的诱惑迟早会抓住你的。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD5_23
-    SAY ~Of course not.~
+    SAY ~当然不会。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD5_41
-    SAY ~So I am to be used as a meatshield, then.  I suppose there is nothing for it.~
+    SAY ~那么我就是要被当肉盾用了。我想也没别的办法。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD5_42
-    SAY ~So, I am to be used as a meatshield, then.  I await your answer.~
+    SAY ~那么，我就是要被当肉盾用了。我等你的答复。~
     IF ~~ DO ~SetGlobal("LK#IylosFriendsDecisionUncertain","GLOBAL",1)~ EXIT
   END
 
 
 // 6th PC Dialogue (Friendship)
   IF WEIGHT #-2 ~Global("LK#IylosTalks","GLOBAL",11) RealGlobalTimerExpired("LK#IylosTalksTimer","GLOBAL")~ PCD6
-    SAY ~<CHARNAME>, your pack is open- here...~ [LK#I231] = ~There we are, fixed.~
-    ++ ~Did you just do something...kind?  For me?  Who are you, and what have you done with Iylos?!~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD6_1
-    ++ ~Thanks, Iylos.  I didn't realise it had come open.~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD6_2
-    ++ ~It's all almost over, isn't it?  Oh, thank you.  Ah, I wish it didn't come down to these battles- I wish there was another way to do this.  (sigh)~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD6_3
-    ++ ~I could have done that myself, Iylos.~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD6_4
+    SAY ~<CHARNAME>，你的包裹开了——这里……~ [LK#I231] = ~好了，修好了。~
+    ++ ~你刚才是不是做了件……好心的事？为我？你是谁，你把伊洛斯怎么了？！~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD6_1
+    ++ ~谢谢，伊洛斯。我都没注意到它开了。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD6_2
+    ++ ~一切都快结束了，是吧？哦，谢谢你。唉，我真希望不必落到这些战斗上——我真希望还有别的法子。（叹气）~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD6_3
+    ++ ~我自己也能弄好，伊洛斯。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1)~ + PCD6_4
   END
 
   IF ~~ PCD6_1
-    SAY ~Are you insinuating that I am anything less than courteous, <CHARNAME>?~ = ~...what?  Why're you looking at me like that?~
+    SAY ~你是在暗示我没那么有礼，<CHARNAME>？~ = ~……什么？你为什么那样看我？~
     ++ ~You honestly can't have just said that.  Iylos, you're one of the most terrible people I know.  You really are.  (laugh)~ + PCD6_11
     ++ ~Ah...no reason.  No reason at all.~ + PCD6_11
     ++ ~You're being sarcastic, right?  Anything less than courteous?  Hah!  Now *that* is a joke.~ + PCD6_11
@@ -694,31 +694,31 @@ APPEND LK#IYLJ
   END
 
   IF ~~ PCD6_2
-    SAY ~No problem, <CHARNAME>.  I just hate to see things out of order, is all.  I've noticed that you aren't the most...organised person, sometimes.~ = ~I'm just trying to help out however I can.~
+    SAY ~没问题，<CHARNAME>。我只是看不得东西乱着。我注意到你有时候不是最……有条理的人。~ = ~我只是想尽力帮点忙。~
     ++ ~I know my faults.  You don't need to lord them over me.~ + PCD6_21
     ++ ~I am so!  As you'll recall, it was I who organised *your* pack last night, Iylos.~ + PCD6_22
-    ++ ~If you say so.~ EXIT
+    ++ ~你这么说就这么吧。~ EXIT
     ++ ~No, I'm not.  But I'm more intelligent than you.~ + PCD6_23
   END
 
   IF  ~~ PCD6_3
-    SAY ~So do I.  But it seems there is no other way, as it is...unless some miracle were to occur, we're stuck fighting.  I suppose there isn't much for it but to keep going--it's either us, or them, at this point.~
+    SAY ~我也一样。可看来别无他法，就现在而言……除非出现什么奇迹，我们只能打下去。到这一步，我想也没什么别的办法——不是我们，就是他们。~
     ++ ~That's a rather drastic turnaround, Iylos.  What provoked this change of view?~ + PCD6_31
-    ++ ~I know what you mean.  (sigh)~ EXIT
-    ++ ~Whatever.~ EXIT
+    ++ ~我明白你的意思。（叹气）~ EXIT
+    ++ ~随便。~ EXIT
     ++ ~Well, we can always pray.~ + PCD6_32
   END
 
   IF ~~ PCD6_4
-    SAY ~I'm sure you could, but it is always easier for someone else to do it.  And I know your penchant for being unorganised; you could have forgotten about it, and lost something important.~ = ~I'm just trying to help out however I can.~
+    SAY ~我相信你能，可让别人来做总是更省事。而且我知道你爱乱放东西的毛病；你说不定会忘了它，丢什么要紧的东西。~ = ~我只是想尽力帮点忙。~
     ++ ~I know my faults.  You don't need to lord them over me.~ + PCD6_21
     ++ ~I am so!  As you'll recall, it was I who organised *your* pack last night, Iylos.~ + PCD6_22
-    ++ ~If you say so.~ EXIT
+    ++ ~你这么说就这么吧。~ EXIT
     ++ ~No, I'm not.  But I'm more intelligent than you.~ + PCD6_23
   END
 
   IF ~~ PCD6_11
-    SAY ~If you say so, <CHARNAME>.  At least I can't compare to your cooking, however...simply atrocious.~ = ~Ah, but don't worry.  We have at least one consummate cook in this party.~
+    SAY ~你这么说就这么吧，<CHARNAME>。不过至少我在厨艺上比不过你……简直糟糕透顶。~ = ~啊，不过别担心。这队伍里至少有一个厨艺高手。~
     ++ ~You can...cook?  Since when?  Why haven't you said this before?!~ + PCD6_111
     ++ ~My cooking is wonderful!  It is *yours* which is to be deplored!~ + PCD6_112
     ++ ~My cooking is fine, Iylos.  Perhaps it is your tastebuds which have failed you.~ + PCD6_113
@@ -728,19 +728,19 @@ APPEND LK#IYLJ
   END
 
   IF ~~ PCD6_21
-    SAY ~Of course I do.  *Someone* has to make sure you don't get conceited, after all.~
+    SAY ~当然。总得*有人*保证你别太自满。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_22
-    SAY ~Ah...true.  Even still, you're remarkably unorganised...for...~ = ~I've really lost that, haven't I?  (sigh)~
+    SAY ~啊……确实。可即便如此，你还真是毫无条理……真……~ = ~我确实把它弄丢了，是吧？（叹气）~
     ++ ~Yep.  I got you good.~ + PCD6_221
     ++ ~Bwahahaha.~ + PCD6_221
     ++ ~Don't worry about it, Iylos.  *Someone* has to make sure you don't get conceited, after all.~ + PCD6_222
   END
 
   IF ~~ PCD6_23
-    SAY ~If you say so, <CHARNAME>.  I can't say the same about you when you cook, however...simply atrocious.  (laugh)~ = ~Ah, but don't worry.  We have at least one consummate cook in this party.~
+    SAY ~你这么说就这么吧，<CHARNAME>。可你做饭时我可说不了同样的话……简直糟糕透顶。（笑）~ = ~啊，不过别担心。这队伍里至少有一个厨艺高手。~
     ++ ~You can...cook?  Since when?  Why haven't you said this before?!~ + PCD6_111
     ++ ~My cooking is wonderful!  It is *yours* which is to be deplored!~ + PCD6_112
     ++ ~My cooking is fine, Iylos.  Perhaps it is your tastebuds which have failed you.~ + PCD6_113
@@ -750,24 +750,24 @@ APPEND LK#IYLJ
   END
 
   IF ~~ PCD6_31
-    SAY ~Extensive thinking.  Contemplation.  Listening to you.~
+    SAY ~大量的思考。沉思。听你说话。~
     ++ ~You mean you *do* listen to me?  Wow.  That's a relief.~ + PCD6_311
     ++ ~Well, it's a lovely change.  Keep it up.~ + PCD6_311
     ++ ~Eh.  I think I preferred the old 'stop fighting you are a horrible person', honestly.~ + PCD6_312
   END
 
   IF ~~ PCD6_32
-    SAY ~Indeed we can, <CHARNAME>.  Indeed we can.~
+    SAY ~我们当然能，<CHARNAME>。我们当然能。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_111
-    SAY ~Mostly because I enjoyed watching you struggle with the fire.  If you wish, I could cook, from now on.~ = ~But right now, we have a quest to be getting on with--places to go, people to see, right?  Well, lets get going.~
+    SAY ~多半是因为我喜欢看你跟火较劲。你若愿意，从今往后我可以来做饭。~ = ~可现在，我们有任务要办——有地方要去，有人要见，对吧？那就走吧。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_112
-    SAY ~Hmm.  Are you telling me that you magically procured the mushroom, uh, 'soup' that we had the other night, and didn't spend all evening slavering over the fire trying to perfect it, because it tasted like boiled cabbage?~
+    SAY ~嗯。你是说，那天晚上我们吃的那道蘑菇「汤」是你用魔法变出来的，你并没整晚对着火流口水想把它弄好，因为它吃起来像煮卷心菜？~
     ++ ~Yes!  I do have magical abilities, you know.  I am a spawn of Bhaal.~ + PCD6_1121
     ++ ~Fine.  You win.  But you're cooking from now on!~ + PCD6_114
     ++ ~I hate you, forever and ever, and my hatred is pure.  I hope you die painfully and horribly, on a bed of boiled cabbage.~ + PCD6_1122
@@ -775,12 +775,12 @@ APPEND LK#IYLJ
   END
 
   IF ~~ PCD6_113
-    SAY ~Perhaps, but somehow, I doubt it.~
+    SAY ~也许吧，可不知怎的，我不太信。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_114
-    SAY ~I would be more than happy to cook, if you will let me.  Because as I remember, unless you magically procured the mushroom, uh, 'soup' that we had the other night, which tasted like boiled cabbage, by the way, your cooking is terrible.~
+    SAY ~你若让我来，我会很乐意做饭。因为我记得，除非那道蘑菇「汤」——顺带说，味道像煮卷心菜——是你用魔法变出来的，你的厨艺很糟。~
     ++ ~Yes!  I do have magical abilities, you know.  I am a spawn of Bhaal.~ + PCD6_1121
     ++ ~Fine.  You win.  But you *are* cooking from now on!~ + PCD6_1141
     ++ ~I hate you, forever and ever, and my hatred is pure.  I hope you die painfully and horribly, on a bed of boiled cabbage.~ + PCD6_1122
@@ -788,47 +788,47 @@ APPEND LK#IYLJ
   END
 
   IF ~~ PCD6_115
-    SAY ~You have a point, there.  If you were, I'm sure we would all be long dead by now.~
+    SAY ~你这话有道理。你要是那样，我肯定我们早都死了。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_221
-    SAY ~You got me good, indeed.  Always next time, I suppose.~
+    SAY ~你确实把我堵住了。我想总有下次。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_222
-    SAY ~Is there any point trying to argue?  (sigh)~
+    SAY ~争辩还有意义吗？（叹气）~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_311
-    SAY ~I do listen to you, yes.  When it suits me, of course.  But for now, let us continue our journey--there is much to do, as I recall.  Fighting Bhaalspawn, for one.  Defeating them.  Keeping their heads as trophies, of course.~
+    SAY ~我确实听你说话，是的。当然，是在合我意的时候。可现在，我们继续赶路吧——我记得有很多事要做。比如跟巴尔之子打。击败他们。当然，把他们的头留作战利品。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_312
-    SAY ~Truly?  Well, I shall endeavour to a 'horrible person' to you in future, then.~
+    SAY ~当真？那我以后就努力对你做个「可怕的人」。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_1121
-    SAY ~I suppose so, yes.  But that does not account for the mess you caused, <CHARNAME>.  Surely a *Bhaalspawn* could have cleaned up?  Or perhaps not, in this case.  But for now, let us continue our journey--there is much to do, as I recall.  Fighting Bhaalspawn, for one.  Defeating them.  Keeping their heads as trophies, of course.~
+    SAY ~我想是的。可这解释不了你弄出的那摊乱子，<CHARNAME>。一个*巴尔之子*总该收拾干净吧？也许在这件事上不行。可现在，我们继续赶路吧——我记得有很多事要做。比如跟巴尔之子打。击败他们。当然，把他们的头留作战利品。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_1122
-    SAY ~I know, <CHARNAME>.  I know.~
+    SAY ~我知道，<CHARNAME>。我知道。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_1123
-    SAY ~Of course it did, <CHARNAME>.  Of course it did.~
+    SAY ~当然会，<CHARNAME>。当然会。~
     IF ~~ EXIT
   END
 
   IF ~~ PCD6_1141
-    SAY ~As I said, I would be happy to.  But for now, let us continue our journey--there is much to do, as I recall.  Fighting Bhaalspawn, for one.  Defeating them.  Keeping their heads as trophies, of course.~
+    SAY ~我说过，我会乐意。可现在，我们继续赶路吧——我记得有很多事要做。比如跟巴尔之子打。击败他们。当然，把他们的头留作战利品。~
     IF ~~ EXIT
   END
 
@@ -837,61 +837,61 @@ APPEND LK#IYLJ
 // Iylos Dislike Dialogue (1)
 // -------------------------------------
   IF WEIGHT #-2 ~Global("LK#IylosDislikeTalks","GLOBAL",1) RealGlobalTimerExpired("LK#IylosDislikeTalksTimer","GLOBAL")~ PCDIS
-    SAY ~Watch yourself, <CHARNAME>.  I don't trust you, and I will watch your every move until I find that you have proved yourself.  But till then, remember that I will be watching you--and I'm not afraid to take action if need be.~ [LK#I160]
-    ++ ~What's that supposed to mean?!~ DO ~IncrementGlobal("LK#IylosDislikeTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosDislikeTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCDIS_1
-    ++ ~I wouldn't be so cocky if I were you, Iylos--you don't know who you're dealing with here.  I am a Bhaalspawn.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) IncrementGlobal("LK#IylosDislikeTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosDislikeTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCDIS_2
-    ++ ~Whatever.  Look, I don't really care.~ DO ~IncrementGlobal("LK#IylosDislikeTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosDislikeTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCDIS_2
-    ++ ~You're very welcome to leave if you want, Iylos.  You know I'm not going to commit some atrocity--or should, by now.~ DO ~IncrementGlobal("LK#IylosDislikeTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosDislikeTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCDIS_3
+    SAY ~当心你自己，<CHARNAME>。我不信任你，我会盯着你的一举一动，直到你证明了自己。但在那之前，记住我会盯着你——需要时我不怕动手。~ [LK#I160]
+    ++ ~那是什么意思？！~ DO ~IncrementGlobal("LK#IylosDislikeTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosDislikeTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCDIS_1
+    ++ ~换我我就不这么狂妄，伊洛斯——你不知道自己在跟谁打交道。我是巴尔之子。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1) IncrementGlobal("LK#IylosDislikeTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosDislikeTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCDIS_2
+    ++ ~随便。听着，我其实不在乎。~ DO ~IncrementGlobal("LK#IylosDislikeTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosDislikeTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCDIS_2
+    ++ ~你大可以走，伊洛斯。你知道我不会干什么暴行——或者说，到现在你该知道了。~ DO ~IncrementGlobal("LK#IylosDislikeTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosDislikeTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCDIS_3
   END
 
   IF ~~ PCDIS_1
-    SAY ~Watch yourself--exactly that.  I wouldn't have thought it terribly hard to understand.~
+    SAY ~当心你自己——正是这个意思。我本以为这不太难懂。~
     ++ ~Are you threatening me?~ + PCDIS_11
-    ++ ~Watch *yourself*, you arrogant git.  I do have other things to do that stand here listening to you whine!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCDIS_12
+    ++ ~当心*你自己*，你这个傲慢的混蛋。我还有别的事要干，不能站在这儿听你抱怨！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCDIS_12
     ++ ~I'm not stupid.~ + PCDIS_13
-    ++ ~(sigh) Look, Iylos.  I don't really like you, and you don't like me.  But we have a task to do--we have to stop this damned war, and I'm going to do that even if you aren't.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~  + PCDIS_14
+    ++ ~（叹气）听着，伊洛斯。我并不喜欢你，你也不喜欢我。可我们有任务——我们得止住这场该死的战争，就算你不干，我也要干。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~  + PCDIS_14
   END
 
   IF ~~ PCDIS_2
-    SAY ~My tutor was a Bhaalspawn; I know what you're capable of, <CHARNAME>.  Don't underestimate me.  I have watched you in battle; I have learnt your tactics, your weaknesses.~
+    SAY ~我的老师就是个巴尔之子；我知道你能做什么，<CHARNAME>。别小看我。我在战斗中观察过你；我摸清了你的战法、你的弱点。~
     ++ ~Are you threatening me?~ + PCDIS_11
-    ++ ~Watch *yourself*, you arrogant git.  I do have other things to do that stand here listening to you whine!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCDIS_12
+    ++ ~当心*你自己*，你这个傲慢的混蛋。我还有别的事要干，不能站在这儿听你抱怨！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCDIS_12
     ++ ~I'm not stupid.~ + PCDIS_13
-    ++ ~(sigh) Look, Iylos.  I don't really like you, and you don't like me.  But we have a task to do--we have to stop this damned war, and I'm going to do that even if you aren't.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~  + PCDIS_14
-    ++ ~Whatever- just go away!~DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~  + PCDIS_21
+    ++ ~（叹气）听着，伊洛斯。我并不喜欢你，你也不喜欢我。可我们有任务——我们得止住这场该死的战争，就算你不干，我也要干。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~  + PCDIS_14
+    ++ ~随便——走开就行！~DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~  + PCDIS_21
   END
 
   IF ~~ PCDIS_3
-    SAY ~Perhaps, but I'm not going to take that risk.~
+    SAY ~也许吧，可我不冒这个险。~
     ++ ~Are you threatening me?~ + PCDIS_11
-    ++ ~Watch *yourself*, you arrogant git.  I do have other things to do that stand here listening to you whine!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCDIS_12
+    ++ ~当心*你自己*，你这个傲慢的混蛋。我还有别的事要干，不能站在这儿听你抱怨！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCDIS_12
     ++ ~I'm not stupid.~ + PCDIS_13
-    ++ ~(sigh) Look, Iylos.  I don't really like you, and you don't like me.  But we have a task to do--we have to stop this damned war, and I'm going to do that even if you aren't.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~  + PCDIS_14
-    ++ ~Whatever--just go away!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCDIS_21
+    ++ ~（叹气）听着，伊洛斯。我并不喜欢你，你也不喜欢我。可我们有任务——我们得止住这场该死的战争，就算你不干，我也要干。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~  + PCDIS_14
+    ++ ~随便——走开就行！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PCDIS_21
   END
 
   IF ~~ PCDIS_11
-    SAY ~It is not a threat; it is a promise, <CHARNAME>.~
+    SAY ~这不是威胁；这是承诺，<CHARNAME>。~
     IF ~~ EXIT
   END
 
   IF ~~ PCDIS_12
-    SAY ~I have more pressing things to do than to fight for you, but for some reason I continue to do so even though I no longer have to.  *I*, at least, am not proud of being a <PRO_SONDAUGHTER> of Murder, unlike you who revels in the slaughter.~
+    SAY ~我有比为你打仗更紧要的事，可不知为何，明明不再需要，我还是继续这么做。至少*我*不为自己是谋杀的<PRO_SONDAUGHTER>而自豪，不像你，还沉醉在杀戮里。~
     IF ~~ EXIT
   END
 
   IF ~~ PCDIS_13
-    SAY ~I would hope not, <CHARNAME>...I would hope not.~
+    SAY ~我希望不会，<CHARNAME>……我希望不会。~
     IF ~~ EXIT
   END
 
   IF ~~ PCDIS_14
-    SAY ~I will aid you in stopping this war, and defeating the other Bhaalspawn; but I will *not* be party to any nefarious behaviour.  I hope you would have the sense to listen, and not ignore what I am saying.  I, at least, am not proud of being a <PRO_SONDAUGHTER> of Murder, like you who revels in the slaughter.~
+    SAY ~我会助你止住这场战争、击败其他巴尔之子；但我*不会*参与任何邪恶的勾当。我希望你有脑子听进去，别把我的话当耳旁风。至少*我*不为自己是谋杀的<PRO_SONDAUGHTER>而自豪，不像你，还沉醉在杀戮里。~
     IF ~~ DO ~SetGlobal("LK#IylosProudOfBeingBhaalspawn","GLOBAL",1)~ EXIT
   END
 
   IF ~~ PCDIS_21
-    SAY ~Just bear it in mind, <CHARNAME>.~
+    SAY ~记住就好，<CHARNAME>。~
     IF ~~ EXIT
   END
 
@@ -901,84 +901,84 @@ APPEND LK#IYLJ
 // -------------------------------------
 // Plot Dialogue 1
   IF WEIGHT #-2 ~Global("LK#IylosLastTimeSeeingPP","GLOBAL",1)~ PocketPlane2
-    SAY ~So this could be the last time we see this accursed place, couldn't it?~ [LK#I232] = ~I can't say I'm unhappy about it.~
-    ++ ~Neither am I.  I'll be glad to get out of here, have this over with.  (sigh)~ DO ~IncrementGlobal("LK#IylosLastTimeSeeingPP","GLOBAL",1)~ + PP2_1
-    ++ ~I'll miss it...even if it isn't exactly the most beautiful place, it's been there for me when I need it.~ DO ~IncrementGlobal("LK#IylosLastTimeSeeingPP","GLOBAL",1)~ + PP2_2
-    ++ ~Unhappy?  I'm ecstatic!  I can't wait to see the back of it.  God, I wish I could destroy it now!~ DO ~IncrementGlobal("LK#IylosLastTimeSeeingPP","GLOBAL",1)~ + PP2_3
-    ++ ~You don't have to like it.  But it is a place of power, and for that, I respect it.  I created this plane, if certain people are to be believed; this is part of me.~ DO ~IncrementGlobal("LK#IylosLastTimeSeeingPP","GLOBAL",1)~ + PP2_4
+    SAY ~这么说，这可能是我们最后一次见到这该死的地方了，是吧？~ [LK#I232] = ~我不能说我不为此高兴。~
+    ++ ~我也一样。我会高兴离开这里，把这一切了结。（叹气）~ DO ~IncrementGlobal("LK#IylosLastTimeSeeingPP","GLOBAL",1)~ + PP2_1
+    ++ ~我会想念它……就算它不是最美的地方，我需要时它一直都在。~ DO ~IncrementGlobal("LK#IylosLastTimeSeeingPP","GLOBAL",1)~ + PP2_2
+    ++ ~不高兴？我乐坏了！我巴不得再也见不到它。天哪，我真希望现在就把它毁掉！~ DO ~IncrementGlobal("LK#IylosLastTimeSeeingPP","GLOBAL",1)~ + PP2_3
+    ++ ~你不必喜欢它。可它是力量之地，为此我敬它。若某些人的话可信，这个位面是我造的；它是我的一部分。~ DO ~IncrementGlobal("LK#IylosLastTimeSeeingPP","GLOBAL",1)~ + PP2_4
   END
 
   IF ~~ PP2_1
-    SAY ~It has gone on for a while, hasn't it, since Saradush?  At least it will be over soon, I suppose.  It will be nice to be able to go where I may without unwanted restrictions hanging over my head.~
+    SAY ~从萨拉杜什算起，已经过了好一阵了，是吧？至少很快就结束了，我想。能想去哪就去哪，头上不再悬着那些不想有的限制，会很好。~
     IF ~~ EXIT
   END
 
   IF ~~ PP2_2
-    SAY ~I suppose.  At least all this will be over soon, I suppose.  It will be nice to be able to go where I may without unwanted restrictions hanging over my head.~
+    SAY ~我想是。至少这一切很快就结束了，我想。能想去哪就去哪，头上不再悬着那些不想有的限制，会很好。~
     IF ~~ EXIT
   END
 
   IF ~~ PP2_3
-    SAY ~Well, soon you will be able to, <CHARNAME>.  It will be over soon--all of it, I suppose.  It will be nice to be able to go where I may without unwanted restrictions hanging over my head.~
+    SAY ~嗯，很快你就能了，<CHARNAME>。很快就结束了——我想，全部都会结束。能想去哪就去哪，头上不再悬着那些不想有的限制，会很好。~
     IF ~~ EXIT
   END
 
   IF ~~ PP2_4
-    SAY ~A part of you which has grown and become- more, I know.  But I will not miss it.~ = ~It will be over soon--all of it, I suppose.  It will be nice to be able to go where I may without unwanted restrictions hanging over my head.~
+    SAY ~你身上成长、变化——变得更强的，一部分，我知道。可我不会想念它。~ = ~很快就结束了——我想，全部都会结束。能想去哪就去哪，头上不再悬着那些不想有的限制，会很好。~
     IF ~~ EXIT
   END
 
 
 // Plot Dialogue 3 (Floating)
   IF WEIGHT #-2 ~Global("LK#IylosLastBhaalspawnDialogue","GLOBAL",1)~ last
-    SAY ~And so we come to the last of the Five which you have been so valiantly fighting against, <CHARNAME>.~ [LK#I165]
-    ++ ~Balthazar, yes.~ DO ~IncrementGlobal("LK#IylosLastBhaalspawnDialogue","GLOBAL",1)~ + last_1
-    ++ ~In a little while...need to rest first, recuperate.  That last dungeon just took it all out of me.  (sigh) Sometimes I wonder if I'm really cut out for this adventuring business...~ DO ~IncrementGlobal("LK#IylosLastBhaalspawnDialogue","GLOBAL",1)~ + last_1
-    ++ ~I'd avoid killing him if I could.~ DO ~IncrementGlobal("LK#IylosLastBhaalspawnDialogue","GLOBAL",1) IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + last_1
+    SAY ~于是我们来到了你一直英勇抗争的那五人的最后一个，<CHARNAME>。~ [LK#I165]
+    ++ ~巴尔萨扎，是的。~ DO ~IncrementGlobal("LK#IylosLastBhaalspawnDialogue","GLOBAL",1)~ + last_1
+    ++ ~过一会儿……得先休息，缓一缓。刚那个地牢把我掏空了。（叹气）有时候我怀疑自己是不是真适合干冒险这行……~ DO ~IncrementGlobal("LK#IylosLastBhaalspawnDialogue","GLOBAL",1)~ + last_1
+    ++ ~如果我能，我会避免杀他。~ DO ~IncrementGlobal("LK#IylosLastBhaalspawnDialogue","GLOBAL",1) IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + last_1
   END
 
   IF ~~ last_1
-    SAY ~I know Balthazar.  He would not fight you if he felt you could help his cause.~
+    SAY ~我了解巴尔萨扎。他若觉得你能帮他的事业，就不会跟你打。~
     ++ ~Which is?~ + last_11
   END
 
   IF ~~ last_11
-    SAY ~He does not want to resurrect Bhaal, as you may have suspected.  He wants to prevent it.~
+    SAY ~他并不想复活巴尔，你也许已经猜到了。他想阻止这件事。~
     ++ ~Yes, I had gathered that much.  What else can you tell me?~ + last_111
-    ++ ~Really?  I thought he was just like the others...well, what do you suggest we do?~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + last_111
-    ++ ~Then I will be forced to kill him.~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + last_112
+    ++ ~真的？我还以为他跟其他几个一样……那我们该怎么办，你说？~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + last_111
+    ++ ~那我就不得不杀他。~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + last_112
   END
 
   IF ~~ last_111
-    SAY ~He may not be averse to a...a truce, of sorts, perhaps.~ = ~I cannot guarantee it, but I think if we play our cards right we can stop him from doing something drastic, and persuade him to help our cause.~
+    SAY ~他也许并不排斥某种……某种停战，也许。~ = ~我保证不了，可我想我们若走得对，能阻止他做出什么激烈的事，并说服他帮我们。~
     ++ ~Well--I bow before your superior intellect, Iylos; how do you propose we do that?~ + last_1111
     ++ ~Maybe...I'm not sure.~ + last_1112
     ++ ~A truce?  With a Bhaalspawn?  You have to be joking.~ + last_1113
   END
 
   IF ~~ last_112
-    SAY ~You *want* to resurrect Bhaal?~
-    ++ ~Of course.  As soon as I learned it was possible, I have striven towards it as much as I could.  And now the moment is at hand...I won't have some foolish monk stopping me from returning my father to his due glory!~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + last_1121
+    SAY ~你*想*复活巴尔？~
+    ++ ~当然。我一知道这事可行，就尽力朝它努力。现在时机就在眼前……我不会让一个蠢修士拦住我，不让我父亲恢复他应得的荣光！~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + last_1121
     ++ ~Heh, I was just joking, Iylos.  But what do you suggest?~ + last_111
   END
 
   IF ~~ last_1111
-    SAY ~Perhaps by appealing to his better nature.  Last time I spoke to him, he did not seem particularly welcoming...I suppose we'll have to wait and see.~
+    SAY ~也许可以打动他的良知。上次我跟他说话时，他似乎并不特别欢迎我……我想我们只能等着看。~
     IF ~~ EXIT
   END
 
   IF ~~ last_1112
-    SAY ~Last time I spoke to him, he did not seem particularly welcoming...I suppose we'll have to wait and see, if that is what you decide to do.  I would not discount Balthazar's help--he could be a powerful ally.~
+    SAY ~上次我跟他说话时，他似乎并不特别欢迎我……我想，你若决定那么做，我们就只能等着看。我不会低估巴尔萨扎的助力——他可能是个强大的盟友。~
     IF ~~ EXIT
   END
 
   IF ~~ last_1113
-    SAY ~Perhaps we could appeal to his better nature.  Last time I spoke to him, he did not seem particularly welcoming, however...I suppose we'll have to wait and see.~
+    SAY ~也许我们可以打动他的良知。可上次我跟他说话时，他似乎并不特别欢迎我……我想我们只能等着看。~
     IF ~~ EXIT
   END
 
   IF ~~ last_1121
-    SAY ~Then you are doomed, <CHARNAME>.  If that is your intention--I will provide no aid to you.  Farewell, and I hope you realise the folly of your current course of action.~
+    SAY ~那你就注定完了，<CHARNAME>。若那是你的意图——我不会给你任何援助。别了，我希望你明白你现在这条路有多蠢。~
     IF ~~ DO ~LeaveParty() SetGlobal("LK#IylosJoinedParty","GLOBAL",0) SetGlobal("LK#IylosLeftUnhappy","GLOBAL",1) EscapeAreaMove("AR5500",958,1567,5)~ EXIT
   END
 
@@ -989,80 +989,80 @@ APPEND LK#IYLJ
 
 // Pocket Plane
   IF WEIGHT #-2 ~Global("LK#IylosPP","GLOBAL",1)~ LK#Iylos_PocketPlane
-    SAY ~I do not trust this place, <CHARNAME>.  It reeks of corruption and horror.  Can't you hear the screams in the background?  I don't know how you could stay here for long, yet alone sleep here...~ [LK#I163]
-    ++ ~I don't.  I only come here when I absolutely need to, or are taken by the Solar.  I'd avoid it if I could.~ DO ~IncrementGlobal("LK#IylosPP","GLOBAL",1) IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~  + PP_1
-    ++ ~It isn't so bad, really, once you get used to the gloom.~ DO ~IncrementGlobal("LK#IylosPP","GLOBAL",1)~ + PP_2
-    ++ ~Oh, suck it UP, Iylos!  There's nothing wrong with the place.~ DO ~IncrementGlobal("LK#IylosPP","GLOBAL",1) IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + PP_3
-    ++ ~I like it.  The screams are almost...enjoyable.  Tantalising, one could say.~ DO ~IncrementGlobal("LK#IylosPP","GLOBAL",1) IncrementGlobal("BLK#IylosHappiness","GLOBAL",-2)~ + PP_4
+    SAY ~我不信任这地方，<CHARNAME>。它散发着腐坏与恐怖的气味。你听不见背景里的尖叫吗？我不知道你怎么能在这儿久待，更别说在这儿睡……~ [LK#I163]
+    ++ ~我不在这儿睡。我只在绝对需要、或被索拉带来时才来。能避开我就避开。~ DO ~IncrementGlobal("LK#IylosPP","GLOBAL",1) IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~  + PP_1
+    ++ ~其实没那么糟，一旦习惯了这阴暗就好。~ DO ~IncrementGlobal("LK#IylosPP","GLOBAL",1)~ + PP_2
+    ++ ~哦，*忍*着点，伊洛斯！这地方没什么不好。~ DO ~IncrementGlobal("LK#IylosPP","GLOBAL",1) IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + PP_3
+    ++ ~我喜欢它。那些尖叫几乎……令人愉快。可以说，很撩人。~ DO ~IncrementGlobal("LK#IylosPP","GLOBAL",1) IncrementGlobal("BLK#IylosHappiness","GLOBAL",-2)~ + PP_4
   END
 
   IF ~~ PP_1
-    SAY ~I'm not surprised.~
+    SAY ~我不意外。~
     IF ~~ EXIT
   END
 
   IF ~~ PP_2
-    SAY ~Somehow, I find that hard to believe.~
+    SAY ~不知怎的，我很难相信。~
     IF ~~ EXIT
   END
 
   IF ~~ PP_3
-    SAY ~So the darkness which pervades the air doesn't disturb you, the almost tangible death?~
-    ++ ~Eh.  Not particularly.~ EXIT
+    SAY ~那么弥漫在空气里的黑暗不打扰你？那几乎摸得着的死亡？~
+    ++ ~呃。倒不怎么。~ EXIT
     ++ ~...where?!  I haven't noticed it...~ + PP_31
     ++ ~Yes, it does.  But where else can I be sure I am safe, if not in a place of my own creation?~ + PP_31
   END
 
   IF ~~ PP_4
-    SAY ~You disgust me, <CHARNAME>...you truly do.~
+    SAY ~你令我作呕，<CHARNAME>……真的。~
     IF ~~ EXIT
   END
 
   IF ~~ PP_31
-    SAY ~The very stones feel wrong, the ground beneath my feet makes not a sound as I move over it.  Nothing good can come of this place, <CHARNAME>.~
+    SAY ~连石头都感觉不对，我脚下的地面在我走过时不发一点声响。这地方不会有什么好结果，<CHARNAME>。~
     IF ~~ EXIT
   END
 
 
 // Merceneries dead--Amkethran
   IF WEIGHT #-2 ~Global("LK#IylosSaemon","GLOBAL",1)~ LK#IylosMerceneriesDead
-    SAY ~By the unpleasant expression on your face and the quickly pooling blood at your feet, <CHARNAME>, I deduce you've met this Saemon Havarian before.~ [LK#IBLN]
-    ++ ~ Oh, yes.  He's a snivelling, pathetic excuse for a man, only interested in himself.  He's been helpful several times before, but it has always come at a drastic price.~ DO ~SetGlobal("LK#IylosSaemon","GLOBAL",2)~ + Saemon_1
-    ++ ~Saemon?  Bastard.  Does anyone not know Saemon Havarian, the most damned, wanted rogue on the planet?!~ DO ~SetGlobal("LK#IylosSaemon","GLOBAL",2)~ + Saemon_2
-    ++ ~Eh...I don't particularly care for him, but its just his way.  He can't help being the way he is, I suppose.~ DO ~SetGlobal("LK#IylosSaemon","GLOBAL",2)~ + Saemon_3
+    SAY ~从你脸上那不快的神情，和你脚下迅速积起的血来看，<CHARNAME>，我推断你以前见过这位赛蒙·哈瓦里安。~ [LK#IBLN]
+    ++ ~哦，是的。他是个抽着鼻子、可悲得算不上男人的东西，只关心自己。他以前帮过几次忙，可每次都索要惨重的代价。~ DO ~SetGlobal("LK#IylosSaemon","GLOBAL",2)~ + Saemon_1
+    ++ ~赛蒙？那个混蛋。谁不认识赛蒙·哈瓦里安，这星球上最该死、最被通缉的恶棍？！~ DO ~SetGlobal("LK#IylosSaemon","GLOBAL",2)~ + Saemon_2
+    ++ ~呃……我并不特别喜欢他，可那就是他的作风。我想他也没法不那样。~ DO ~SetGlobal("LK#IylosSaemon","GLOBAL",2)~ + Saemon_3
   END
 
   IF ~~ Saemon_1
-    SAY ~I can imagine, if this situation is any example.  Some men are incorrigible...and unfortunately, I have a feeling we'll be seeing Saemon again.  According to the locals, he's become quite a fixture.~ = ~But then again, some say that they have seen Drow around the place, so I'm not sure how much salt one should take with it.  Possibly a bag or so.~
+    SAY ~从这情形看，我能想象。有些人是不可救药的……而不幸的是，我感觉我们还会再见到赛蒙。据本地人说，他在这儿已经扎下根了。~ = ~不过话又说回来，也有人说在这附近见过卓尔，所以这话该打多少折扣，我说不准。也许得打一整袋。~
     IF ~~ EXIT
   END
 
   IF ~~ Saemon_2
-    SAY ~I can imagine how much you dislike him, if this situation is any example.  Some men are incorrigible...and unfortunately, I have a feeling we'll be seeing Saemon again.  According to the locals, he's become quite a fixture.~ = ~But then again, some say that they have seen Drow around the place, so I'm not sure how much salt one should take with it.  Possibly a bag or so.~
+    SAY ~从这情形看，我能想象你有多讨厌他。有些人是不可救药的……而不幸的是，我感觉我们还会再见到赛蒙。据本地人说，他在这儿已经扎下根了。~ = ~不过话又说回来，也有人说在这附近见过卓尔，所以这话该打多少折扣，我说不准。也许得打一整袋。~
     IF ~~ EXIT
   END
 
   IF ~~ Saemon_3
-    SAY ~ If this situation is any example, he is totally incorrigible...and unfortunately, I have a feeling we'll be seeing Saemon again.  According to the locals, he's become quite a fixture.~ = ~But then again, some say that they have seen Drow around the place, so I'm not sure how much salt one should take with it.  Possibly a bag or so.~
+    SAY ~从这情形看，他就是彻底不可救药……而不幸的是，我感觉我们还会再见到赛蒙。据本地人说，他在这儿已经扎下根了。~ = ~不过话又说回来，也有人说在这附近见过卓尔，所以这话该打多少折扣，我说不准。也许得打一整袋。~
     IF ~~ EXIT
   END
   
 
 // Spectator Comment
   IF WEIGHT #-2 ~Global("LK#IylosBeholder","GLOBAL",1)~ LK#IylosBeholder
-    SAY ~What an interesting Beholder.  I would have liked to learn more about him.  I had always thought such creatures were inherently evil.  Perhaps I was wrong.  Something to think on, at least.~ [LK#IBLN]
-    ++ ~That was Spectator--we've met him a few times before.  Lovely chap, really, if a bit visible.~ DO ~IncrementGlobal("LK#IylosBeholder","GLOBAL",1)~ + Spectator_1
-    ++ ~You don't like being wrong very much, do you Iylos?~ DO ~IncrementGlobal("LK#IylosBeholder","GLOBAL",1)~ + Spectator_2
-    ++ ~I should have killed him the last time I had a chance.~ DO ~IncrementGlobal("LK#IylosBeholder","GLOBAL",1)~ + Spectator_1
+    SAY ~多有意思的一个眼魔。我本想多了解他一些。我一直以为这类生物天生邪恶。也许我错了。至少，这值得想一想。~ [LK#IBLN]
+    ++ ~那是旁观者——我们以前遇见过他几次。其实是个可爱的小伙子，只是有点显眼。~ DO ~IncrementGlobal("LK#IylosBeholder","GLOBAL",1)~ + Spectator_1
+    ++ ~你不太喜欢自己出错，是吧，伊洛斯？~ DO ~IncrementGlobal("LK#IylosBeholder","GLOBAL",1)~ + Spectator_2
+    ++ ~上次有机会时，我该杀了他。~ DO ~IncrementGlobal("LK#IylosBeholder","GLOBAL",1)~ + Spectator_1
   END
 
   IF ~~ Spectator_1
-    SAY ~In the Underdark, I presume?  Ah...it must have been a fascinating experience.  Sendai will not wait for us, however--lu' ol's draeval whol ilta ulu el.~ = ~It's time for her to die.~
+    SAY ~我猜是在幽暗地域？啊……那一定是个迷人的经历。可赛达不会等我们——lu' ol's draeval whol ilta ulu el。~ = ~该她死了。~
     IF ~~ EXIT
   END
 
   IF ~~ Spectator_2
-    SAY ~Sendai will not wait for us,--lu' ol's draeval whol ilta ulu el.~ = ~It's time for her to die.~
+    SAY ~赛达不会等我们——lu' ol's draeval whol ilta ulu el。~ = ~该她死了。~
     IF ~~ EXIT
   END
   
@@ -1073,14 +1073,14 @@ APPEND LK#IYLJ
 // -------------------------------------
 // Scenery Interjection, Forest Area
   IF WEIGHT #-2 ~AreaCheck("AR6400") Global("LK#IylosTransport","GLOBAL",1)~ LK#IylosForestcomment
-    SAY ~And so your pocket plane has transported us right into the middle of a group of enemy soliders--wonderful tactics, <CHARNAME>.  Perhaps you hoped the surprise would disable them or somesuch?~ [LK#IBLN] = ~Regardless, we must fight them now!~
+    SAY ~于是你的口袋空间把我们直接送到了敌兵群中间——好战术，<CHARNAME>。也许你指望这突袭能让他们失灵什么的？~ [LK#IBLN] = ~不管怎样，我们现在得打！~
     IF ~~ DO ~IncrementGlobal("LK#IylosTransport","GLOBAL",1)~ EXIT
   END
 
 // Drow Enclave--Spiders
   IF WEIGHT #-2
     ~AreaCheck("AR6103") InParty(Myself) See(Player1) Global("LK#IylosSpiders","GLOBAL",1)~ LK#IylosDrowEnclaveSpiders
-    SAY ~Ah...I had forgotten the peculiar obsession the Drow had with spiders.  Wonderful--we already have to fight through an army of Drow Priestesses, mercenaries and wizards, and now we have a colony of enormous poisonous spiders added to the mix.  Just wonderful.~ [LK#IBLN]
+    SAY ~啊……我忘了卓尔对蜘蛛那种古怪的痴迷。好极了——我们本来就得打穿一整支卓尔女祭司、佣兵和法师的军队，现在又多了一窝巨大的毒蜘蛛。真是好极了。~ [LK#IBLN]
     IF ~~ DO ~IncrementGlobal("LK#IylosSpiders","GLOBAL",1)~ EXIT
   END
 
@@ -1112,7 +1112,7 @@ END
 // Skeleton Cleric
 INTERJECT_COPY_TRANS HGSKL01 1 LK#IylosSkeletonCleric
   == LK#IYLJ IF ~InParty("Iylos") InMyArea("Iylos") !StateCheck("Iylos",CD_STATE_NOTVALID)~ THEN ~Bhaal?!  Skeleton, you call this Bhaalspawn an abomination, and yet you are that much worse!  Whatever connection you have to Bhaal, consider it now severed!~
-  == HGSKL01 ~Prepare for your doom, vessel!  Spare none!  Bhaal will return!~
+  == HGSKL01 ~准备受死吧，容器！一个不留！巴尔将归来！~
 END
 
 
@@ -1122,7 +1122,7 @@ END
 // Diaytha
 INTERJECT SENPRI 3 LK#IylosDiaytha
   == LK#IYLJ IF ~InParty("Iylos") InMyArea("Iylos") !StateCheck("Iylos",CD_STATE_NOTVALID)~ THEN ~Ka dos daewl, Yathrin.  Usstan orn'la kre'j ulu z'haan ka Usstan zhahen dos--whol zhaunyl udos zhal elgg dos!~
-  == SENPRI ~Hah, Usstan tlun l' Detholusin d' Sendai, wael--Usstan orn elgg dos lu' dosst yeunn Bhaalspawn!  Enter if you dare.~
+  == SENPRI ~哈，Usstan tlun l' Detholusin d' Sendai, wael——Usstan orn elgg dos lu' dosst yeunn Bhaalspawn！敢就进来。~
 COPY_TRANS SENPRI 3
 
 
@@ -1139,7 +1139,7 @@ END
 // -------------------------------------
 // God Advice
 INTERJECT_COPY_TRANS FINSOL01 27 LK#IylosFinSol
-  == LK#IYLJ IF ~InParty("Iylos") InMyArea("Iylos")~ THEN ~I must advise against this, <CHARNAME>.  Power does things to people, such as Amelissan here.  I am begging you...do not do this.  Don't become another Amelissan, or Irenicus, or Bodhi.~ = ~Stay mortal, keep your wits about you.  Consider this decision carefully.  Weigh *everything* up before you decide.~
+  == LK#IYLJ IF ~InParty("Iylos") InMyArea("Iylos")~ THEN ~I must advise against this, <CHARNAME>.  Power does things to people, such as Amelissan here.  I am begging you...do not do this.  Don't become another Amelissan, or Irenicus, or Bodhi.~ = ~保持凡人，保持清醒。仔细考虑这个决定。决定之前，把*一切*都权衡清楚。~
 END
 
 
@@ -1159,37 +1159,37 @@ APPEND ~LK#IYLJ~
 
   // Clicky-click
   IF ~IsGabber(Player1) CombatCounter(0)~ Player_Initiated_Dialogues
-    SAY ~ (Iylos glances at you momentarily, before returning his eyes to the ground before you.)~ [LK#IBLN]
-    ++ ~(Flirt with Iylos)~ DO ~IncrementGlobal("LK#IylosFlirtedWithTimes","GLOBAL",1)~ + flirts
-    ++ ~(Talk to Iylos)~ DO ~IncrementGlobal("LK#IylosTalkedToTimes","GLOBAL",1)~ + question
+    SAY ~（伊洛斯短暂地瞥了你一眼，随后把目光收回你面前的地上。）~ [LK#IBLN]
+    ++ ~（与伊洛斯调情）~ DO ~IncrementGlobal("LK#IylosFlirtedWithTimes","GLOBAL",1)~ + flirts
+    ++ ~（跟伊洛斯说话）~ DO ~IncrementGlobal("LK#IylosTalkedToTimes","GLOBAL",1)~ + question
     ++ ~Iylos, could you stop talking to me so often?  Your voice can get a little...irritating at times.~ + donttalk
     ++ ~Iylos, I have to ask you to leave the party.~ + leavetheparty
-    ++ ~Ah, nothing.  (Leave Iylos alone)~ EXIT
+    ++ ~啊，没什么。（让伊洛斯独处）~ EXIT
   END
 
   IF ~~ donttalk
-    SAY ~As you wish.~
+    SAY ~随你。~
     IF ~~ DO ~SetGlobal("LK#IylosTalksLessOften","GLOBAL",1)~ EXIT
   END
 
   IF ~~ leavetheparty
-    SAY ~Are you sure, <CHARNAME>?~
+    SAY ~你确定吗，<CHARNAME>？~
     ++ ~Quite.~ + quite
     ++ ~Actually, stay in the party, please.~ + stay
   END
 
   IF ~~ quite
-    SAY ~If I must--but know that you will be watched.  Goodbye, <CHARNAME>--perhaps we shall see each other again sometime.~
+    SAY ~如果我必须——可要知道你会被盯着。再会，<CHARNAME>——也许我们什么时候还会再见。~
     IF ~~ DO ~SetGlobal("LK#IylosJoinedParty","GLOBAL",0) LeaveParty() SetGlobal("LK#IylosLeftGood","GLOBAL",1) EscapeAreaMove("AR5500",958,1567,5)~ EXIT
   END
 
   IF ~~ stay
-    SAY ~As you wish.~
+    SAY ~随你。~
     IF ~~ EXIT
   END
 
   IF ~~ flirts
-    SAY ~(You take in Iylos' broad shoulders and blue eyes as he walks beside you comfortably, hands at his side.)~
+    SAY ~（伊洛斯走在你身旁，双手垂在身侧，从容自在；你看着他那宽阔的肩和蓝色的眼睛。）~
     + ~RandomNum(2,1)~ + ~(Observe Iylos)~ + observe1
     + ~RandomNum(2,2)~ + ~(Observe Iylos)~ + observe2
     + ~RandomNum(2,1)~ + ~(Walk up behind Iylos and whisper unintelligibly into his ear)~ + whisper1
@@ -1210,16 +1210,16 @@ APPEND ~LK#IYLJ~
     + ~Global("LK#IylosApologise","GLOBAL",1)~ + ~Iylos, I'd like to apologise for annoying you earlier...I hope you don't mind, sometimes I just feel a little playful.~ DO ~SetGlobal("LK#IylosApologise","GLOBAL",0)~ + apologise
     + ~RandomNum(2,1)~ + ~You should smile more often, Iylos.  It suits you.~ + yousmile1
     + ~RandomNum(2,2)~ + ~You should smile more often, Iylos.  It suits you.~ + yousmile2
-    ++ ~(Leave Iylos alone)~ EXIT
+    ++ ~（让伊洛斯独处）~ EXIT
   END
 
   IF ~~ question
-    SAY ~(Iylos looks at you briefly.) What is it you want, <CHARNAME>?~
+    SAY ~（伊洛斯短暂地看了你一眼。）你想要什么，<CHARNAME>？~
     + ~RandomNum(3,1) Global("LK#IylosClasses","GLOBAL",0)~                                                                                 + ~Do you agree with the idea of upper and lower classes, Iylos?~ DO ~SetGlobal("LK#IylosClasses","GLOBAL",1)~                                                                        + classes
     + ~RandomNum(3,2) Global("LK#IylosGate","GLOBAL",0)~                                                                                    + ~Have you ever been to Baldur's Gate?~ DO ~SetGlobal("LK#IylosClasses","GLOBAL",1)~                                                                        + gate
     + ~Global("LK#IylosCeaseDialogue","GLOBAL",0)~                                                                                          + ~Iylos, must you *always* be watching me as would a hawk, waiting for my next move?  I'm not about to erupt into violence, or murder all within my sight, you know.~ DO ~SetGlobal("LK#IylosCeaseDialogue","GLOBAL",1)~                                                                  + PID_Cease
     + ~Global("MetBal","GLOBAL",1) Global("LK#IylosKnowsBalthDialogue","GLOBAL",0)~                                                         + ~Ah...so *that* was Balthazar.  Charming fellow.~ DO ~SetGlobal("LK#IylosKnowsBalthDialogue","GLOBAL",1)~                                                             + PID_KnowsBalth
-    + ~Global("MetBal","GLOBAL",0) Global("LK#IylosDoesn�tKnowBalthDialogue","GLOBAL",0)~                                                   + ~Who is this Balthazar you mentioned a while back, Iylos?~ DO ~SetGlobal("LK#IylosDoesn�tKnowBalthDialogue","GLOBAL",1)~                                                       + PID_WhoisBalth
+    + ~Global("MetBal","GLOBAL",0) Global("LK#IylosDoesn’tKnowBalthDialogue","GLOBAL",0)~                                                   + ~Who is this Balthazar you mentioned a while back, Iylos?~ DO ~SetGlobal("LK#IylosDoesn’tKnowBalthDialogue","GLOBAL",1)~                                                       + PID_WhoisBalth
     + ~RandomNum(3,3) Global("LK#IylosPastries","GLOBAL",0)~                                                                                + ~Do you enjoy pastries?~ DO ~SetGlobal("LK#IylosPastries","GLOBAL",1)~                                                                       + pastries
     + ~RandomNum(3,1) Global("LK#IylosDrink","GLOBAL",0)~                                                                                   + ~What do you like to drink?  Do you like to drink alcohol?~ DO ~SetGlobal("LK#IylosDrink","GLOBAL",1)~                                                                          + drink
     + ~RandomNum(3,2) Global("LK#IylosAnimal","GLOBAL",0)~                                                                                  + ~What is your favourite animal, Iylos?~ DO ~SetGlobal("LK#IylosAnimal","GLOBAL",1)~                                                                         + animal
@@ -1276,1218 +1276,1218 @@ APPEND ~LK#IYLJ~
     + ~RandomNum(3,3) Global("LK#IylosTease3","GLOBAL",0)~                                                                                  + ~Iylos.  All this masculinity, pride and arrogance.  Are you compensating for something, perhaps?~ DO ~SetGlobal("LK#IylosTease3","GLOBAL",1)~                                                          + tease3
     + ~Global("LK#IylosSituation","GLOBAL",0)~                                                                                              + ~What do you think of our situation, Iylos?  Melissan, the Five?~ DO ~SetGlobal("LK#IylosSituation","GLOBAL",1)~                                                          + situation
 
-    ++ ~Ah, nothing.  (Leave Iylos alone)~ EXIT
+    ++ ~啊，没什么。（让伊洛斯独处）~ EXIT
   END
 
 
   // Flirts
   IF ~~ observe1
-    SAY ~(You turn your gaze to the monk, his powerfully muscled back and arms obvious underneath his robe.  His gait is confident and wary.  The patterns on his head are covered in a slight stubble--he must have forgotten to shave this morning.)~ = ~(He turns around to face you for a moment, his eyes unreadable, before returning to his constant vigil of your surroundings.  You can't help but notice his slight smile.)~
+    SAY ~（你把目光转向那修士，他有力的背与手臂在袍下清晰可见。他的步态自信而警觉。他头上的纹样覆着一层短须——今早他准是忘了刮。）~ = ~（他转身面对你片刻，眼神难以捉摸，随后又回到他对四周一贯的警戒。你不禁注意到他嘴角那点浅浅的笑。）~
     IF ~~ EXIT
   END
 
   IF ~~ observe2
-    SAY ~(Surreptitiously you turn to observe Iylos, who is as usual lost in thought, his eyes scanning the horizon for danger or perhaps something else.  His deep, usually clear blue eyes are clouded slightly, and his face looks downcast.)~
-    ++ ~Are you alright, Iylos?~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + observe2_1
+    SAY ~（你悄悄转去看伊洛斯，他像平常一样沉在思绪里，眼睛扫着地平线，寻找危险，或者别的什么。他那通常清澈的深蓝眼睛蒙着一层阴翳，脸上显得低落。）~
+    ++ ~你还好吗，伊洛斯？~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + observe2_1
     ++ ~What're you so dark about, Iylos?~ + observe2_2
-    ++ ~(Leave him alone)~ EXIT
+    ++ ~（让他独处）~ EXIT
   END
 
   IF ~~ observe2_1
-    SAY ~I'm...fine.  Contemplating what the future holds.  There is so much ahead of you--us.  Much danger, and many foes.  Let us hope we survive.~
+    SAY ~我……没事。在想将来会怎样。你面前——我们面前——有太多东西。许多危险，许多敌人。但愿我们能活下来。~
     IF ~~ EXIT
   END
 
   IF ~~ observe2_2
-    SAY ~I'm contemplating what dark secrets our future may hold.  There is much ahead of you--us.  Much danger, and many foes.  Let us hope we survive.~
+    SAY ~我在想我们的将来可能藏着什么黑暗的秘密。你面前——我们面前——有太多东西。许多危险，许多敌人。但愿我们能活下来。~
     IF ~~ EXIT
   END
 
   IF ~~ train1
-    SAY ~(Iylos' slow movements are fluid and graceful, yet there is an element of inevitability and power withheld beneath his simple seeming gestures.  His eyes are open, thoughtless and still as he balances upon one foot, the other held in lotus position just below his waist.)~ = ~(His arms perform a series of sweeping gestures, finally concluding in a prayerlike position on his chest.  After a moment, he notices your stare and blinks at you.)~ = ~This is the flying horse, <CHARNAME>.  It is one of the simplest movements in yoga--it is said to be the epitomy of grace.~
+    SAY ~（伊洛斯的动作缓慢、流畅而优雅，可在他看似简单的姿态下，藏着一种必然与蓄而不发的力量。他睁着眼，无思无念，静如止水，一腿站立，另一腿在腰下结莲花坐。）~ = ~（他的手臂做了一连串舒展的手势，最后在胸前合成祈祷般的姿势。过了一会儿，他注意到你的注视，对你眨了眨眼。）~ = ~这是「飞马式」，<CHARNAME>。它是瑜伽里最简单的动作之一——据说它是优雅的极致。~
     IF ~~ EXIT
   END
 
 
   IF ~~ meditate1
-    SAY ~(You notice Iylos' breathing slow as he closes his eyes, still walking.  He seems aware of his surroundings, and yet does not acknowledge them as he moves.  He is murmuring a chant of some kind which you can't quite make out, but sounds strangely foreign and alluring.)~ = ~(His expression is very peaceful and serene, and his manner slightly detached.  After several more moments he opens his eyes and although his breathing is once more normal, the aura of calm surrounding him remains.)~
+    SAY ~（你注意到伊洛斯闭着眼，呼吸慢下来，却仍在走。他似乎察觉四周，可走动时并不去理会。他在低声念着某种你听不清的吟诵，听起来奇特而带异域诱惑。）~ = ~（他的神情非常平和宁静，举止略带疏离。又过了片刻，他睁开眼，呼吸虽已恢复如常，环绕他的那份安宁仍留着。）~
     IF ~~ EXIT
   END
 
   IF ~~ meditate2
-    SAY ~Do you mind, <CHARNAME>?  I'm not sure you realise how hard it is to meditate when another is watching you.~
+    SAY ~你介意吗，<CHARNAME>？我不确定你知不知道，别人盯着你时冥想有多难。~
     IF ~~ EXIT
   END
 
 
   IF ~~ arm1
-    SAY ~(You increase your stride to match that of the monk, and within a few moments you are right beside him.  With a casual motion you reach out to touch his arm, and slowly move downwards to his wrist.  He glances at you briefly, a glare hidden beneath his usual mask, and detaches your hand.)~ = ~Do you mind, <CHARNAME>?!  I'm trying to think.  Leave me alone.~
+    SAY ~（你加快步子，赶上那修士的节奏，片刻间就到了他身旁。你随手伸手去碰他的手臂，缓缓向下移到他的手腕。他短促地瞥你一眼，惯常的面具下藏着一道怒视，然后把你的手拨开。）~ = ~你介意吗，<CHARNAME>？！我在思考。别烦我。~
     IF ~~ EXIT
   END
 
   IF ~~ arm2
-    SAY ~(You carefully stroke Iylos' arm, his cool skin smooth beneath your fingers.  The tips of his ears redden ever so slightly, and he withdraws his arm.)~ = ~<CHARNAME>, what are you doing?~
+    SAY ~（你小心地抚过伊洛斯的手臂，他的肌肤在你的指下凉爽而光滑。他的耳尖微微泛红，他把手臂抽了回去。）~ = ~<CHARNAME>，你在做什么？~
     ++ ~Flirting with you.  What does it look like?~ + arm2_1
     ++ ~Nothing.~ + arm2_2
-    ++ ~You needn't be so tense.  I wasn't attacking you, and there are no foes about.~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + arm2_3
+    ++ ~你不必这么紧绷。我不是在攻击你，附近也没有敌人。~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + arm2_3
   END
 
   IF ~~ arm2_1
-    SAY ~I would appreciate it if you did not do it again.~
+    SAY ~你若不再这样做，我会感激。~
     IF ~~ EXIT
   END
 
   IF ~~ arm2_2
-    SAY ~(Iylos looks at you suspiciously, before turning away.) If you say so.~
+    SAY ~（伊洛斯狐疑地看着你，随后转过身去。）你这么说就这么吧。~
     IF ~~ EXIT
   END
 
   IF ~~ arm2_3
-    SAY ~There is a reason I am tense, <CHARNAME>, and it has nothing to do with enemies.  Do not think that you can win me over with 'innocent' touches or compliments--I am not so easily won.~
+    SAY ~我紧绷是有原因的，<CHARNAME>，跟敌人无关。别以为用「无辜」的触碰或恭维就能赢得我——我没那么容易被收买。~
     IF ~~ EXIT
   END
 
 
   IF ~~ smile1
-    SAY ~(Iylos glances at you, his blue eyes alighting upon your friendly smile.  His eyes narrow briefly before turning back to the road, his eyes resolutely upon the ground in front of him.)~
+    SAY ~（伊洛斯瞥了你一眼，他那双蓝眼落在你友善的微笑上。他的眼睛微微眯起，随后转回路上，目光坚决地落在他面前的地上。）~
     IF ~~ EXIT
   END
 
   IF ~~ smile2
-    SAY ~(You smile at Iylos, but his gaze slides off you as water from a duck.  At first it seems he did not even notice, but after a moment it becomes evident that he is smiling faintly in return, even if he is busying himself with adjusting his robe.)~
+    SAY ~（你对伊洛斯微笑，可他的目光像水从鸭背上滑过一样滑开。起初他似乎根本没注意，可过了一会儿就明显起来：他也在淡淡地回你一笑，尽管他正忙着整理自己的袍子。）~
     IF ~~ EXIT
   END
 
   IF ~~ yousmile1
-    SAY ~Why would I smile, <CHARNAME>, when there are hundreds dying even as we speak?  Perhaps you should concern yourself with the more pressing issues at hand, such as where you're intending for us to sleep tonight and how you will end this damned war.~
+    SAY ~我为什么要笑，<CHARNAME>，就在我们说话的这会儿都有几百人在死？也许你该操心更紧迫的事，比如今晚你打算让我们睡哪儿，还有你打算怎么结束这场该死的战争。~
     IF ~~ EXIT
   END
 
   IF ~~ yousmile2
-    SAY ~If you wish, <CHARNAME>, but I don't see how a smile could help anything--world hunger, for example.  *Surely* your time would be better spent preparing for battle?~
-    ++ ~I wasn't suggesting a smile would solve anything, but sometimes it can light up the day even when all seems hopeless.  I'd suggest trying it sometime.~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~You never know if you don't try!~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~Perhaps, but you have such a handsome smile.  I'd like to see it more often.~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ EXIT
+    SAY ~随你，<CHARNAME>，可我看不出一个笑能帮上什么忙——比如世界饥荒。*当然*，你的时间用来备战会更值吧？~
+    ++ ~我不是说笑能解决什么，可有时就算一切看着无望，它也能照亮一天。我倒建议你偶尔试试。~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~你不试怎么知道！~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~也许吧，可你笑起来那么好看。我想多见见。~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ EXIT
   END
 
   IF ~~ poke1
-    SAY ~(You creep up behind Iylos and poke his stomach; you can feel his taut muscles underneath your fingertip.  In a flash, you find yourself on the ground, your arm sore and aching.)~ = ~Care to try that again, <CHARNAME>?  Hmph.~
+    SAY ~（你悄悄走到伊洛斯身后，戳他的肚子；指尖下能感到他紧实的肌肉。一闪之间，你发现自己躺在地上，手臂又酸又疼。）~ = ~还想再来一次吗，<CHARNAME>？哼。~
     IF ~~ DO ~SetGlobal("LK#IylosApologise","GLOBAL",1)~ EXIT
   END
 
   IF ~~ poke2
-    SAY ~(You poke Iylos in the back and leap back, quickly looking in the opposite direction, an innocent smile upon your face.)~ = ~(Iylos sighs and turns around to face you.) Was there something, <CHARNAME>?~
+    SAY ~（你戳了伊洛斯后背一下，随即跳开，飞快地看向相反的方向，脸上挂着无辜的笑。）~ = ~（伊洛斯叹了口气，转身面对你。）有什么事吗，<CHARNAME>？~
     ++ ~No, nothing.~ + poke2_1
     ++ ~Yes, actually.  What're you thinking about?~ + poke2_2
-    ++ ~You're so boring!  Why can't you have a little fun once in a while?!  (Pout at him)~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + poke2_3
+    ++ ~你真无聊！你就不能偶尔找点乐子吗？！（冲他撅嘴）~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + poke2_3
   END
 
   IF ~~ poke2_1
-    SAY ~Good.~
+    SAY ~好。~
     IF ~~ DO ~SetGlobal("LK#IylosApologise","GLOBAL",1)~ EXIT
   END
 
   IF ~~ poke2_2
-    SAY ~Why birds have such an unerring sense of direction and inherent knowledge of when and where danger will strike.  Have you ever noticed, in a storm, the birds will always fly in the opposite direction, even if the storm is nowhere to be seen by your eyes?~
-    ++ ~I had noticed that, yes.~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + poke2_21
-    ++ ~No, actually, I hadn't...but now that I think about it, you're quite right.  Birds are some of the most amazing creatures.~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + poke2_21
-    ++ ~Bollocks!~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + poke2_22
+    SAY ~为什么鸟有这么准确的方向感，天生就知道危险何时何地会来。你注意过吗，暴风雨来的时候，鸟总是往相反的方向飞，哪怕你眼睛还看不见风暴？~
+    ++ ~我确实注意到过，是的。~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + poke2_21
+    ++ ~不，其实我没有……可这么一想，你说得很对。鸟是最神奇的生物之一。~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + poke2_21
+    ++ ~胡扯！~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + poke2_22
   END
 
   IF ~~ poke2_3
-    SAY ~I do have fun when I have the time, <CHARNAME>, but we have this little war on our hands at the moment, if you hadn't noticed.  Perhaps you should attend to it rather than poking me at random moments.~
+    SAY ~我有空的时候也会找乐子，<CHARNAME>，可我们眼下手上还有这场小战争，如果你没注意到的话。也许你该去管它，而不是随时乱戳我。~
     IF ~~ DO ~SetGlobal("LK#IylosApologise","GLOBAL",1)~ EXIT
   END
 
   IF ~~ poke2_21
-    SAY ~Such unusual traits must surely be magical.  But let's return to the road--not getting anywhere with idle chatter, are we?  (He turns away from you abruptly.)~
+    SAY ~这样不寻常的特质肯定是魔法。可我们还是上路吧——闲扯是走不到哪里的，是吧？（他突然转身走开。）~
     IF ~~ EXIT
   END
 
   IF ~~ poke2_22
-    SAY ~If you believe so--I think that such unusual traits must surely be magical.  But we're not getting anywhere with idle chatter, are we?  (He turns away from you abruptly.)~
+    SAY ~你若这么信——我觉得这样不寻常的特质肯定是魔法。可闲扯是走不到哪里的，是吧？（他突然转身走开。）~
     IF ~~ EXIT
   END
 
   IF ~~ whack1
-    SAY ~(You sharply jab Iylos in the back, and blink as you find your wrist quickly encircled by his hand.)~ = ~<CHARNAME>, what *are* you trying to do?~
-    ++ ~Get close to you, of course, so I can jab you in the back.  Exactly what I just did, actually.~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + whack1_1
-    ++ ~Nothing--'twas a mistake, I assure you.~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + whack1_1
+    SAY ~（你狠狠戳了伊洛斯后背一下，眨眼间发现自己的手腕已被他的手箍住。）~ = ~<CHARNAME>，你*到底*想干什么？~
+    ++ ~当然是靠近你，好戳你后背。其实正是我刚做的事。~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + whack1_1
+    ++ ~没什么——是个失误，我保证。~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + whack1_1
     ++ ~Whack you!  (Poke him with your free hand)~ + whack1_2
     ++ ~(Attempt to pull free)~ + whack1_3
   END
 
   IF ~~ whack1_1
-    SAY ~I see.  (Iylos lets go of your wrist, his own falling limp by his side.)~ = ~Do not do it again.~
+    SAY ~我明白了。（伊洛斯松开你的手腕，他的手无力地垂在身侧。）~ = ~别再这样。~
     IF ~~ DO ~SetGlobal("LK#IylosApologise","GLOBAL",1)~ EXIT
   END
 
   IF ~~ whack1_2
-    SAY ~(Iylos glares at you, irritated.) I see.~ = ~(He lets go of your wrist, his own falling limp by his side.  He looks pointedly at your other hand, paused in the action of poking him.) Do not do it again.~
+    SAY ~（伊洛斯恼怒地瞪着你。）我明白了。~ = ~（他松开你的手腕，他的手无力垂在身侧。他刻意看向你另一只手——那手还停在戳他的动作上。）别再这样。~
     IF ~~ DO ~SetGlobal("LK#IylosApologise","GLOBAL",1)~ EXIT
   END
 
   IF ~~ whack1_3
-    SAY ~(Iylos glares at you, irritated, for a moment.)~ = ~(He lets go of your wrist, his own falling limp by his side.  He looks pointedly at your other hand, paused in the action of poking him.) Do not do it again.~
+    SAY ~（伊洛斯恼怒地瞪了你一会儿。）~ = ~（他松开你的手腕，他的手无力垂在身侧。他刻意看向你另一只手——那手还停在戳他的动作上。）别再这样。~
     IF ~~ DO ~SetGlobal("LK#IylosApologise","GLOBAL",1)~ EXIT
   END
 
   IF ~~ whack2
-    SAY ~(You expertly cuff Iylos over the back of the head, lightly enough so it doesn't hurt but hard enough to incite a reaction.  Iylos turns around, arms folded on his chest, his face an icy mask of dislike.)~ = ~What part of 'leave me alone' do you not understand, Bhaalspawn?!  I am quite well off without your incessant bothering.  Hmph.  (Iylos continues glaring at you for a moment before striding away stiffly.)~
+    SAY ~（你手法熟练地拍了一下伊洛斯后脑，力道轻得不会疼，却足以引他反应。伊洛斯转过身，双臂抱在胸前，脸上是一副冰冷厌恶的面具。）~ = ~「别烦我」这几个字里，你哪部分听不懂，巴尔之子？！没有你无休止的骚扰，我过得很好。哼。（伊洛斯又瞪了你一会儿，才僵硬地大步走开。）~
     IF ~~ DO ~SetGlobal("LK#IylosApologise","GLOBAL",1)~ EXIT
   END
 
   IF ~~ whisper1
-    SAY ~(Carefully, you sneak up behind Iylos and within the space of a moment you step up to his back, almost every part of you touching.  He stands rigidly, shocked.  You lean forward and mumble into his ear, barely making any sound as your lips brush his ear.)~ = ~(You feel him shiver, though he does not move for several moments.)~ = ~(Suddenly, he turns around, his eyes blazing, his mouth a thin line of anger.)~ = ~Touch me again, <CHARNAME>, and I will be gone before you can utter a word.  (He stalks away furiously, and refuses to talk to you for some time.)~
+    SAY ~（你小心地潜到伊洛斯身后，片刻间贴到他背后，几乎每一处都碰着他。他僵立着，吃了一惊。你向前倾，在他耳边低语，嘴唇擦过他的耳朵，几乎没发出声音。）~ = ~（你感到他一颤，可他好一会儿没动。）~ = ~（突然，他转过身，眼睛灼亮，嘴抿成一条愤怒的细线。）~ = ~再碰我一次，<CHARNAME>，我就在你说出一个字之前离开。（他怒气冲冲地大步走开，之后好一阵都不肯跟你说话。）~
     IF ~~ EXIT
   END
 
   IF ~~ whisper2
-    SAY ~(You lean forward and whisper nonsense into Iylos' ear, barely containing your suppressed laughter.  He moves backward slightly, til you're almost touching, and turns around.)~ = ~You are a fool, <CHARNAME>, if you think you can alter how I feel about you and your *gifts* by courting me.  Leave me alone, and do not attempt to do so again!~
+    SAY ~（你向前倾，在伊洛斯耳边低语些胡话，几乎压不住笑。他稍稍后退，直到你们几乎相触，然后转过身。）~ = ~你是个蠢货，<CHARNAME>，如果你以为靠讨好我就能改变我对你和你那些*礼物*的看法。别烦我，也别再试！~
     IF ~~ EXIT
   END
 
   IF ~~ ear1
-    SAY ~(Without a moment's hesitation you lean over and blow fiercely into Iylos' ear.  The man in question blinks owlishly for a moment, as though he could not believe what had just happened, and walks away shaking his head.)~
+    SAY ~（你毫不迟疑地俯身，用力往伊洛斯耳朵里吹了口气。那人像猫头鹰一样眨了好一会儿眼，仿佛不敢相信刚才发生的事，然后摇着头走开。）~
     IF ~~ EXIT
   END
 
   IF ~~ ear2
-    SAY ~(You sidle up to Iylos on the pretense of making conversation and lean over, supposedly to tell him something important.  Instead of words what issues forth from your mouth is a burst of wind, which travels right to Iylos' ear.  He jumps, surprised, and shakes his head as if to empty it of something.)~ = ~(He gives you a look of long-suffering tiredness, and suddenly you find your ear filled with wet finger.)~
+    SAY ~（你借着说话的由头凑到伊洛斯身边，俯身像是要告诉他什么要紧事。可你嘴里出来的不是话，而是一阵风，直钻进伊洛斯耳朵。他一惊跳起，摇着头，像是要把什么东西从脑袋里倒出去。）~ = ~（他给了你一个久经忍耐的疲倦眼神，忽然你发现自己的耳朵被一根湿手指塞住了。）~
     ++ ~(Scream and jump backwards)~ + ear2_1
-    ++ ~(Grab his hand and pull it away from your head, tutting.) Iylos, really.  Can't you do better than that?~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + ear2_2
+    ++ ~（抓住他的手，把它从你头上拉开，啧了一声。）伊洛斯，真是的。你就不能做得更好点？~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + ear2_2
     ++ ~Argh!  Ugh, Iylos, that's disgusting!!~ + ear2_2
   END
 
   IF ~~ ear2_1
-    SAY ~(Iylos smirks at you.) Just don't do that again, <CHARNAME>, or I will do a lot worse.  I give as good as I get, when the mood strikes me.  (He turns away, but not before giving you another long-suffering look and hints of a glare.)~
+    SAY ~（伊洛斯冲你得意地一笑。）别再那样，<CHARNAME>，否则我会做得更过分。我心情来了，也是以其人之道还治其人之身。（他转过身，走前又给了你一个久经忍耐的眼神和几分怒视。）~
     IF ~~ EXIT
   END
 
   IF ~~ ear2_2
-    SAY ~Of course.  I was just looking for something just as childish and immature as what you just did to counter.  I *do* give as good as I get, when the mood strikes me.  (He turns away, but not before giving you another long-suffering look and hints of a glare.)~
+    SAY ~当然。我只是想找个跟你刚才做的事一样幼稚的东西来还手。我*确实*会在心情来时以其人之道还治其人之身。（他转过身，走前又给了你一个久经忍耐的眼神和几分怒视。）~
     IF ~~ EXIT
   END
 
   IF ~~ apologise
-    SAY ~I suppose that is alright.  Just...don't continue bothering me.  I have better things to do than watch you play games.~
+    SAY ~我想那也行。只是……别再继续烦我。我有比看你玩游戏更好的事要做。~
     IF ~~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ EXIT
   END
 
   // Questions
   IF ~~ classes
-    SAY ~No, I do not.  I think the separation of peoples is useless, and only serves to cause discontent with those who are poorer or less well-off.  But then again, if all were suddenly to become equal, there would always be those who sought to tip the balance of power to their favour.~  = ~I think whatever we do, there will always be those who are more successful businessmen, more successful artists, more successful fishermen, more successful fighters.  To take that away would take away what makes us human; our individuality.  Everyone has their strengths and weaknesses.~ = ~I apologise, I did not mean to ramble.  I do not agree with classes, but I can see the reason for their existence.~
+    SAY ~不，我不这么认为。我觉得把人分等级毫无用处，只会让那些更穷、境况更差的人心生不满。不过话又说回来，若所有人忽然都平等了，总还会有人想把权力的天平扳向自己。~  = ~我觉得不管我们怎么做，总会有更成功的商人、更成功的艺术家、更成功的渔夫、更成功的战士。把这夺走，就等于夺走让我们成为人的东西；我们的个性。人人都有长处和短处。~ = ~我道歉，我不是有意絮叨。我不认同阶级，可我能看出它存在的理由。~
     IF ~~ EXIT
   END
 
   IF ~~ gate
-    SAY ~Yes, I have.  Several years back, before the Iron Crisis.  I did not like it at all...too many people, too much intrigue and too much activity.  I would not care to go there again.~
+    SAY ~是的，去过。几年前，铁危机之前。我一点也不喜欢……人太多，勾心斗角太多，热闹太多。我不太想再去。~
     IF ~~ EXIT
   END
 
   IF ~~ pastries
-    SAY ~(Iylos looks startled for a moment.) I don't mind them, but they aren't my first choice of food, no.  I am rather partial to custard tarts, however.~
+    SAY ~（伊洛斯愣了一下。）我不讨厌它们，可它们不是我首选的食物，不。不过我倒挺偏爱蛋奶挞。~
     IF ~~ EXIT
   END
 
   IF ~~ drink
-    SAY ~Water has always been sufficient for me; alcohol confuses the mind and weakens the body, and I would not care to be caught unawares--in any situation.~
+    SAY ~水对我一向足够；酒乱心智、弱身体，我不愿在任何情形下被打个措手不及。~
     IF ~~ EXIT
   END
 
   IF ~~ animal
-    SAY ~I have no favourite animal, and neither does this topic concern our quest.  I would appreciate it if you would stop bothering me and get back to the quest at hand.~
+    SAY ~我没有最喜欢的动物，这话题也跟我们的任务无关。你若能不再烦我、回到手上的任务，我会很感激。~
     IF ~~ EXIT
   END
 
   IF ~~ tattoos
-    SAY ~That is none of your business, and I intend to keep it that way.  Please leave me alone, <CHARNAME>, I have no wish for idle chatter.~
+    SAY ~那不关你的事，我也打算这样。请别烦我，<CHARNAME>，我不想闲扯。~
     IF ~~ EXIT
   END
 
   IF ~~ kill
-    SAY ~(Iylos' face tightens, and his eyes narrow.) Why would you be interested in such a morbid question, <CHARNAME>?~
+    SAY ~（伊洛斯的脸绷紧，眼睛眯起。）你为什么会对这么病态的问题感兴趣，<CHARNAME>？~
     ++ ~No reason, just wondering.~ + kill_1
-    ++ ~Because it interests me...when I kill, there's the exhilaration of the hunt, and the adrenalin rush of the final blow.  Of course, the regret hits me afterwards, but it is not important and easily dismissed.~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + kill_2
-    ++ ~When I kill, my mind is a blank slate; death is my purpose, and there is no point evading my fate.  I was just wondering what it was like for another.~ DO  ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-2)~ + kill_2
-    ++ ~It isn't morbid, I wish to know purely for scientific reasons.~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + kill_2
+    ++ ~因为它让我感兴趣……我杀人的时候，有猎杀的兴奋，有最后一击的肾上腺素冲涌。当然，事后会涌上悔意，可那不重要，很容易就打发了。~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + kill_2
+    ++ ~我杀人的时候，脑子是一片空白；死亡是我的目的，逃避命运没有意义。我只是想知道别人是什么感觉。~ DO  ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-2)~ + kill_2
+    ++ ~这不病态，我纯粹是为了科学的原因想知道。~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",-1)~ + kill_2
     ++ ~I'm not, I'm just--I don't like death. I hate it, and I wish I didn't have to kill.~ + kill_3
   END
 
   IF ~~ kill_1
-    SAY ~Then you would not mind if I do not answer the question.~
+    SAY ~那你就不介意我不回答这个问题了。~
     IF ~~ EXIT
   END
 
   IF ~~ kill_2
-    SAY ~You truly are a spawn of Bhaal.  (Sigh)~
+    SAY ~你真是巴尔的后裔。（叹气）~
     IF ~~ + kill_3
   END
 
   IF ~~ kill_21
-    SAY ~No, I did not.~
+    SAY ~不，我没有。~
     IF ~~ EXIT
   END
   
   IF ~~ kill_3
-    SAY ~When I fight, there is only one thing upon my mind; find a weakness, and strike.  If I can, I will render the enemy unconscious, but the circumstances surrounding our quest do not look kindly upon such behaviour.  It would be no good if enemies begin to wait until dark to attack, seeking revenge for the damages we have done them.~
+    SAY ~我战斗时，心里只有一件事；找到弱点，然后出击。若能，我会把敌人打昏，可我们这任务的情形不容这种举动。敌人若开始等到天黑才来袭击，为我们的伤害报仇，那就不妙了。~
     ++ ~You didn't answer my question.~ + kill_21
   END
 
   IF ~~ hair
-    SAY ~(Iylos raises an eyebrow.) Yes, it looks fine.  A little windblown perhaps, but fine nonetheless.~
+    SAY ~（伊洛斯挑起一边眉毛。）是的，看着不错。也许有点被风吹乱，但还是不错。~
     IF ~~ EXIT
   END
 
   IF ~~ flower
-    SAY ~The forget-me-not.~
-    ++ ~Why the forget-me-not?~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + flower_1
-    ++ ~What's a forget-me-not?~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + flower_2
-    ++ ~Alright.~ EXIT
+    SAY ~勿忘我。~
+    ++ ~为什么是勿忘我？~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + flower_1
+    ++ ~勿忘我是什么？~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + flower_2
+    ++ ~好吧。~ EXIT
   END
 
   IF ~~ flower_1
-    SAY ~I like the blue colour painted upon its petals; it reminds me of the desert sky on a clear day.  Calm, peaceful, and with a lingering regret that night must come to pass.~
+    SAY ~我喜欢它花瓣上那蓝色；它让我想起晴日里沙漠的天空。平静、安宁，还带着一丝夜必将到来的怅惘。~
     IF ~~ EXIT
   END
 
   IF ~~ flower_2
-    SAY ~A forget-me-not is a small blue flower which sticks to fabric.  I like the blue colour painted upon its petals; it reminds me of the desert sky on a clear day.  Calm, peaceful, and with a lingering regret that night must come to pass.~
+    SAY ~勿忘我是一种会粘在布料上的蓝色小花。我喜欢它花瓣上那蓝色；它让我想起晴日里沙漠的天空。平静、安宁，还带着一丝夜必将到来的怅惘。~
     IF ~~ EXIT
   END
 
   IF ~~ treat
-    SAY ~Not particularly--there was no time for such frivolities in the monastery, <CHARNAME>.  'Treats', as such, were not allowed.  We were given another kind of reward for good behaviour.~
-    ++ ~What was that?~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + treat_1
+    SAY ~不特别——修道院里没时间搞这种闲玩意，<CHARNAME>。所谓的「甜点」是不许的。我们表现好会得到另一种奖赏。~
+    ++ ~那是什么？~ DO ~IncrementGlobal("BLK#IylosHappiness","GLOBAL",1)~ + treat_1
     ++ ~Makes sense.~ + treat_1
   END
 
   IF ~~ treat_1
-    SAY ~If we behaved well in lessons, we were taken to the city and allowed to wander its boundaries.  We did not get out very often, unless it was to work or meditate, so such visits were treasured above almost all else.  Enough of that, however...let us get back to the road.~
+    SAY ~我们课上表现好，就被带到城里，允许在城界内闲逛。我们很少能出去，除非是干活或冥想，所以这样的出行几乎比什么都珍贵。不过这些够了……我们回路上吧。~
     IF ~~ EXIT
   END
 
   IF ~~ dale
-    SAY ~Yes, I have.  I quite like the Dales, frigid though they are.  I stayed in Luskan, even visited the small town of Kuldahar--one day I would like to return there, it was breathtaking.  The Spine of the World is, indeed, very beautiful...but just as perilous.  That could explain why I like it so much.~
+    SAY ~是的，去过。我挺喜欢谷地，虽然冷。我在路斯坎待过，还去过库尔达哈那个小镇——有朝一日我想再回去，那景色令人屏息。世界之脊确实很美……也一样凶险。这也许能解释我为什么这么喜欢它。~
     IF ~~ EXIT
   END
 
   IF ~~ colour
-    SAY ~Blue.  But, really <CHARNAME>--must you ask such frivolous questions?!  We have tasks to be doing, and shouldn't be standing around idly discussing our favourite things.~
+    SAY ~蓝色。可真是的，<CHARNAME>——你非得问这种无聊的问题吗？！我们有任务要做，不该站在这儿闲闲地聊自己最喜欢什么。~
     IF ~~ EXIT
   END
 
   IF ~~ scent
-    SAY ~The scent of roses in the early morning.  Or possibly freshly baked bread.~
+    SAY ~清晨玫瑰的香气。或者也许是刚出炉的面包。~
     IF ~~ EXIT
   END
 
   IF ~~ volo
-    SAY ~Ah...Volo.  I don't like him at all--a pompous fool, always exaggerating tales of his and others' exploits.  I'm constantly surprised by how well his books sell, but I suppose it really should not.~ = ~I once met Volothamp; we were at an inn, and he was harassing the owner for a tale about several famous adventurers who had just passed through; I believe it was Drizzt and his followers.  I intervened and politely asked a few questions of my own, and after reading Volo's notes showed them to the owner of the inn, who promptly threw Volo out of the establishment and thanked me, throwing the notes into the fire.  (Iylos chuckles.)~
+    SAY ~啊……伏罗。我一点也不喜欢他——一个自命不凡的蠢货，老夸大自己和别人的事迹。他的书卖得那么好，我总感到惊讶，不过我想这其实也不该惊讶。~ = ~我见过一次伏洛坦；我们在一家客栈里，他缠着店主，要打听几个刚经过的著名冒险者的故事；我记得是崔斯特和他的同伴。我插了话，客气地问了几个我自己的问题，然后看了伏罗的笔记，把它们给店主看，店主立刻把伏罗赶出店，谢了我，还把笔记扔进火里。（伊洛斯轻轻笑了。）~
     ++ ~What did the notes say?~ + volo_1
-    ++ ~Heh, yeah.~ EXIT
+    ++ ~嘿，是啊。~ EXIT
   END
 
   IF ~~ volo_1
-    SAY ~As I remember, it was something along the lines of how the inn was thoroughly disreputable, and how the owner was surely a tramp of some kind.  Volo's way of getting back at him for refusing to divulge details of Drizzt's stay, I suppose.  Pathetic.~
+    SAY ~我记得，大意是说这客栈声名极其败坏，店主肯定是个什么流浪汉。我想那是伏罗报复店主不肯透露崔斯特住宿细节的法子。可悲。~
     IF ~~ EXIT
   END
 
   IF ~~ knownbalth
-    SAY ~Since I was a child.  He was my best friend, then my tutor, and then my Master.~ = ~<CHARNAME>, I am tired of answering your questions.  Leave me be!~
+    SAY ~从我还是孩子起。他先是我最好的朋友，然后是我的老师，再然后是我的师父。~ = ~<CHARNAME>，我答你的问题答累了。别烦我！~
     IF ~~ EXIT
   END
 
   IF ~~ selfhate
-    SAY ~Sometimes, yes.  But self-hatred never gets one anywhere.  We all make mistakes; sometimes terrible, and we must deal with the consequences of those mistakes, whether it be by doing a good deed or suffering our conscience.  Everyone handles it differently.  Not that you would know, of course, <CHARNAME>; being a Bhaalspawn and all.~
+    SAY ~有时会，是的。可自厌从来带不到哪里去。我们都会犯错；有时是很严重的错，而我们必须承担那些错的后果，或是以善行弥补，或是受良心折磨。每个人应对的方式不同。当然你不会懂，<CHARNAME>；毕竟是巴尔之子嘛。~
     IF ~~ EXIT
   END
 
   IF ~~ sunsets
-    SAY ~Yes, I do.  The sunsets in the desert are spectacular...gold, red, and orange, spraying out from the remnants of the dying sun.  One day I hope you see it, <CHARNAME>, so you can see the true beauty of the desert--and gain some modicum of respect for it.~
+    SAY ~是的，我喜欢。沙漠的日落很壮观……金、红、橙，从将死的太阳残躯里喷散出来。有朝一日我希望你能看到，<CHARNAME>，好让你看见沙漠真正的美——并对它生出几分敬意。~
     IF ~~ EXIT
   END
 
   IF ~~ moretattoos
-    SAY ~No, I do not.~
+    SAY ~不，我没有。~
     IF ~~ EXIT
   END
 
   IF ~~ parents
-    SAY ~Perhaps, but it is none of your concern.  Please cease prying into my business, <CHARNAME>, it is not an area you wish to dabble in.  (Iylos' eyes take on a dangerous glint as he turns away.)~
+    SAY ~也许吧，可这不关你的事。请别再探我的私事，<CHARNAME>，那不是你该涉足的领域。（伊洛斯转身时眼里闪过一丝危险的光。）~
     IF ~~ EXIT
   END
 
   IF ~~ desert
-    SAY ~Usually some form of shelter is available, even if it is just in the form of a rocky outcropping or an overhang.  Caves are also good to sleep in; they provide warmth and protection from the elements.  I'm fairly sure we won't be needing to resort to any of those things, but they are there if needed.~
+    SAY ~通常总能找到某种遮蔽，哪怕只是一块突出的岩壁或崖檐。山洞也适合睡；它们保暖，也能挡风遮雨。我相当确定我们用不上这些，可需要时它们就在。~
     IF ~~ EXIT
   END
 
   IF ~~ neverwinter
-    SAY ~The city of Neverwinter?  No, I have not.  I have heard many things about it, and none of them good, however.~
+    SAY ~无冬城？不，我没去过。可我听过许多关于它的说法，没有一句是好话。~
     IF ~~ EXIT
   END
 
   IF ~~ nightday
-    SAY ~It depends on my mood--and right now, my mood is annoyed.  Cease your damned questions, and leave me be!~
+    SAY ~这要看我的心情——而现在，我的心情是恼火。别再问那些该死的问题，别烦我！~
     IF ~~ EXIT
   END
 
   IF ~~ monk
-    SAY ~I had no choice in the matter; I was raised in a Monastery, among many monks.  What else would I have done?~  = ~No, it was become a monk or a scholar, and I had no wish to spend all day inside a cage of knowledge and books.~
+    SAY ~这事我没得选；我在修道院长大，身边全是修士。我还能做什么？~  = ~不，是当修士还是当学者，而我不想整天待在知识和书本的笼子里。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Med
-    SAY ~Of course--we can continue doing it each morning before sunrise, if you wish.~
-    ++ ~I'd like that.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Med_1
+    SAY ~当然——你若愿意，我们可以每天日出前继续做。~
+    ++ ~我愿意。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Med_1
     ++ ~No thanks...I'd just like to do it one more time.~ + PID_Med_2
-    ++ ~Do you like chicken?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Med_3
+    ++ ~你喜欢鸡肉吗？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Med_3
   END
 
   IF ~~ PID_Sorry
-    SAY ~Life has been hard for us all, <CHARNAME>, not just you.  That does not excuse such rudeness.~
+    SAY ~我们所有人日子都不好过，<CHARNAME>，不只是你。可那不能成为这种无礼的借口。~
     ++ ~Still, I apologise.  It was not my intention to say what I did, it just...happened.~ + PID_Sorry_1
-    ++ ~Look, I'm no good at this.  Just--sorry.  Okay?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Sorry_1
+    ++ ~听着，我不擅长这个。就——对不起。行吗？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Sorry_1
     ++ ~I'm sorry, Iylos.  What more could you want?!~ + PID_Sorry_1
     ++ ~Why even bother apologising if you're going to act like that?~ + PID_Sorry_1
   END
 
   IF ~~ PID_PPlane
-    SAY ~In theory.  But this place is so ominous...the very sky screams unnatural doom.~
-    ++ ~You get used to it after a while.  Really, you do.~DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_PPlane_1
-    ++ ~I created it; do I scream unnatural doom?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_PPlane_2
+    SAY ~理论上。可这地方太不祥了……连天空都在尖叫着非自然的厄运。~
+    ++ ~过一阵你就习惯了。真的，你会习惯。~DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_PPlane_1
+    ++ ~是我造的；我在尖叫非自然的厄运吗？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_PPlane_2
     ++ ~I...I know what you mean.  But I created it, apparently...so it can't be all that bad...can it?~ + PID_PPlane_2
-    ++ ~You're just pathetic and weak.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_PPlane_3
+    ++ ~你只是可悲又软弱。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_PPlane_3
   END
 
   IF ~~ PID_Bhaal
-    SAY ~Perhaps my comment was out of line, <CHARNAME>, but you cannot say what you did and then expect one to act like all was fine.  Leave me alone, <CHARNAME>, I have no wish to speak to you any further.~
+    SAY ~也许我那句话过了头，<CHARNAME>，可你不能说了那种话，还指望别人当作一切如常。别烦我，<CHARNAME>，我不想再跟你说话。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Med_1
-    SAY ~Then I expect you up at dawn tomorrow morning.  (Iylos smiles at you faintly.)~
+    SAY ~那我指望你明早黎明起来。（伊洛斯对你淡淡一笑。）~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Med_2
-    SAY ~If you wish--though practice makes perfect, they say.  Are you sure?~
+    SAY ~随你——不过人说熟能生巧。你确定？~
     ++ ~Yes, quite.  Thanks, but no thanks.~ + PID_Med_21
-    ++ ~Actually, I think I will do it a bit more than that...do you mind teaching me some more?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Med_22
+    ++ ~其实，我想我会多做一些……你介意再多教我一些吗？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Med_22
   END
 
   IF ~~ PID_Med_3
-    SAY ~(After a moment's pause, Iylos begins to laugh.) Is that a yes or a no, <CHARNAME>?~
+    SAY ~（顿了顿，伊洛斯笑起来。）那是答应还是不答应，<CHARNAME>？~
     ++ ~A definite yes.~ + PID_Med_1
     ++ ~A no.  (Grin)~ + PID_Med_21
   END
 
   IF ~~ PID_Sorry_1
-    SAY ~Do not expect a simple apology to right what you said, <CHARNAME>, but it is accepted.  For now.~
+    SAY ~别指望一句简单的道歉就能弥补你说的话，<CHARNAME>，不过我接受了。就眼下。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_PPlane_1
-    SAY ~For some strange reason, that doesn't comfort me in the slightest.~
+    SAY ~不知为何，这话一点也没安慰到我。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_PPlane_2
-    SAY ~Do you really want me to answer that question, <CHARNAME>?~
-    ++ ~Ah...perhaps not, then.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_PPlane_21
+    SAY ~你真要回答那个问题吗，<CHARNAME>？~
+    ++ ~啊……那还是不问了。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_PPlane_21
     ++ ~(Roll your eyes)~ + PID_PPlane_21
-    ++ ~Yes!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_PPlane_22
-    ++ ~Must you act immature?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_PPlane_21
+    ++ ~要！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_PPlane_22
+    ++ ~你非得这么幼稚吗？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_PPlane_21
   END
 
   IF ~~ PID_PPlane_3
-    SAY ~And you are nought but a self-obsessed raven, in twain, to quote one famous poet.  Leave me to my thoughts, <CHARNAME>, I am not interested.~
+    SAY ~而你不过是一只自顾自的渡鸦，一分为二，借用某位名诗人的话。让我自己想事情，<CHARNAME>，我没兴趣。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Med_21
-    SAY ~(Iylos shrugs.) Your choice.~
+    SAY ~（伊洛斯耸耸肩。）你的选择。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Med_22
-    SAY ~If you want to learn more, then I expect you up at dawn tomorrow morning.  (Iylos smiles at you faintly.)~
+    SAY ~你若想多学，那我指望你明早黎明起来。（伊洛斯对你淡淡一笑。）~
     IF ~~ EXIT
   END
 
   IF ~~ PID_PPlane_21
-    SAY ~(Iylos loses his usual composure for a moment, and flashes you a grin.)~
+    SAY ~（伊洛斯一时失了惯常的沉稳，冲你咧嘴一笑。）~
     IF ~~ EXIT
   END
 
   IF ~~ PID_PPlane_22
-    SAY ~If you wish.  Yes, in answer to your question.  (Iylos loses his usual composure for a moment, and flashes you a slight grin.)~
+    SAY ~随你。是的，回答你的问题。（伊洛斯一时失了惯常的沉稳，冲你微微咧嘴一笑。）~
     IF ~~ EXIT
   END
 
   //New questions as of 9/2/07
   IF ~~ Appreciate
-    SAY ~You have a large task ahead of you, <CHARNAME>--I would not want you going in all by yourself.  You might get hurt!~ = ~Better I come along and look after you, don't you think?~
+    SAY ~你面前有件大事，<CHARNAME>——我不想你一个人去。你说不定会受伤！~ = ~我跟你一起去照看你更好，你不觉得吗？~
     ++ ~I can handle myself, Iylos.  You don't need to baby me.~ + AP1
     ++ ~Whatever.  It would have been nice of you to just say 'that's okay, <CHARNAME>, I don't mind' instead of giving me this bullshit.~ + AP2
     ++ ~Heh, you might be right, at that.  Anyway--thank you.~ + AP3
-    ++ ~If you say so.~ EXIT
+    ++ ~你这么说就这么吧。~ EXIT
   END
 
   IF ~~ AP1
-    SAY ~If you say so, <CHARNAME>.  If you say so.  (He grins slightly.)~
+    SAY ~你这么说就这么吧，<CHARNAME>。你这么说就这么吧。（他微微咧嘴一笑。）~
     IF ~~ EXIT
   END
 
   IF ~~ AP2
-    SAY ~I was just being humorous.  There is no need to get up in arms about it.~
+    SAY ~我只是在开玩笑。不必为此动气。~
     IF ~~ EXIT
   END
 
   IF ~~ AP3
-    SAY ~No problem at all, <CHARNAME>.~
+    SAY ~完全没问题，<CHARNAME>。~
     IF ~~ EXIT
   END
 
   IF ~~ HerbalLore
-    SAY ~I know some things, but the vast majority of plant and herb lore has evaded my interest so far.  Perhaps one day I will become interested in it, but for now--I would prefer to know the art of battle than that of healing.~
+    SAY ~我懂一些，可植物和草药的大部分知识至今没引起我的兴趣。也许有天我会感兴趣，可现在——我更愿意懂战斗之术，而不是治疗之术。~
     IF ~~ EXIT
   END
 
   IF ~~ Leila
-    SAY ~Leila studied at the Monastery for a short time before becoming embroiled with...family, so to speak.  She was to quit studying and acquire a job, earn money, or face the prospect of having her child taken away from her.~ = ~It was not a happy situation.  I joined the Monastery several years after she had left, but she still visited the Monastery, sometimes brought us food from the Inn and stories of the outside world.  She was almost like a universal mother to us students, even though she was only several years older than us.~ = ~She did not support my decision to leave the Monastery, and almost made me stay.  Leaving was...hard for me, and having to leave Leila and little Keira made it no easier.~ = ~But I don't want to speak of this any further--I have delved enough into past incidents to satisfy your curiosity, surely.~
+    SAY ~蕾拉在修道院学过一小段时间，后来卷进了……家庭的事，可以这么说。她本该辍学去找份活、挣钱，否则就面临孩子被夺走的前景。~ = ~那不是个愉快的处境。我是在她离开几年后才入修道院的，可她还常来修道院，有时从客栈给我们带吃的，讲外面世界的故事。她对我们这些学生几乎像个通用的母亲，尽管她只比我们大几岁。~ = ~她不支持我离开修道院的决定，几乎让我留了下来。离开对我来说……很难，而要离开蕾拉和小凯拉，让它更难。~ = ~可我不想再谈这个了——我已经挖了足够多的旧事来满足你的好奇，肯定够了。~
     IF ~~ EXIT
   END
 
   IF ~~ Bitter
-    SAY ~Bitter?  I don't think of myself as bitter...but perhaps it is because each day, I see so much I have not experienced, not done, not tried.  Things I have missed out on, and *can't* try.  Life is not endless, and my thread is, doubtless, nearing its middle.~ = ~Maybe that helps you, a little.  But I do not think of myself as bitter.  Dark, perhaps.  But not bitter.~
+    SAY ~苦？我不觉得自己苦……可也许是因为我每天都看见那么多我没经历过、没做过、没试过的事。我错过的东西，而且*不能*去试。生命不是无尽的，而我的线，无疑已近中段。~ = ~也许这能帮你一点。可我不觉得自己苦。阴郁，也许。但不是苦。~
     IF ~~ EXIT
   END
 
   IF ~~ Night
-    SAY ~The night holds many dangers, beyond that of the day.  You can't see where you're going--at least, I can't; sound is somewhat enhanced, but vision goes out the window, so to speak.  I find that incredibly frustrating.~ = ~So, no, I do not like the night.  It has dangers hidden to our eyes, and has a tenuousness I would rather not have to face each and every time it comes upon Faerun.~
+    SAY ~夜里有白昼之外许多危险。你看不清自己在往哪走——至少我看不清；听觉会有所增强，可视力就谈不上了。我觉得这极其恼人。~ = ~所以，不，我不喜欢夜晚。它有藏在我们眼外的危险，还有一种每当它降临费伦时我宁愿不必面对的飘忽不定。~
     IF ~~ EXIT
   END
 
   IF ~~ Consider
-    SAY ~A friend, yes.  You have proved yourself somewhat worthy of my friendship, and as such, I will treat you as one.~
+    SAY ~朋友，是的。你已证明自己多少配得上我的友谊，既是如此，我就把你当朋友待。~
     IF ~~ EXIT
   END
 
   IF ~~ Consider2
-    SAY ~A traveling companion; a friend would be a severe distortion of the truth.~
+    SAY ~一个同行的伙伴；说是朋友，那是对事实的严重歪曲。~
     IF ~~ EXIT
   END
 
   IF ~~ WhatsNextForIylos
-    SAY ~I am not terribly sure.  Return to the Monastery for a time, perhaps, or return to the deserts.  I feel that I have not finished traveling, and would like to continue--perhaps visit the Dales once more, or to Luskan.~
+    SAY ~我不太确定。也许回修道院待一阵，或者回沙漠。我觉得自己还没走够，想继续——也许再去一次谷地，或者去路斯坎。~
     IF ~~ EXIT
   END
 
   IF ~~ GrowingHair
-    SAY ~Long hair is not helpful in combat, <CHARNAME>, as you know.  It was mostly a personal decision to shave my head; though keeping it smooth is an endless, unsatisfying task, I prefer that to not being able to see.~
+    SAY ~长发在战斗中没好处，<CHARNAME>，你知道的。剃头多半是我个人的决定；虽然保持光洁是件无尽又不痛快的事，可我宁愿那样，也不愿看不见。~
     IF ~~ EXIT
   END
 
   // PID 1--Cease
   IF ~~ PID_Cease
-    SAY ~I'm just doing my job, Bhaalspawn.  Do you have a problem with that?~ 
-    ++ ~Actually yes, I do.  If your job simply consists of being prejudiced and rude, Iylos, then I would rather you go.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Cease_1
-    ++ ~Of *course* not!  I mean, I'm sure *you* wouldn't mind being eyed like a fat mouse by a hungry cat, would you?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Cease_1
+    SAY ~我只是在尽职，巴尔之子。你对此有意见？~ 
+    ++ ~其实有。如果你的职责只是偏见和无礼，伊洛斯，那我宁愿你走。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Cease_1
+    ++ ~当*然*没有！我是说，我肯定*你*不会介意被一只饿猫像盯肥老鼠一样盯着，是吧？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Cease_1
     ++ ~Iylos, please, there is no need for hostility here.  I'm just asking you to trust me a little.  Obviously I'm not going to harm you or any other innocents; I haven't so far, why should I now?~ + PID_Cease_2
     ++ ~Surely you can see that I mean only good, Iylos?  Must you persist with this suspicion?~ + PID_Cease_3
-    ++ ~Would 1000 gold, perhaps, ease your suspicion somewhat?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-5)~ + PID_Cease_4
+    ++ ~一千金币，也许能让你的疑心松一点？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-5)~ + PID_Cease_4
     ++ ~Leave.  Me.  Alone.  I need some room to work, I can't do what I need to do with you constantly breathing down the back of my shirt.~ + PID_Cease_1
-    ++ ~Actually, it doesn't matter.  Don't worry about it.~ EXIT
+    ++ ~其实无所谓。别在意。~ EXIT
   END
 
   IF ~~ PID_Cease_1
-    SAY ~I am doing my duty to one I am loyal to, and you would do well to at least respect that.  Or is the concept of honour and loyalty something that is unfamiliar to you?~
-    ++ ~(Stay silent)~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Cease_11
+    SAY ~我是在对我效忠的人尽我的职责，你至少该尊重这一点。还是说，荣誉与忠诚这类概念对你很陌生？~
+    ++ ~（保持沉默）~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Cease_11
     ++ ~I am quite familiar with honour and loyalty and respect those who exhibit these traits.  However, I would appreciate it if you would give me a bit of breathing room and allow me to work without your constant watching.  I know you mean well, and that you have reason to be suspicious of me, but everything you have seen so far of me has been good, has it not?.~ + PID_Cease_12
-    ++ ~MY command stands.  Leave if you wish, Iylos, I'm sick of your tired obsession with 'duty!.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Cease_13
+    ++ ~*我*的命令算数。想走就走，伊洛斯，我受够了你那套「职责」的乏味执念。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Cease_13
     ++ ~Iylos, just back off a little.~ + PID_Cease_14
     ++ ~Please, Iylos, just do as I ask.  You can't observe me when I feel like I have to watch my every move, because it isn't how I truly am.  Look at it from that perspective.~ + PID_Cease_12
   END
 
   IF ~~ PID_Cease_2
-    SAY ~Humour, <CHARNAME>?  Since when has that been a part of your make up?  Not that it matters.  I am not a cat, stalking my prey, just waiting for a chance to attack.~
+    SAY ~幽默，<CHARNAME>？你身上什么时候有过这种东西？不过无所谓。我不是猫，潜伏着等机会袭击猎物。~
     IF ~~ + PID_Cease_1
   END
 
   IF ~~ PID_Cease_3
-    SAY ~Just because you haven't harmed any innocents so far does not mean you don't have any intention of doing so in the future, <CHARNAME>.  Don't attempt to dissuade me from my task, it will not work.~
+    SAY ~你至今没伤害过任何无辜者，并不代表你将来没有这个意图，<CHARNAME>。别想劝我放弃任务，那没用。~
     ++ ~Iylos, this is foolishness.  You know as well as I do that I'm not going to harm anybody I don't need to.~ + PID_Cease_31
     ++ ~I'm not trying to dissuade you from your task.  I'm asking you to at least trust me enough to let me do what I need to without you questioning my every move!~ + PID_Cease_14
-    ++ ~I don't kill unless it is a necessity.  You, of all people, should understand that.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Cease_31
-    ++ ~Fine!  I give up.  In the future, watch yourself; you may find yourself on the wrong end of a sword, or perhaps a fist.  Either way...~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PID_Cease_14
+    ++ ~除非必要，我不杀人。你最该明白这一点。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Cease_31
+    ++ ~好！我放弃。以后，当心你自己；你说不定会发现自己在剑的另一头，或者拳头下。不管怎样……~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PID_Cease_14
   END
 
   IF ~~ PID_Cease_4
-    SAY ~(Iylos' eyes flash.) You would try to *bribe* me, <CHARNAME>?!  You are truly a despicable <PRO_MANWOMAN>, and I will leave this...this *party* as soon as I possibly can.  If you weren't under the protection of the Five I would kill you where you stand!~
+    SAY ~（伊洛斯的眼睛一闪。）你想*贿赂*我，<CHARNAME>？！你真是个卑劣的<PRO_MANWOMAN>，我会尽可能早点离开这……这*队伍*。要不是你受五人庇护，我就当场杀了你！~
     ++ ~The...five?~ + PID_Cease_41
     ++ ~The five?  I think I've heard of them...aren't they a group of people out to *kill* Bhaalspawn?~ + PID_Cease_41
-    ++ ~Iylos, don't even let yourself consider the notion that you would be able to kill me.  I am a *Bhaalspawn*, I have powers you couldn't dream of.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Cease_42
+    ++ ~伊洛斯，连想都别想你能杀我。我是*巴尔之子*，我有你梦不到的力量。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Cease_42
     + ~CheckStatGT([PC],12,WIS)~ + ~(Cluck your tongue) Iylos, I don't think your Master will be very happy with that little display!  Come now...do you REALLY have any intention of leaving this party, or are you just bluffing as I suspect?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + PID_Cease_42
     ++ ~I will do what I can to stop you from being in the way!  I have no intention of harming you or any other who has not caused *me* harm.~ + PID_Cease_32
   END
 
   IF ~~ PID_Cease_11
-    SAY ~Pah, I thought not.  Don't try to best me, <CHARNAME>; you will find it is *not* worth your while.  Either way...~
+    SAY ~呸，我看不会。别想胜过我，<CHARNAME>；你会发现那*不*值当。不管怎样……~
     IF ~~ + PID_Cease_14
   END
 
   IF ~~ PID_Cease_12
-    SAY ~I admit a grudging respect for your abilities, <CHARNAME>- but not for you personally.  I have yet to see any great feat which could make me trust you; no heavenly wonder with which to convince me of your innocence.~ = ~Just because you haven't done anything so far does not mean you aren't thinking about doing it in future.~
+    SAY ~我勉强承认你的能力，<CHARNAME>——但不是你这个人。我还没见过什么伟大的事迹能让我信任你；没有什么神圣的奇迹能说服我你是无辜的。~ = ~你至今没做过什么，并不代表你没在想将来要做。~
     IF ~~ + PID_Cease_14
   END
 
   IF ~~ PID_Cease_13
-    SAY ~I have my orders, and I will *follow* them!  Whether or not I have your support doesn't matter to me.  If you force me to leave, I will trail you unobserved and draw my conclusions regardless.~
+    SAY ~我有我的命令，我会*服从*！你有没有支持我，我不在乎。你若逼我走，我会在暗处跟着你，照样下我的结论。~
     ++ ~I was just joking, Iylos...you can stay.  But please, *please*, give me some space.~ + PID_Cease_121
     ++ ~Leave then.  Goodbye.  As long as I don't have to deal with you in my face all the time!~ + PID_Cease_131
     ++ ~I don't take kindly to intimidation, Iylos.  You are free to leave, but if I find you, *anywhere* near me again, you will regret the moment your god-forsaken 'master' told you to join me.  Pray our paths do not cross again!~ + PID_Cease_131
-    ++ ~You can stay...for the moment.  But one more out of line move; one more situation where you take over or get in my way and you're gone.  A friendly warning, shall we say.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Cease_123
+    ++ ~你可以留下……就眼下。可再有一次越界；再有下次你擅作主张或挡我的路，你就走。就当是一句友善的警告。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Cease_123
   END
 
   IF ~~ PID_Cease_14
-    SAY ~I have my orders, <CHARNAME>, and I will follow them.  I would be lax in my duty if I did not watch you as carefully as I do, and I cannot have that upon my head.  That's all there is to it.~
-    ++ ~I suppose that's fair enough.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_Cease_121
+    SAY ~我有命令，<CHARNAME>，我会服从。如果我不同样仔细地盯你，我就失职了，而我不能把这事搁在头上。就这样。~
+    ++ ~我想这还算公道。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_Cease_121
     ++ ~Iylos, you're becoming repetitive.  I tire of this argument...please, at least *consider* putting down your guard, just a little.  If only that, and nothing else.~ + PID_Cease_121
     + ~CheckStatGT([PC],12,WIS)~ + ~Someday soon, Iylos, you will see how very wrong you are in this situation.  I have only the best of intentions, and until you see that, you are blind.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-3)~ + PID_Cease_122
     ++ ~I'm absolutely *awed* by your determination to disregard everything I say, Iylos.~ + PID_Cease_123
   END
 
   IF ~~ PID_Cease_31
-    SAY ~Perhaps.  Either way...~
+    SAY ~也许。不管怎样……~
     IF ~~ + PID_Cease_14
   END
 
   IF ~~ PID_Cease_32
-    SAY ~No, I do not.  You say that, but I have yet to see it for yourself...you kill those you could spare, and you disregard those you do.  I see no compassion there.~
+    SAY ~不，我不这么认为。你这么说，可我还未亲眼见到……你杀那些本可饶过的，也无视那些你杀了的。我在那里看不到慈悲。~
     IF ~~ + PID_Cease_14
   END
 
   IF ~~ PID_Cease_41
-    SAY ~The Five are just some of the people who are interested in you, <CHARNAME>--as I have told you before, you are becoming rather famous.  Infamous.  Whichever you prefer.  Either way...~
+    SAY ~五人只是对你有兴趣的人中的一部分，<CHARNAME>——我早跟你说过，你正变得相当出名。臭名昭著。随你喜欢哪个说法。不管怎样……~
     IF ~~ + PID_Cease_14
   END
 
   IF ~~ PID_Cease_42
-    SAY ~Don't try to best me, <CHARNAME>; you will find it is *not* worth your while.  Either way...~
+    SAY ~别想胜过我，<CHARNAME>；你会发现那*不*值当。不管怎样……~
     IF ~~ + PID_Cease_14
   END
 
   IF ~~ PID_Cease_121
-    SAY ~I will think on it, <CHARNAME>, but for now...we will see.~
+    SAY ~我会想一想，<CHARNAME>，可现在……我们再看吧。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Cease_122
-    SAY ~Perhaps, but I will do what I believe is right regardless of your opinion, Bhaalspawn.  Remember that.~
+    SAY ~也许吧，可不管你怎么想，我都会做我认为对的事，巴尔之子。记住这话。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Cease_123
-    SAY ~I will do what I believe is right regardless of your opinion, Bhaalspawn.  Remember that.~
+    SAY ~不管你怎么想，我都会做我认为对的事，巴尔之子。记住这话。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Cease_131
-    SAY ~Fine, but beware...*I* do not take kindly to intimidation, Bhaalspawn.  Goodbye...for now.~
+    SAY ~好，可要当心……*我*不善待人恐吓，巴尔之子。再见……暂时。~
     IF ~~ DO ~LeaveParty() SetGlobal("IylosLeftUnhappy","GLOBAL",1) EscapeAreaMove("AR5500",958,1567,5)~ EXIT
   END
 
   // PID 2--Balthazar
   IF ~~ PID_KnowsBalth
-    SAY ~Indeed.~ 
-    ++ ~Much like yourself--I can see why you hold him in such high esteem, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",4)~ + PID_KnowsBalth_1
-    ++ ~Balthazar is a very enigmatic man.  I can only hope he fights for the same cause as us.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_KnowsBalth_2
-    ++ ~A pathetic man...obsessed with mundane virtues such as loyalty and obedience.  Why concern yourself with him so?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-3)~ + PID_KnowsBalth_3
-    ++ ~(Stop conversing)~ EXIT
+    SAY ~确实。~ 
+    ++ ~很像你——我明白你为什么这么敬重他了，伊洛斯。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",4)~ + PID_KnowsBalth_1
+    ++ ~巴尔萨扎是个非常莫测的人。我只能希望他跟我们在为同一件事而战。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_KnowsBalth_2
+    ++ ~一个可悲的人……沉迷于忠诚和服从这类世俗美德。你何必这么在意他？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-3)~ + PID_KnowsBalth_3
+    ++ ~（停止交谈）~ EXIT
   END
 
   IF ~~ PID_KnowsBalth_1
-    SAY ~Thank you, <CHARNAME>.  He is a powerful man, in more ways than one, and it is an honour to serve him.~
+    SAY ~谢谢你，<CHARNAME>。他是个强大的人，不止一方面，为他效力是一种荣幸。~
     ++ ~I'm sure.  No wonder you were so reluctant to disobey him; I'm sure he would see it as a betrayal.~ + PID_KnowsBalth_11
-    ++ ~No problem.~ EXIT
-    ++ ~He is a powerful man, indeed.  I appreciate you vouching for me, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_KnowsBalth_12
-    ++ ~Perhaps.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
+    ++ ~没问题。~ EXIT
+    ++ ~他确实是个强大的人。谢谢你为我担保，伊洛斯。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_KnowsBalth_12
+    ++ ~也许。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
   END
 
   IF ~~ PID_KnowsBalth_2
-    SAY ~Us?  I fight for Balthazar's cause, <CHARNAME>--do not think that because I vouched for you that I will blindly follow your lead.  I will continue to aid you for a time, until I feel that I have done my part in this.~
-    ++ ~Thank you, Iylos.  I appreciate it.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    SAY ~我们？我为巴尔萨扎的事业而战，<CHARNAME>——别以为我为你担保了，就会盲目跟着你走。我会再帮你一阵，直到我觉得自己在这件事上尽到了本分。~
+    ++ ~谢谢你，伊洛斯。我很感激。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
     ++ ~Of course--I meant in general.~ + PID_KnowsBalth_21
     ++ ~Thank you for continuing your help, regardless--I would be lost without it.~ + PID_KnowsBalth_22
   END
 
   IF ~~ PID_KnowsBalth_3
-    SAY ~Because, <CHARNAME>, he is worthy.  Perhaps unlike yourself.~
+    SAY ~因为，<CHARNAME>，他值得。也许不像你。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_KnowsBalth_11
-    SAY ~Indeed.  I would never dream of betraying one such as Balthazar.~
-    ++ ~I can understand why.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~I apologise for my...reluctance to accept that you were simply doing your job.  Regardless, lets get going.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~Let's get going, then.~ EXIT
+    SAY ~确实。我绝不会梦想背叛巴尔萨扎这样的人。~
+    ++ ~我明白为什么。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~我为……我之前不愿接受你只是在尽职而道歉。不管怎样，我们走吧。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~那我们走吧。~ EXIT
   END
 
   IF ~~ PID_KnowsBalth_12
-    SAY ~I was just doing what I believe is right, <CHARNAME>.  Do not think that I will blindly follow your lead, however; I will continue to aid you for a time, until I feel that I have done my part in this.~
-    ++ ~Thank you, Iylos.  I appreciate it.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    SAY ~我只是在做我认为对的事，<CHARNAME>。可别以为我会盲目跟着你走；我会再帮你一阵，直到我觉得自己在这件事上尽到了本分。~
+    ++ ~谢谢你，伊洛斯。我很感激。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
     ++ ~Of course--I meant in general.~ + PID_KnowsBalth_21
     ++ ~Thank you for continuing your help, regardless--I would be lost without it.~ + PID_KnowsBalth_22
   END
 
   IF ~~ PID_KnowsBalth_21
-    SAY ~Perhaps.~
+    SAY ~也许。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_KnowsBalth_22
-    SAY ~It is my pleasure, <CHARNAME>.~
+    SAY ~是我的荣幸，<CHARNAME>。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_WhoisBalth
-    SAY ~A man I hold great trust and respect for- that is all you need to know for the time being.~
+    SAY ~一个我极信任、极敬重的人——眼下你只需知道这些。~
     IF ~~ EXIT
   END
 
   // PID 3--Amkethran
   IF ~~ PID_Amk
-    SAY ~I was raised in Amkethran, yes.  What is it to you?~
-    ++ ~Oh, nothing...I was just wondering.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_1
+    SAY ~我是在阿姆凯斯兰长大的，是的。这跟你有什么关系？~
+    ++ ~哦，没什么……我只是好奇。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_1
     ++ ~You were raised in Amkethran?  Where were you born?~ + PID_Amk_2
-    ++ ~I was raised in Candlekeep...my mother died when I was very young.  I was raised by a man called Gorion.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_3
-    ++ ~Amkethran isn't the place for a child...so dusty, so dry.  Surely you had a terrible childhood?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_2
+    ++ ~我是在烛堡长大的……我母亲在我很小的时候就去世了。是一个叫葛立安的人把我养大的。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_3
+    ++ ~阿姆凯斯兰不是孩子待的地方……那么尘土，那么干燥。你的童年一定很糟吧？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_2
     ++ ~Were you raised in the Monastery, or...?~ + PID_Amk_2
   END
 
   IF ~~ PID_Amk_1
-    SAY ~Fine.~
+    SAY ~好吧。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_2
-    SAY ~I see no reason to share my past with you, <CHARNAME>; I am here because I must, not out of any wish to get to know you.  Keep that in mind.~
+    SAY ~我看不出有什么理由要跟你分享我的过去，<CHARNAME>；我来这儿是因为必须来，不是出于想了解你的意愿。记住这点。~
     ++ ~Putting two and two together isn't that hard...you were raised in Amkethran in a Monastery, you have not mentioned any parents to speak of, and you either don't know or aren't willing to share where you were born.  Are you...are you an orphan, Iylos?~ + PID_Amk_21
     ++ ~Monks could not have the best of parents...~ + PID_Amk_22
     ++ ~A Monastery is not the best place to raise a child, surely?~ + PID_Amk_23
   END
 
   IF ~~ PID_Amk_3
-    SAY ~That isn't a question, <CHARNAME>.  Are you quite finished?~
-    ++ ~I grew up with my half-sister, Imoen.  We did everything together...quite often we got in trouble with Gorion and the monks, but we grew up okay.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_31
-    ++ ~I grew up in Candlekeep, as I said, though I don't consider it my home.  Gorion was weak, pathetic, and his death forced me to come to terms with the world.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_32
-    ++ ~Yes, I am--now it is your turn to tell me something.  A truth for a truth.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_33
-    ++ ~Gorion was a kindly old man, though not much of a father.  Did you have a father figure as you grew up?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_34
+    SAY ~那不是个问题，<CHARNAME>。你问完了吗？~
+    ++ ~我跟我同母异父的妹妹爱蒙一起长大。我们做什么都一起……常跟葛立安和修士们惹麻烦，可我们长得还行。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_31
+    ++ ~我说过，我在烛堡长大，虽然我不把它当家乡。葛立安软弱、可悲，他的死逼我去面对这个世界。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_32
+    ++ ~是的，我问完了——现在轮到你说点事。一真换一真。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_33
+    ++ ~葛立安是个慈祥的老人，虽然算不上什么父亲。你成长时有父亲般的人吗？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_34
   END
 
   IF ~~ PID_Amk_21
-    SAY ~Yes.  Does it matter?~
-    ++ ~No, it doesn't--I was just curious.  Sorry for prying.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_211
-    ++ ~Yes, actually it does.  You see, I, too, was an orphan.  Funny how things work out, isn't it?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_212
-    ++ ~(Remain silent)~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_213
+    SAY ~有。这要紧吗？~
+    ++ ~不，不要紧——我只是好奇。抱歉多问。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_211
+    ++ ~其实要紧。你看，我也是个孤儿。事情就是这么巧，是吧？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_212
+    ++ ~（保持沉默）~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_213
     ++ ~Of course not...I apologise, but I had to know.~ + PID_Amk_213
   END
 
   IF ~~ PID_Amk_22
-    SAY ~No, they were not.  Leave me be, <CHARNAME>, I have no interest in discussing this with you.~
+    SAY ~不，他们不是。别烦我，<CHARNAME>，我没兴趣跟你谈这个。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_23
-    SAY ~Maybe not, but I survived.  Leave me be, <CHARNAME>, I have no interest in discussing this with you.~
+    SAY ~也许不，可我活下来了。别烦我，<CHARNAME>，我没兴趣跟你谈这个。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_31
-    SAY ~(Iylos is silent, and waits for you to continue.)~
-    ++ ~...That's all, really.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_311
-    ++ ~Did you have someone, like I had Imoen?  Someone your own age?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_312
-    ++ ~Look, I'm sorry to have brought it up.  It doesn't matter, you obviously aren't interested.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_Amk_313
+    SAY ~（伊洛斯沉默着，等你继续说。）~
+    ++ ~……就这些，真的。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_311
+    ++ ~你有没有过这样的人，像我拥有爱蒙那样？同龄的人？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_312
+    ++ ~听着，抱歉提起这个。这不要紧，你显然没兴趣。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_Amk_313
   END
 
   IF ~~ PID_Amk_32
-    SAY ~Gorion, from all that I've heard, was a very honourable and good man--a Harper, in point of fact.  And you say he was weak and pathetic?~
-    ++ ~Yes, I do!  He just went off and died, left me to fend for myself without giving me a moment's notice!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_321
-    ++ ~Perhaps that was an exaggeration...he was a good and honourable man, yes.  But he had no strength when it came to us; he died at a time when I needed him the most.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_322
+    SAY ~据我所闻，葛立安是个非常正直善良的人——其实是个竖琴手。而你说他软弱可悲？~
+    ++ ~是的，我说了！他就那么走了、死了，把我丢下自己撑着，一句招呼都不打！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_321
+    ++ ~也许那是夸张了……他是个善良正直的人，是的。可面对我们时他没有力量；他死的时候，正是我最需要他的时候。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_322
     ++ ~Look, it doesn't matter...don't worry about it.~ + PID_Amk_323
   END
 
   IF ~~ PID_Amk_33
-    SAY ~I am an orphan, as you may have suspected.  I grew up in the Monastery, but I got bored with my Monastic training and left.  There.  Are you satisfied?~
-    ++ ~Yes, thank you.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_331
+    SAY ~我是个孤儿，你也许已经猜到了。我在修道院长大，可我对修道院的训练厌倦了，就离开了。好了。你满意了吗？~
+    ++ ~是的，谢谢。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_331
     ++ ~No, I'm not--why did you leave?~ + PID_Amk_332
     ++ ~Fair enough...thank you.  I've got one last question, though...Why are you so secretive about your past with me?  I've never been anything but friendly and yet you remain aloof and unfriendly.~ + PID_Amk_333
   END
 
   IF ~~ PID_Amk_34
-    SAY ~No, I did not--the monks were not what you would call suitable parents.  I have no wish to discuss this with you, <CHARNAME>...~
+    SAY ~不，我没有——那些修士可不是你说的合适父母。我不想跟你谈这个，<CHARNAME>……~
     ++ ~Of course.  I apologise.~ + PID_Amk_341
     ++ ~You might not, but I do.  I like to know about my companions, thankyouverymuch.~ + PID_Amk_342
-    ++ ~Fine.~ EXIT
+    ++ ~好吧。~ EXIT
   END
 
   IF ~~ PID_Amk_211
-    SAY ~Of course.  You're...forgiven, I suppose.~
+    SAY ~当然。我想……你被原谅了。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_212
-    SAY ~Indeed.~ [ LK#I102 ]
+    SAY ~确实。~ [ LK#I102 ]
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_213
-    SAY ~I thought not.~
+    SAY ~我看没有。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_311
-    SAY ~I see.  I did not have one such as Imoen to grow up with; no sister or brother to share joy or sadness with.  I have accepted that.  That's enough of this conversation, any more and it will become maudlin.~
+    SAY ~我明白了。我没有像爱蒙那样的人一起长大；没有兄弟姐妹分享喜乐与悲伤。我已经接受了。这段谈话到此为止，再多就要变得感伤了。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_312
-    SAY ~I did not have one such as Imoen to grow up with; no sister or brother to share joy or sadness with.  I have accepted that.  That's enough of this conversation, any more and it will become maudlin.~
+    SAY ~我没有像爱蒙那样的人一起长大；没有兄弟姐妹分享喜乐与悲伤。我已经接受了。这段谈话到此为止，再多就要变得感伤了。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_313
-    SAY ~You're...forgiven, I suppose.  Let's get moving.~
+    SAY ~我想……你被原谅了。我们走吧。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_321
-    SAY ~He did not leave you without a moment's notice, <CHARNAME>--no father would ever do such a thing.  You, at least, had a father.  Think on that before you go accusing Gorion of being 'weak' and 'pathetic'.~
+    SAY ~他不是一句招呼都不打就走的，<CHARNAME>——没有哪个父亲会做这种事。至少你有过父亲。在指责葛立安「软弱」「可悲」之前，想想这个。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_322
-    SAY ~I highly doubt he would die without cause, <CHARNAME>.  But that is your business, not mine, and I would prefer to keep it that way.~
+    SAY ~我很怀疑他会无缘无故就死，<CHARNAME>。可那是你的事，不是我的，我宁愿保持这样。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_323
-    SAY ~If that is what you wish.~
+    SAY ~如果你要这样。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_331
-    SAY ~Good.~
+    SAY ~好。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_332
-    SAY ~I left because I had to.  I am not the type to stay in a monastery my entire life, I had to go out into the world and seek out inner peace.  Many wished me to stay, but I felt a drive to explore and the desert became my paradise, forever unveiling new mysteries and answering questions no human ever could.~
+    SAY ~我离开是因为我不得不离开。我不是那种一辈子待在修道院里的人，我必须走进世界去寻求内心的安宁。许多人希望我留下，可我有一股探索的驱力，沙漠成了我的天堂，不断揭开新的谜团，回答没有凡人能回答的问题。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_333
-    SAY ~I see no reason to share my past with you, <CHARNAME>; I am here because I must, not out of any wish to get to know you.  Keep that in mind.~
+    SAY ~我看不出有什么理由要跟你分享我的过去，<CHARNAME>；我来这儿是因为必须来，不是出于想了解你的意愿。记住这点。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_341
-    SAY ~You're forgiven, <CHARNAME>.  It is just not a subject I wish to speak about with you.~
+    SAY ~你被原谅了，<CHARNAME>。只是这不是我想跟你谈的话题。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk_342
-    SAY ~You will survive, I suspect.~
+    SAY ~我猜你会活下来的。~
     IF ~~ EXIT
   END
 
   // PID 3--Amkethran (good path)
   IF ~~ PID_Amk2
-    SAY ~I was raised in Amkethran, yes.  What was it that you wanted to know, <CHARNAME>?~ [ LK#I104 ]
-    ++ ~Oh, nothing...I was just wondering.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_1
+    SAY ~我是在阿姆凯斯兰长大的，是的。你想知道什么，<CHARNAME>？~ [ LK#I104 ]
+    ++ ~哦，没什么……我只是好奇。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_1
     ++ ~You were raised in Amkethran?  Where were you born?~ + PID_Amk2_2
-    ++ ~I was raised in Candlekeep...my mother died when I was very young.  I was raised by a man called Gorion.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_3
-    ++ ~Amkethran isn't the place for a child...so dusty, so dry.  Surely you had a terrible childhood?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk2_2
+    ++ ~我是在烛堡长大的……我母亲在我很小的时候就去世了。是一个叫葛立安的人把我养大的。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_3
+    ++ ~阿姆凯斯兰不是孩子待的地方……那么尘土，那么干燥。你的童年一定很糟吧？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk2_2
     ++ ~Were you raised in the Monastery, or...?~ + PID_Amk2_2
   END
 
   IF ~~ PID_Amk2_1
-    SAY ~If you're sure.~
+    SAY ~你若确定的话。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_2
-    SAY ~I was an orphan.  I was given to the Monastery when I was very young, and I was never told who my parents were, why they left me there or where I was born.~
-    ++ ~I'm sorry.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_21
-    ++ ~Oh, Iylos...(Hug him)~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_21
-    ++ ~I was an orphan as well...I was raised by Gorion in Candlekeep, but I never knew my mother.  I didn't know about my...father, I suppose, until Gorion's death.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_22
+    SAY ~我是个孤儿。我很小就被交给修道院，从没人告诉过我我的父母是谁、为什么把我留在那儿、我生在哪儿。~
+    ++ ~我很抱歉。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_21
+    ++ ~哦，伊洛斯……（抱住他）~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_21
+    ++ ~我也是个孤儿……我在烛堡由葛立安养大，可我从不知道我母亲。直到葛立安死，我才知道我的……父亲，我想。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_22
   END
 
   IF ~~ PID_Amk2_3
-    SAY ~That...isn't really a question, <CHARNAME>.  (Iylos smiles slightly.) Are you finished, or did you have more to add?~
+    SAY ~那……算不上个问题，<CHARNAME>。（伊洛斯微微一笑。）你说完了，还是还有要补的？~
     ++ ~I grew up with my half-sister, Imoen.  We did everything together...quite often we got in trouble with Gorion and the monks, but we grew up okay.~ + PID_Amk2_31
-    ++ ~I grew up in Candlekeep, as I said, though I don't consider it my home.  Gorion was weak, pathetic, and his death forced me to come to terms with the world.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk2_32
-    ++ ~Yes, I am--now it is your turn to tell me something.  A truth for a truth.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_33
-    ++ ~Gorion was a kindly old man, though not much of a father.  Did you have a father figure as you grew up?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_34
+    ++ ~我说过，我在烛堡长大，虽然我不把它当家乡。葛立安软弱、可悲，他的死逼我去面对这个世界。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk2_32
+    ++ ~是的，我问完了——现在轮到你说点事。一真换一真。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_33
+    ++ ~葛立安是个慈祥的老人，虽然算不上什么父亲。你成长时有父亲般的人吗？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_34
   END
 
   IF ~~ PID_Amk2_4
-    SAY ~It was hard in many ways, but I am the better for it.  "What doesn't kill only makes you stronger" was one of the first lessons I learnt in the Monastery.~ = ~The monks were kind, but they weren't the best of parents--they didn't know how to deal with an overactive child, so they set me to work and study.~ = ~I was happy, in a way.  I never knew any other way; it was then that I befriended one of the younger monks, a man named Balthazar.  He was kind to me, and took me under his wing.  I owe a lot to him.~
+    SAY ~许多方面都很难，可正因如此我变得更好。「杀不死你的只会让你更强」是我在修道院学到的最早的课之一。~ = ~修士们心是好的，可他们不是最好的父母——他们不知道怎么对付一个精力过剩的孩子，就把我派去干活和念书。~ = ~某种意义上我是快乐的。我不知道还有别的方式；就是那时我跟一个较年轻的修士交上了朋友，那人叫巴尔萨扎。他待我很好，把我收在羽翼下。我欠他很多。~
     + ~Global("MetBal","GLOBAL",1)~ + ~I have to admit, I can't really imagine Balthazar being your mentor...(Smile slightly)~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_41
     + ~!Global("MetBal","GLOBAL",1)~ + ~You've mentioned Balthazar before...but I won't invade your privacy any more.  Thank you for telling me, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_42
-    ++ ~It was much the same in Candlekeep--Gorion took me under his wing and taught me what he knew, and Imoen and I grew up under his direction and that of the monks.  So I suppose we aren't so different...in one way, at least.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_Amk2_43
+    ++ ~在烛堡也差不多——葛立安把我收在羽翼下，教我所会的东西，我和爱蒙在他的指导和修士们的教导下长大。所以我想我们没那么不同……至少在一点上。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_Amk2_43
     ++ ~I'm glad your childhood was a happy one, if hard.  Not many are as lucky in that respect.~ + PID_Amk2_44
   END
 
   IF ~~ PID_Amk2_5
-    SAY ~Yes, I was raised in the Monastery...let me explain.~
+    SAY ~是的，我是在修道院长大的……让我解释。~
     IF ~~ + PID_Amk2_2
   END
 
   IF ~~ PID_Amk2_21
-    SAY ~It is well in the past, <CHARNAME>, and though I harbor a regret that I never met my parents, I do not regret growing up in the monastery.  I'm fine.~
-    ++ ~You do know people say 'I'm fine' even when their world is collapsing, don't you?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_211
-    ++ ~I'm glad you grew up the way you did, Iylos...otherwise you wouldn't be the same man you are now, who is helping me achieve balance in a life which is so fabulously torn it is sometimes hard to see which way to turn.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_212
-    ++ ~I'm sorry to have brought it up, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_213
-    ++ ~I regret not meeting my mother...I definately don't regret not meeting my father, though I have...sort of met him, I suppose.  In a way, I meet him each time I fall asleep.  (Sigh)~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_214
+    SAY ~它早已是过去，<CHARNAME>，虽然我为从未见过父母而抱有一丝遗憾，但我不后悔在修道院长大。我没事。~
+    ++ ~你可知道人们说「我没事」的时候，往往是天都塌了？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_211
+    ++ ~我很高兴你是这样长大的，伊洛斯……否则你就不会是现在的你，不会帮我在这被撕得七零八落、有时看不清该往哪转的人生里寻回平衡。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_212
+    ++ ~抱歉提起这个，伊洛斯。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_213
+    ++ ~我遗憾没能见到我母亲……不过我绝对不遗憾没见到我父亲，虽说我……算是见过他了，我想。某种意义上，我每次睡着都会见到他。（叹气）~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_214
   END
 
   IF ~~ PID_Amk2_22
-    SAY ~It is well in the past, <CHARNAME>, and though I harbor a regret that I never met my parents, I do not regret growing up in the monastery.  I must admit, I hope you don't have such a regret that you never met your father...from what I hear he seems rather ominous.~
+    SAY ~它早已是过去，<CHARNAME>，虽然我为从未见过父母而抱有一丝遗憾，但我不后悔在修道院长大。我得承认，我希望你没有那种从未见过父亲的遗憾……据我所闻，他相当不祥。~
     ++ ~Aha, ah.  Hah.  Hah.  Iylos, *please*...your humour would be more suited to cattle than humans.  Don't inflict it upon one such as me.~ + PID_Amk2_221
-    ++ ~Ominous only *begins* to describe Bhaal...though I'm sure even Bhaal himself would have the manners to not bring up another's questionable heritage.  (Glare at him)~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk2_222
-    ++ ~No, I don't regret that I never met my father...(Grin)~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_223
+    ++ ~不祥只是*开始*描述巴尔……不过我相信连巴尔本人也有教养，不会提起别人可疑的血统。（瞪他）~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk2_222
+    ++ ~不，我不遗憾从没见过我父亲……（咧嘴笑）~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_223
   END
 
   IF ~~ PID_Amk2_31
-    SAY ~(Iylos is silent and waits for you to continue.)~
-    ++ ~...That's all, really.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_311
-    ++ ~Did you have someone, like I had Imoen?  Someone your own age?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_312
-    ++ ~Look, I'm sorry to have brought it up.  It doesn't matter, you obviously aren't interested.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_Amk_313
+    SAY ~（伊洛斯沉默着，等你继续说。）~
+    ++ ~……就这些，真的。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_311
+    ++ ~你有没有过这样的人，像我拥有爱蒙那样？同龄的人？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_312
+    ++ ~听着，抱歉提起这个。这不要紧，你显然没兴趣。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_Amk_313
   END
 
   IF ~~ PID_Amk2_32
-    SAY ~Gorion, from all that I've heard, was a very honourable and good man--a Harper, in point of fact.  And you say he was weak and pathetic?~
-    ++ ~Yes, I do!  He just went off and died, left me to fend for myself without giving me a moment's notice!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_321
-    ++ ~Perhaps that was an exaggeration...he was a good and honourable man, yes.  But he had no strength when it came to us; he died at a time when I needed him the most.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_322
+    SAY ~据我所闻，葛立安是个非常正直善良的人——其实是个竖琴手。而你说他软弱可悲？~
+    ++ ~是的，我说了！他就那么走了、死了，把我丢下自己撑着，一句招呼都不打！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk_321
+    ++ ~也许那是夸张了……他是个善良正直的人，是的。可面对我们时他没有力量；他死的时候，正是我最需要他的时候。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk_322
     ++ ~Look, it doesn't matter...don't worry about it.~ + PID_Amk_323
   END
 
   IF ~~ PID_Amk2_33
-    SAY ~I am an orphan, as you may have suspected.  I grew up in the Monastery, under the tutelage of the monks and Balthazar, who was to become my teacher in the monastic way.  I eventually left in search of inner peace, and found the Anauroch desert.  Is that enough?~
-    ++ ~Yes, thank you.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_331
-    ++ ~No, its not--why did you leave?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk2_332
+    SAY ~我是个孤儿，你也许已经猜到了。我在修道院长大，受修士们和巴尔萨扎的教导——后者后来成了我修道之路的老师。我最终离开，去寻求内心的安宁，找到了安纳罗克沙漠。这够了吗？~
+    ++ ~是的，谢谢。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_331
+    ++ ~不，不够——你为什么离开？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Amk2_332
   END
 
   IF ~~ PID_Amk2_34
-    SAY ~No, I did not--the monks were not what you would call suitable parents.  The ones I was close to were more like older friends who occasionally acted in the parental roles, but they were never true parents, only in terms of discipline.~ = ~It was hard in many ways, but I am the better for it.  What doesn't kill can only make you stronger was one of the first lessons I learnt in the Monastery.~ = ~The monks were kind, but as I have said, they weren't the best of parents--they didn't know how to deal with an overactive child, so they set me to work and study.~ = ~I was happy, in a way.  I never knew any other way; it was then that I befriended one of the younger monks, a man named Balthazar.  He was kind to me, andtook me under his wing.  I owe a lot to him.~
+    SAY ~不，我没有——那些修士可不是你说的合适父母。我亲近的那些更像年长的朋友，偶尔扮演父母的角色，可他们从不是真正的父母，只是在管教上。~ = ~许多方面都很难，可正因如此我变得更好。「杀不死你的只会让你更强」是我在修道院学到的最早的课之一。~ = ~修士们心是好的，可他们不是最好的父母——他们不知道怎么对付一个精力过剩的孩子，就把我派去干活和念书。~ = ~某种意义上我是快乐的。我不知道还有别的方式；就是那时我跟一个较年轻的修士交上了朋友，那人叫巴尔萨扎。他待我很好，把我收在羽翼下。我欠他很多。~
     + ~Global("MetBal","GLOBAL",1)~ + ~I have to admit, I can't really imagine Balthazar being your mentor...(Smile slightly)~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_41
     + ~!Global("MetBal","GLOBAL",1)~ + ~You've mentioned Balthazar before...but I won't invade your privacy any more.  Thank you for telling me, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_42
-    ++ ~It was much the same in Candlekeep--Gorion took me under his wing and taught me what he knew, and Imoen and I grew up under his direction and that of the monks.  So I suppose we aren't so different...in one way, at least.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_Amk2_43
+    ++ ~在烛堡也差不多——葛立安把我收在羽翼下，教我所会的东西，我和爱蒙在他的指导和修士们的教导下长大。所以我想我们没那么不同……至少在一点上。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",2)~ + PID_Amk2_43
     ++ ~I'm glad your childhood was a happy one, if hard.  Not many are as lucky in that respect.~ + PID_Amk2_44
   END
 
   IF ~~ PID_Amk2_41
-    SAY ~Perhaps not, but that is what occured nonetheless.~
+    SAY ~也许不是，可事情就是这样发生的。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_42
-    SAY ~No problem.~
+    SAY ~没问题。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_43
-    SAY ~Indeed, perhaps not.~
+    SAY ~确实，也许不是。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_44
-    SAY ~Thank you.  No, they are not...not all have the privilege of being clothed and fed each night, and having a place to sleep in.  We *were* lucky, in that respect.  In others, though...perhaps not.~
+    SAY ~谢谢你。不，他们不是……不是人人都有每晚穿衣吃饭、有地方睡的福气。这方面我们*是*幸运的。可别的方面……也许不。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_211
-    SAY ~(Iylos chuckles) Indeed...but I *am* fine.  For the time being, anyway.~
+    SAY ~（伊洛斯轻轻笑了）确实……可我*是*没事。至少眼下。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_212
-    SAY ~Thank you for that rather underhanded compliment, <CHARNAME>.  I hope I am helping, and I am sorry for the problems I caused you when you first agreed to let me travel with you.  I am a better man for my childhood, and for that I am grateful.~
+    SAY ~谢谢你那句相当拐弯抹角的恭维，<CHARNAME>。我希望我帮上了忙，也为你初答应让我同行时给你带来的麻烦道歉。我的童年让我成了更好的人，为此我感激。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_213
-    SAY ~It's alright, <CHARNAME>--it is not your fault.~
+    SAY ~没关系，<CHARNAME>——不是你的错。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_214
-    SAY ~I wish it were otherwise, <CHARNAME>...I truly do.  Having the bane of Bhaal upon you cannot be easy, to be torn between what is right, and what is easy.  Perhaps...perhaps there is something I *can* help you with, but not now.  Another time, perhaps.~
-    ++ ~I would like that, thank you, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~Sure.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~We'll see.~ EXIT
+    SAY ~我希望不是这样，<CHARNAME>……真的。背负巴尔的诅咒不好受，在正确与容易之间被撕扯。也许……也许有件事我*能*帮你，但不是现在。也许改日。~
+    ++ ~我很愿意，谢谢你，伊洛斯。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~当然。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~再看吧。~ EXIT
   END
 
   IF ~~ PID_Amk2_221
-    SAY ~I'm sure you will survive somehow, <CHARNAME>.  But in future, I will make sure to direct my humour to more willing participants, perhaps.  (Iylos grins at you.)~
+    SAY ~我相信你总能活下来，<CHARNAME>。不过以后，我会尽量把我的幽默指向更愿意接受的人。（伊洛斯冲你咧嘴笑。）~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_222
-    SAY ~I apologise, <CHARNAME>, it was not my intent to cause offense.~
-    ++ ~It's alright...just don't do it again.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~Bah.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
-    ++ ~(Sigh) Don't worry about it, Iylos...it isn't your fault.  Its just a sensitive issue with me is all.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_2221
+    SAY ~我道歉，<CHARNAME>，我不是有意冒犯。~
+    ++ ~没关系……只是别再这样。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~呸。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ EXIT
+    ++ ~（叹气）别在意，伊洛斯……不是你的错。只是这事对我比较敏感罢了。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Amk2_2221
   END
 
   IF ~~ PID_Amk2_223
-    SAY ~(Iylos grins back.)~
+    SAY ~（伊洛斯咧嘴回笑。）~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_311
-    SAY ~ I did not have one such as Imoen to grow up with; no sister or brother to share joy or sadness with.  I have accepted that.  I sometimes regret that I did not, though.~
+    SAY ~我没有像爱蒙那样的人一起长大；没有兄弟姐妹分享喜乐与悲伤。我已经接受了。不过我有时会遗憾没有。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_312
-    SAY ~I did not have one such as Imoen to grow up with; no sister or brother to share joy or sadness with.  I have accepted that.  I sometimes regret that I did not, though.~
+    SAY ~我没有像爱蒙那样的人一起长大；没有兄弟姐妹分享喜乐与悲伤。我已经接受了。不过我有时会遗憾没有。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_313
-    SAY ~It's alright.~
+    SAY ~没关系。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_321
-    SAY ~I highly doubt he left you without good cause, <CHARNAME>--no father would ever do such a thing.  You, at least, had a father.  Think on that before you go accusing Gorion of being 'weak' and 'pathetic'.~
+    SAY ~我很怀疑他会无缘无故离开你，<CHARNAME>——没有哪个父亲会做这种事。至少你有过父亲。在指责葛立安「软弱」「可悲」之前，想想这个。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_322
-    SAY ~I highly doubt he would die without cause, <CHARNAME>.  But that is your business, not mine, and I would prefer not to pry.  Thank you.~
+    SAY ~我很怀疑他会无缘无故就死，<CHARNAME>。可那是你的事，不是我的，我宁愿不去探问。谢谢。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_323
-    SAY ~If that is what you wish.~
+    SAY ~如果你要这样。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_331
-    SAY ~Good.~
+    SAY ~好。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_332
-    SAY ~I left because I had to.  I am not the type to stay in a monastery my entire life, I had to go out into the world and seek out inner peace.  Many wished me to stay, but I felt a drive to explore and the desert became my paradise, forever unveiling new mysteries and answering questions no human ever could.~
+    SAY ~我离开是因为我不得不离开。我不是那种一辈子待在修道院里的人，我必须走进世界去寻求内心的安宁。许多人希望我留下，可我有一股探索的驱力，沙漠成了我的天堂，不断揭开新的谜团，回答没有凡人能回答的问题。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Amk2_2221
-    SAY ~Still, I apologise.  It was inappropriate and rude, and I am not one to usually vent such feelings.  To the road, then, I suppose.~
+    SAY ~不过，我还是道歉。那不合宜也无礼，而我平常不是会这样发泄情绪的人。那就上路吧，我想。~
     IF ~~ EXIT
   END
 
   // PID 4--Anauroch
   IF ~~ PID_Anau
-    SAY ~Many reasons, <CHARNAME>, and perhaps I shall even explain some to you.  When I left the Monastery, I was fighting with a powerful urge to travel, to explore the unknown and see what was over the next hill.  I travelled to places such as Baldur's Gate and beyond, even to Neverwinter, without finding what I was looking for.~  = ~I met some interesting people, did some interesting things, but it did not hold me captivated for very long.  I wandered listlessly, surviving on the generosity of people and whatever gold I could earn from working.~
-    ++ ~(Interrupt) What sort of work did you do?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Anau_1
-    ++ ~(Interrupt) What didn't hold your captivation?  Travelling, or the cities you travelled to?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Anau_2
-    ++ ~(Let him continue)~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_3
+    SAY ~很多原因，<CHARNAME>，也许我还会给你解释一些。我离开修道院时，正跟一股强烈的冲动搏斗：要旅行、要探索未知、要看下一座山后面是什么。我去过博德之门等地，甚至到过无冬城，却没找到我要找的东西。~  = ~我遇到过一些有趣的人，做过一些有趣的事，可它们没能让我着迷太久。我漫无目的地游荡，靠别人的慷慨和自己干活挣的那点金币活着。~
+    ++ ~（打断）你做过什么活？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Anau_1
+    ++ ~（打断）什么没能让你着迷？是旅行，还是你去的那些城市？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Anau_2
+    ++ ~（让他继续）~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_3
   END
 
   IF ~~ PID_Anau_1
-    SAY ~(Iylos glares at you, irritated.) Guarding people, adventuring, building--many things.~
+    SAY ~（伊洛斯恼怒地瞪着你。）看人守门、冒险、盖房——很多活。~
     IF ~~ + PID_Anau_3
   END
 
   IF ~~ PID_Anau_2
-    SAY ~(Iylos glares at you, irritated.) A little of both.  Anyway...~
+    SAY ~（伊洛斯恼怒地瞪着你。）两样都有一点。总之……~
     IF ~~ + PID_Anau_3
   END
 
   IF ~~ PID_Anau_3
-    SAY ~I made my way back to the Monastery, feeling somewhat crestfallen and dark.  I threw myself into my training, and quickly become one of the most powerful warriors in the Monastery, second only to the Masters and Balthazar.  But I never graduated--I had the strength, the physical skills, but I did not have peace of mind.  I was turbulent, much like yourself.  My mind was a rush of ideas and thoughts, and as much as I and my tutors tried, I could not master my mind.~ = ~Angry at my inability to focus and meditate, I fled into the desert, hoping I would find some answer there.  I came across an...underground encampment, so to speak, who took me in for a while and taught me their language.  But I was forced to move on.~ = ~During my travels through the desert, I learnt many things about both myself and my surroundings--the serenity of the desert brought peace to me, and I felt at home.  It was inexplicable, a slight shift in my awareness, but I'd found a home, and I still regard it as such.~
-    ++ ~Well...that was disappointing.  I was hoping for a more interesting story, epic battles with frightening sand-creatures and tragic heartbreaks, perhaps.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_31
-    ++ ~Candlekeep was never truly my home...I don't have one.  I'm a vagabond, really, I travel where I must and at times wherever my feet take me.  You're lucky to have somewhere you can call home.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_32
-    ++ ~It suits you, I suppose.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_33
+    SAY ~我回到修道院，心里有些灰败阴郁。我埋头苦练，很快成了修道院里最强的战士之一，仅次于几位师父和巴尔萨扎。可我始终没毕业——我有力量，有体术，可我没有心的安宁。我躁动不安，很像你。我的脑子里奔涌着念头和想法，无论我和老师们怎么努力，我都驾驭不了自己的心。~ = ~我气自己无法专注冥想，就逃进沙漠，希望在那儿找到某个答案。我碰上了一个……可以说是个地下营地，他们收留了我一阵，教我他们的语言。可我不得不离开，继续走。~ = ~我在沙漠中旅行时，对自己和四周都学到了很多——沙漠的宁静给了我安宁，我觉得像回了家。那说不清，只是我意识里一点微小的转变，可我找到了一个家，至今仍当它是家。~
+    ++ ~嗯……真让人失望。我本想听个更有趣的故事，跟可怕沙怪进行史诗大战，或者悲惨情伤什么的。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_31
+    ++ ~烛堡从来不是我真正的家……我没有家。我其实是个流浪者，该往哪走就往哪走，有时脚带我去哪就哪走。你能有个叫家的地方，真幸运。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_32
+    ++ ~我想，它挺配你的。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_33
   END
 
   IF ~~ PID_Anau_31
-    SAY ~Of course you were--I purposely omitted those.~
+    SAY ~你当然失望——那些是我故意略去的。~
     ++ ~You mean you DID fight giant sand-creatures and had tragic heartbreaks?!~ + PID_Anau_311
     ++ ~Ah...okay.  Why?~ + PID_Anau_312
-    ++ ~Fool.  I hate you forever and ever!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_313
+    ++ ~傻瓜。我永远永远讨厌你！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_313
   END
 
   IF ~~ PID_Anau_32
-    SAY ~I suppose I am, yes.  The desert is where I feel the most comfortable, as strange as it may seem to a city-dweller like yourself.~
+    SAY ~我想是的。沙漠是我最自在的地方，对像你这样住城里的人来说也许很奇怪。~
     ++ ~Watch who you're calling a city dweller!~ + PID_Anau_321
-    ++ ~It does seem a little strange, but I can see where you're coming from.  Thank you for telling me, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_322
-    ++ ~It's weird, thats what it is.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Anau_323
+    ++ ~听着确实有点怪，可我能明白你的意思。谢谢你告诉我，伊洛斯。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_322
+    ++ ~就是怪，就这么回事。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Anau_323
   END
 
   IF ~~ PID_Anau_33
-    SAY ~How so?~
-    ++ ~Well, you're harsh and sometimes unpredictable.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_331
+    SAY ~怎么讲？~
+    ++ ~嗯，你严厉，有时还难以捉摸。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_331
     ++ ~Uh...doesn't matter.  Forget about it.~ + PID_Anau_332
-    ++ ~You can be calm one moment, and then completely change your outlook the next...the desert can look peaceful one moment, and suddenly a raging tornado can appear.  Much the same.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_333
+    ++ ~你这一刻可以很平静，下一刻观点就彻底变了……沙漠这一刻看着平和，忽然就能冒出狂暴的龙卷风。差不多一样。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Anau_333
   END
 
   IF ~~ PID_Anau_311
-    SAY ~Perhaps, but you'll just have to wait until I'm ready to tell you, won't you?~
+    SAY ~也许，可你只能等我愿意告诉你的时候，是吧？~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Anau_312
-    SAY ~Because I don't particularly feel like sharing those details with you.  I'm sure you understand.~
+    SAY ~因为我不特别想跟你分享那些细节。我相信你理解。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Anau_313
-    SAY ~I see.  That is, of course, your choice--but the reason why I'm not telling you is because I don't feel the need to, and it is quite personal.  I'm sure you understand.~
+    SAY ~我明白了。那当然由你——可我不告诉你的原因是我觉得没必要，而且那相当私密。我相信你理解。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Anau_321
-    SAY ~Well, I suppose you grew up in a remote castle rather than a city, but it is much the same.~
+    SAY ~嗯，我想你是在一座偏远的城堡，而不是城里长大的，可也差不多。~
     ++ ~No its not, its nothing like the city!  There were monks, and books, and a small town...okay, maybe it was a bit like a city, but nowhere near as much as Amkethran!~ + PID_Anau_3211
-    ++ ~Perhaps.~ EXIT
+    ++ ~也许。~ EXIT
     ++ ~(Sigh) Don't you understand *anything*?  A city is big, and contains thousands of people.  Candlekeep had hundreds, at most.~ + PID_Anau_3211
   END
 
   IF ~~ PID_Anau_322
-    SAY ~No problem.~
+    SAY ~没问题。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Anau_323
-    SAY ~If you wish to think so.~
+    SAY ~你要这么想就这么想。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Anau_331
-    SAY ~(Iylos looks lost for words, and after a moment laughs.)~ = ~I have to admit, that was not entirely what I was expecting.  Perhaps.  I can be harsh and unpredictable at times, I suppose...~
+    SAY ~（伊洛斯一时语塞，过了一会儿笑起来。）~ = ~我得承认，那不全是我预料的。也许。我想我有时确实严厉又难以捉摸……~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Anau_332
-    SAY ~If you wish.~
+    SAY ~随你。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Anau_333
-    SAY ~(Iylos looks thoughtful.) Perhaps you are right.  Something to contemplate.~
+    SAY ~（伊洛斯若有所思。）也许你说得对。值得想一想。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Anau_3211
-    SAY ~You have a point--Amkethran is at least larger than Candlekeep.  Not that it matters...you spend the majority of your time adventuring, as do I.  We can no longer be classified as 'city dweller' or 'desert dweller' but rather 'adventurers'...strange how these things work.~
+    SAY ~你说得有道理——阿姆凯斯兰至少比烛堡大。不过这不要紧……你大部分时间都在冒险，我也一样。我们不能再被归类为「城里人」或「沙漠人」，而是「冒险者」……事情就是这样，真怪。~
     IF ~~ EXIT
   END
 
   // PID 5--Drow
   IF ~~ PID_Drow
-    SAY ~Underneath Anauroch, there are several enclaves of Drow- I was forced to learn their language to survive when I first ventured into the desert.  It was learn Drow, or die.~ 
-    ++ ~Tough decision.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Drow_1
+    SAY ~安纳罗克地下有好几处卓尔聚落——我第一次闯进沙漠时，为了活下来不得不学他们的语言。要么学卓尔语，要么死。~ 
+    ++ ~真难的决定。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Drow_1
     ++ ~Fair enough.~ + PID_Drow_1
-    ++ ~Even still...why could you not go somewhere else without Drow?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Drow_2
+    ++ ~可即便如此……你就不能去个没有卓尔的地方？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Drow_2
   END
 
   IF ~~ PID_Drow_1
-    SAY ~Drow is a complicated language, quite gutteral.  It took me months to grasp the rudiments, but once I began to understand it came a lot more easily.  Some of the Drow there were followers of Good, especially the goddess Eilistrae, so it was not so horrible to associate with them.~
+    SAY ~卓尔语是种复杂的语言，喉音很重。我花了好几个月才摸到皮毛，可一旦开始懂，后面就容易多了。那儿的卓尔有些是善神的信徒，尤其是女神伊莉丝翠，所以跟他们来往也没那么可怕。~
     ++ ~Whatever--that doesn't change the fact that the Drow are a terrible people.  I don't understand how you could *live* with them.~ + PID_Drow_11
-    ++ ~I see your point.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Drow_11
-    ++ ~Why did you have to live with the Drow?  Couldn't you have gone somewhere else?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Drow_2
+    ++ ~我明白你的意思。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Drow_11
+    ++ ~你为什么非得跟卓尔住在一起？你不能去别处吗？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Drow_2
   END
 
   IF ~~ PID_Drow_2
-    SAY ~The Anauroch desert is huge; the chances of coming upon civilisation or even habitation are extremely slim in such an area.  I was lucky to have discovered the Drow.  Eventually they drove me out, much to my chagrin--but some sympathised with my plight and led me to a small human habitation.  I survived, and grew from the experience--but the Drow aren't all as bad as you might at first think.~
+    SAY ~安纳罗克沙漠极大；在那样一片地方遇上文明甚至有人居住的机会极其渺茫。我能碰上卓尔算是幸运。最后他们把我赶了出来，让我很懊恼——可有些人对我的处境抱以同情，把我领到一处小小的人类聚落。我活了下来，也从这段经历里成长了——可卓尔并不都像你起初想的那么坏。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Drow_11
-    SAY ~The Anauroch desert is huge; the chances of coming upon civilisation or even habitation are extremely slim in such an area.  I was lucky to have discovered the Drow- if I had not, I would have surely died.  Eventually they drove me out, much to my chagrin--but some sympathised with my plight and led me to a small human habitation.  I survived, and grew from the experience--but the Drow aren't all as bad as you might at first think.~
+    SAY ~安纳罗克沙漠极大；在那样一片地方遇上文明甚至有人居住的机会极其渺茫。我能碰上卓尔算是幸运——要不是碰上，我肯定死了。最后他们把我赶了出来，让我很懊恼——可有些人对我的处境抱以同情，把我领到一处小小的人类聚落。我活了下来，也从这段经历里成长了——可卓尔并不都像你起初想的那么坏。~
     IF ~~ EXIT
   END
 
   // PID 6--Nyalee
   IF ~~ PID_Nyalee
-    SAY ~I was involved in negotiations with her concerning 'her' swamp.  The temple she inhabited was the hereditary property of one of the monks, and she was disgusted by the state which Nyalee had left it in.  It was one of the most complicated situations I had ever been in, and nothing was clean cut.~ 
+    SAY ~我参与了跟她谈「她的」沼泽的事。她占的那座神殿是某位修士的世袭财产，而她对娜莉把那里弄得那副样子感到恶心。那是我经历过的最复杂的局面之一，没有一件事是干净利落的。~ 
     ++ ~(Remain silent and wait for him to continue)~ + PID_Nyalee_1
     ++ ~What happened?~ + PID_Nyalee_1
-    ++ ~I didn't ask for your life story, Iylos!  Just tell me what happened without all the other additions.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Nyalee_2
+    ++ ~我没问你的生平，伊洛斯！就告诉我发生了什么，别加那些别的。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Nyalee_2
   END
 
   IF ~~ PID_Nyalee_1
-    SAY ~Eventually I confronted the old hag about it, and she said that she had obtained the land from the monk's father and that it was rightfully hers.  I did some things that I'm not proud of.~ = ~I couldn't help but feel sorry for the woman once I'd spoken to her more; she was bitter, broken, and was not capable of compassion or empathy due to the choices she made during her life.  But she riled me into a furor with words of poison, and I...I hit her.  I felt bones shatter from the impact, and with a scream of rage she sent the undead, the inhabitants of the swamp after me.~ = ~I fled under the onslaught, and once back in the Monastery I learned a terrible truth--the monk had lied.  She was thrown out from the Monastery once she was discovered, and I was forced to return to Nyalee's swamp to apologise and make recompense for my terrible actions.  She was unconscious, and there were none of her 'friends' to be seen; I placed a potion of healing by her side, 300 or so gold and a small magical trinket which I hoped would help bring back her sanity.~ = ~She awoke, and looked upon me as a stranger; she did not recall why her bones were broken, nor that it was I who had broken them.  She began to babble about her 'son', Yaga Shura, and his betrayal.  She tore the pendant I had given her from her neck and smashed it, swearing as she did so her revenge upon him.~ = ~She had forgotten I was there, so I left as unobtrusively as I could.  I doubt she even recognised me when you spoke to her, but for some reason I suspect she may remember such as you due to your connection with Yaga Shura.~ = ~Strange how these things work...she does not remember anything about the breaking of her bones, but she remembers the giant and his apparent betrayal of her.  She is a sad creature, eternally condemned to hatred and vilification of both herself and her son.~
-    ++ ~How...how sad.  I almost feel sorry for her.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_11
-    ++ ~She deserved what she got...she sold her heart for life.  She does not deserve pity.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Nyalee_12
-    ++ ~How pathetic, that you would lose your temper so easily...and on a defenceless old woman, at that.  I'm disgusted at you, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_13
+    SAY ~最后我跟那老巫婆当面摊了牌，她说那地是从那修士的父亲手里得的，理应归她。我做了些我不自豪的事。~ = ~跟她多谈了几句后，我忍不住替那女人难过；她苦涩、破碎，因为这辈子做的选择，已经没了慈悲或共情的能力。可她用毒话把我激得暴怒，我……我打了她。我感到骨头在那一击下碎裂，她一声怒号，召了亡灵——沼泽里的居民——来追我。~ = ~我在那阵猛攻下逃走，回到修道院后才得知一个可怕的真相——那修士撒了谎。她被发现后就被逐出了修道院，而我被迫回到娜莉的沼泽去道歉、为我可怕的作为补偿。她昏迷着，她的那些「朋友」一个也看不见；我在她身边放了一瓶治疗药水、约三百金币，还有一件小小的魔法饰品，希望它能帮她恢复理智。~ = ~她醒来，看我的眼神像看陌生人；她不记得自己的骨头为什么断了，也不记得是我打断的。她开始絮叨她的「儿子」亚加苏拉，和他的背叛。她把我给她的吊坠从脖子上扯下来砸碎，一边发誓要向他复仇。~ = ~她忘了我还在那儿，我就尽可能不引人注意地离开了。我怀疑你跟她说话时她根本没认出我，可不知为何，我猜她也许会记得你这样的人，因为你跟亚加苏拉有关联。~ = ~事情就是这样，真怪……她对自己骨头被打断的事一点不记得，却记得那巨人，和他对她的明显背叛。她是个可悲的生灵，永远被判给仇恨，被判给自己和儿子的诋毁。~
+    ++ ~多……多可悲。我几乎替她难过。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_11
+    ++ ~她得到的是她应得的……她拿心换了命。她不值得同情。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-1)~ + PID_Nyalee_12
+    ++ ~多可悲，你竟这么容易就失了脾气……还是对一个手无寸铁的老妇。我为你感到厌恶，伊洛斯。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_13
   END
 
   IF ~~ PID_Nyalee_2
-    SAY ~You asked, <CHARNAME>, so you will listen to what I have to say.~
+    SAY ~你问了，<CHARNAME>，那你就得听我要说的话。~
     IF ~~ + PID_Nyalee_1
   END
 
   IF ~~ PID_Nyalee_11
-    SAY ~You would, wouldn't you?  But it matters naught...what happened happened, and my message remains; you mustn't trust Nyalee, she's crazy.  Let's get moving...but keep my story in mind when dealing with her.  She can change her mind in an instant, and will attack on provocation- and with her 'friends,' the undead, she is no small challenge.~
-    ++ ~I'll keep that in mind.  Thank you, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~I think that's the longest speech I've ever heard you say!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_111
-    ++ ~I will think on this.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_112
+    SAY ~你会的是吧？可那都不重要了……发生的就是发生了，我的话仍然有效；你不能信任娜莉，她疯了。我们走吧……可对付她的时候，记住我的故事。她一瞬间就能改主意，一被激就会动手——加上她那些「朋友」亡灵，她可不是好对付的。~
+    ++ ~我会记住。谢谢你，伊洛斯。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~我想那是我听过你说的最长的一段话！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_111
+    ++ ~我会想一想。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_112
   END
 
   IF ~~ PID_Nyalee_12
-    SAY ~Perhaps, but it matters naught...what happened happened, and my message remains; you mustn't trust Nyalee, she's crazy.  Let's get moving...but keep my story in mind when dealing with her.  She can change her mind in an instant, and will attack on provocation- and with her 'friends' the undead she is no small challenge.~
-    ++ ~I'll keep that in mind.  Thank you, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~I think that's the longest speech I've ever heard you say!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_111
-    ++ ~I will think on this.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_112
+    SAY ~也许，可那都不重要了……发生的就是发生了，我的话仍然有效；你不能信任娜莉，她疯了。我们走吧……可对付她的时候，记住我的故事。她一瞬间就能改主意，一被激就会动手——加上她那些「朋友」亡灵，她可不是好对付的。~
+    ++ ~我会记住。谢谢你，伊洛斯。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~我想那是我听过你说的最长的一段话！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_111
+    ++ ~我会想一想。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_112
   END
 
   IF ~~ PID_Nyalee_13
-    SAY ~I am not proud of what I did, but it matters naught...what happened happened, and my message remains; you mustn't trust Nyalee, she's crazy.  Let's get moving...but keep my story in mind when dealing with her.  She can change her mind in an instant, and will attack on provocation- and with her 'friends' the undead she is no small challenge.~
-    ++ ~I'll keep that in mind.  Thank you, Iylos.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
-    ++ ~I think that's the longest speech I've ever heard you say!~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_111
-    ++ ~I will think on this.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_112
+    SAY ~我不为自己做的事自豪，可那都不重要了……发生的就是发生了，我的话仍然有效；你不能信任娜莉，她疯了。我们走吧……可对付她的时候，记住我的故事。她一瞬间就能改主意，一被激就会动手——加上她那些「朋友」亡灵，她可不是好对付的。~
+    ++ ~我会记住。谢谢你，伊洛斯。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ EXIT
+    ++ ~我想那是我听过你说的最长的一段话！~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_111
+    ++ ~我会想一想。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + PID_Nyalee_112
   END
 
   IF ~~ PID_Nyalee_111
-    SAY ~Heh, indeed--but it is something which you needed to know about, I felt, so I told you.  Think on it, <CHARNAME>, if only for your own benefit.  Take my advice, and do not trust a word Nyalee says, whatever she may offer or promise.  Let us get going.~
+    SAY ~嘿，确实——可我觉得那是你该知道的事，所以就告诉你了。想一想，<CHARNAME>，就算只为你自己好。听我的劝，不管娜莉许什么、答应什么，她的话一个字都别信。我们走吧。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_Nyalee_112
-    SAY ~It is something which you needed to know about, I felt, so I told you.  Think on it, <CHARNAME>, if only for your own benefit.  Take my advice, and do not trust a word Nyalee says, whatever she may offer or promise.  Let us get going.~
+    SAY ~我觉得那是你该知道的事，所以就告诉你了。想一想，<CHARNAME>，就算只为你自己好。听我的劝，不管娜莉许什么、答应什么，她的话一个字都别信。我们走吧。~
     IF ~~ EXIT
   END
 
   // PID 7--Teach Me Drow
   IF ~~ PID_DrowDone
-    SAY ~Don't you think you've learnt enough, <CHARNAME>?  (sigh)~ = ~What would you like me to remind you or teach you?~
+    SAY ~你不觉得你学得够多了吗，<CHARNAME>？（叹气）~ = ~你想让我提醒你或教你什么？~
     ++ ~'Hello, how are you?'~ + RDrow_1
     ++ ~'Drow scum, I hope you burn in hell.'~ + RDrow_2
     + ~Gender([PC],FEMALE)~ + ~ 'On your knees, male!'?~ + RDrow_3
     ++ ~'Wonderful morning, is it not?  And how are the children?'~ + RDrow_4
     ++ ~'Damn.'~ + RDrow_5
     ++ ~Teach me how to say fuck in Drow.  Come on.  Please?~ + RDrow_6
-    ++ ~Actually, no thanks.  I don't need it.~ EXIT
+    ++ ~其实，不了，谢谢。我不需要。~ EXIT
   END
 
   IF ~~ PID_RemindDrow
-    SAY ~If you wish.~
+    SAY ~随你。~
     ++ ~'Hello, how are you?'~ + RDrow_1
     ++ ~'Drow scum, I hope you burn in hell.'~ + RDrow_2
     + ~Gender([PC],FEMALE)~ + ~ 'On your knees, male!'?~ + RDrow_3
     ++ ~'Wonderful morning, is it not?  And how are the children?'~ + RDrow_4
     ++ ~'Damn.'~ + RDrow_5
     ++ ~Teach me how to say fuck in Drow.  Come on.  Please?~ + RDrow_6
-    ++ ~Actually, no thanks.  I don't need it.~ EXIT
+    ++ ~其实，不了，谢谢。我不需要。~ EXIT
   END
 
   IF ~~ RDrow_1
@@ -2501,7 +2501,7 @@ APPEND ~LK#IYLJ~
   END
 
   IF ~~ RDrow_3
-    SAY ~'Pholor dosst la'uren, jaluk!'.~
+    SAY ~'Pholor dosst la'uren, jaluk!'~
     IF ~~ EXIT
   END
 
@@ -2511,17 +2511,17 @@ APPEND ~LK#IYLJ~
   END
 
   IF ~~ RDrow_5
-    SAY ~ 'Xsa'.~
+    SAY ~'Xsa'.~
     IF ~~ EXIT
   END
 
   IF ~~ RDrow_6
-    SAY ~If you must know, it is 'Vith', though Drow do not usually use the word.~ = ~And anticipating your next question--to call someone one is 'Vith'rell'.~
+    SAY ~你若非要知道，那是「Vith」，不过卓尔通常不用这个词。~ = ~顺便预答你下一个问题——骂人是「Vith'rell」。~
     IF ~~ EXIT
   END
 
   IF ~~ PID_TeachDrow
-    SAY ~I could teach you a little, if I have no alternative.  I prefer not to speak it, but I suppose I can teach you some, at least.~ = ~What would you like to learn how to say?~
+    SAY ~若我别无选择，我可以教你一点。我不愿说它，可我想至少能教你一些。~ = ~你想学怎么说哪句？~
     ++ ~How about 'Hello, how are you?'~ + Drow_1
     ++ ~Surprise me.~ + Drow_2
     + ~Gender([PC],FEMALE)~ + ~Perhaps 'On your knees, male!'?~ + Drow_3
@@ -2532,91 +2532,91 @@ APPEND ~LK#IYLJ~
   END
 
   IF ~~ Drow_1
-    SAY ~That is fairly simple.  Repeat after me; 'Vendui, lu'oh ph' dos?'~ = ~It's hard to learn Drow without actually immersing yourself in Drow culture...wait a moment.  You already have.  Didn't that Silver Dragon cast a spell on you to make you appear as Drow, and speak their language?  What happened to it?~
+    SAY ~那挺简单。跟我念；「Vendui, lu'oh ph' dos?」~ = ~不真正浸进卓尔文化，是很难学会卓尔语的……等一下。你已经浸过了。那条银龙不是施了法让你看起来像卓尔、还会说他们的语言吗？后来怎么了？~
     ++ ~It wore off eventually, as most spells do.  So, are you going to teach me, or not?~ + Drow_61
     ++ ~It's still there.  I just wanted *you* to teach me.~ + Drow_62
     ++ ~I knew you liked telling people what to do, what so say, how to act...so I thought you might appreciate the gesture.~ + Drow_63
   END
 
   IF ~~ Drow_2
-    SAY ~Alright.  But I'm not going to tell you what it means- you can ponder that yourself.~ = ~Dosst heen zhah sreenath, drill xal dosst b'luth'ol zotreth seke.~ = ~It's hard to learn Drow without actually immersing yourself in Drow culture...wait a moment.  You already have.  Didn't that Silver Dragon cast a spell on you to make you appear as Drow, and speak their language?  What happened to it?~
+    SAY ~好吧。可我不告诉你它是什么意思——你自己琢磨去。~ = ~Dosst heen zhah sreenath, drill xal dosst b'luth'ol zotreth seke.~ = ~不真正浸进卓尔文化，是很难学会卓尔语的……等一下。你已经浸过了。那条银龙不是施了法让你看起来像卓尔、还会说他们的语言吗？后来怎么了？~
     ++ ~It wore off eventually, as most spells do.  So, are you going to teach me, or not?~ + Drow_61
     ++ ~It's still there.  I just wanted *you* to teach me.~ + Drow_62
     ++ ~I knew you liked telling people what to do, what so say, how to act...so I thought you might appreciate the gesture.~ + Drow_63
   END
 
   IF ~~ Drow_3
-    SAY ~I should have known it would be something like that, <CHARNAME>.  'Pholor dosst la'uren, jaluk!'.~ = ~It's hard to learn Drow without actually immersing yourself in Drow culture...wait a moment.  You already have.  Didn't that Silver Dragon cast a spell on you to make you appear as Drow, and speak their language?  What happened to it?~
+    SAY ~我早该知道会是这类东西，<CHARNAME>。「Pholor dosst la'uren, jaluk!」。~ = ~不真正浸进卓尔文化，是很难学会卓尔语的……等一下。你已经浸过了。那条银龙不是施了法让你看起来像卓尔、还会说他们的语言吗？后来怎么了？~
     ++ ~It wore off eventually, as most spells do.  So, are you going to teach me, or not?~ + Drow_61
     ++ ~It's still there.  I just wanted *you* to teach me.~ + Drow_62
     ++ ~I knew you liked telling people what to do, what so say, how to act...so I thought you might appreciate the gesture.~ + Drow_63
   END
 
   IF ~~ Drow_4
-    SAY ~'Ilythiiri srow, Usstan kestal dos flamgra wun uoi'nota.'~ = ~It's hard to learn Drow without actually immersing yourself in Drow culture...wait a moment.  You already have.  Didn't that Silver Dragon cast a spell on you to make you appear as Drow, and speak their language?  What happened to it?~
+    SAY ~'Ilythiiri srow, Usstan kestal dos flamgra wun uoi'nota.'~ = ~不真正浸进卓尔文化，是很难学会卓尔语的……等一下。你已经浸过了。那条银龙不是施了法让你看起来像卓尔、还会说他们的语言吗？后来怎么了？~
     ++ ~It wore off eventually, as most spells do.  So, are you going to teach me, or not?~ + Drow_61
     ++ ~It's still there.  I just wanted *you* to teach me.~ + Drow_62
     ++ ~I knew you liked telling people what to do, what so say, how to act...so I thought you might appreciate the gesture.~ + Drow_63
   END
 
   IF ~~ Drow_5
-    SAY ~How prosaic.  'Bronretla kre'tan, zhah ol naut?  Lu'oh ph' l' dalharen?'~ = ~It's hard to learn Drow without actually immersing yourself in Drow culture...wait a moment.  You already have.  Didn't that Silver Dragon cast a spell on you to make you appear as Drow, and speak their language?  What happened to it?~
+    SAY ~真是平淡。「Bronretla kre'tan, zhah ol naut?  Lu'oh ph' l' dalharen?」~ = ~不真正浸进卓尔文化，是很难学会卓尔语的……等一下。你已经浸过了。那条银龙不是施了法让你看起来像卓尔、还会说他们的语言吗？后来怎么了？~
     ++ ~It wore off eventually, as most spells do.  So, are you going to teach me, or not?~ + Drow_61
     ++ ~It's still there.  I just wanted *you* to teach me.~ + Drow_62
     ++ ~I knew you liked telling people what to do, what so say, how to act...so I thought you might appreciate the gesture.~ + Drow_63
   END
 
   IF ~~ Drow_6
-    SAY ~It's hard to learn Drow without actually immersing yourself in Drow culture...wait a moment.  You already have.  Didn't that Silver Dragon cast a spell on you to make you appear as Drow, and speak their language?  What happened to it?~
+    SAY ~不真正浸进卓尔文化，是很难学会卓尔语的……等一下。你已经浸过了。那条银龙不是施了法让你看起来像卓尔、还会说他们的语言吗？后来怎么了？~
     ++ ~It wore off eventually, as most spells do.  So, are you going to teach me, or not?~ + Drow_61
     ++ ~It's still there.  I just wanted *you* to teach me.~ + Drow_62
     ++ ~I knew you liked telling people what to do, what so say, how to act...so I thought you might appreciate the gesture.~ + Drow_63
   END
 
   IF ~~ Drow_7
-    SAY ~That would come in handy, I suspect, for one such as you.  Alright...how about we learn a basic one.  Repeat after me: 'Xsa'.~ = ~Put more emphasis on the X.  So it's more like 'ksa'.  That's right.  That means 'damn'.~ = ~Here's another; 'Flamgra wun uoi'nota, nuij.' It means 'burn in hell, fiend.' You may find it useful in our upcoming battles.~
+    SAY ~我猜，对像你这样的人会用得上。好吧……我们来学个基本的。跟我念：「Xsa」。~ = ~X 的音再重些。所以更像「ksa」。对。那意思是「该死」。~ = ~再教你一句；「Flamgra wun uoi'nota, nuij.」意思是「在地狱里烧吧，恶鬼」。我们接下来的战斗里你也许用得上。~
     IF ~~ EXIT
   END
 
   IF ~~ Drow_61
-    SAY ~Ah...no, I don't think I will.  If you want to learn, go back to Ust Natha, or perhaps to some other Drow city.  I do not wish to dirty my tongue with this foul language any more than necessary.~
+    SAY ~啊……不，我想我不会。你要学，就回乌斯特·纳萨，或者别的卓尔城市去。我不想让自己的舌头多沾这脏语言。~
     IF ~~ EXIT
   END
 
   IF ~~ Drow_62
-    SAY ~You wanted *me* to teach you?  Well, I'm afraid I have to decline.  If you want to learn, go back to Ust Natha, or perhaps to some other Drow city.  I do not wish to dirty my tongue with this foul language any more than necessary, especially if you already know it.~
+    SAY ~你要*我*教你？嗯，恐怕我得拒绝。你要学，就回乌斯特·纳萨，或者别的卓尔城市去。我不想让自己的舌头多沾这脏语言，尤其你已经会了。~
     IF ~~ EXIT
   END
 
   IF ~~ Drow_63
-    SAY ~Hardly.  Leave me alone, <CHARNAME>--I have far better things to do than have you point out my faults.~
+    SAY ~差得远。别烦我，<CHARNAME>——我有远比让你指出我的毛病更好的事要做。~
     IF ~~ EXIT
   END
 
   // PID 8--Relationship
   IF ~~ Relationship
-    SAY ~Relationship?  Sexual relationship, you mean to say?~
+    SAY ~关系？你是说性关系？~
     ++ ~Well...yeah.~ + R1
     ++ ~No, I mean falling in love with the moon.  Of course I mean sexual relationships.~ + R1
     ++ ~No...another way to phrase it would be; have you ever fallen in love?~ + R2
   END
 
   IF ~~ R1
-    SAY ~Yes, I have.  But only briefly.  It...did not end too happily, for either party.~
+    SAY ~有过，是的。可很短暂。那……结局不太好，对双方都是。~
     ++ ~What happened?~ + R11
     ++ ~Oh.  Sorry for bringing it up.~ + R12
     ++ ~Hah, bet she couldn't stand you!~ + R13
   END
 
   IF ~~ R2
-    SAY ~I have.  It did not end too happily--for either party.~
+    SAY ~有过。结局不太好——对双方都是。~
     ++ ~What happened?~ + R11
     ++ ~Oh.  Sorry for bringing it up.~ + R12
     ++ ~Hah, bet she couldn't stand you!~ + R13
   END
 
   IF ~~ R11
-    SAY ~It didn't work out.~
+    SAY ~没成。~
     ++ ~That's all?~ + R111
     ++ ~And?  You can't just leave me hanging like this!~ + R111
     ++ ~I'm sorry.~ + R112
@@ -2624,12 +2624,12 @@ APPEND ~LK#IYLJ~
   END
 
   IF ~~ R12
-    SAY ~It's alright.  It happened, and there is nothing I can do about it.  It's not something I particularly like to discuss, so if you'll excuse me.~
+    SAY ~没关系。事情发生了，我也无能为力。这不是我特别愿意谈的事，恕我失陪。~
     IF ~~ EXIT
   END
 
   IF ~~ R13
-    SAY ~*HE* had to leave.~
+    SAY ~*他*不得不离开。~
     ++ ~...He?!~ + R131
     ++ ~Eww!  That's disgusting, Iylos!~ + R132
     ++ ~Aww, how cute!~ + R133
@@ -2637,22 +2637,22 @@ APPEND ~LK#IYLJ~
   END
 
   IF ~~ R111
-    SAY ~I don't feel--comfortable talking about this, <CHARNAME>.  So if you would be so kind as to excuse me, I would greatly appreciate it.~
+    SAY ~我谈这个……不太自在，<CHARNAME>。所以你若能行个方便让我失陪，我会很感激。~
     IF ~~ EXIT
   END
 
   IF ~~ R112
-    SAY ~No need to be sorry, <CHARNAME>.  It happened, and there is nothing I can do about it.  It's not something I particularly like to discuss, so if you'll excuse me.~
+    SAY ~不必道歉，<CHARNAME>。事情发生了，我也无能为力。这不是我特别愿意谈的事，恕我失陪。~
     IF ~~ EXIT
   END
 
   IF ~~ R113
-    SAY ~If you don't want to know, <CHARNAME>, there is a simple solution--don't ask.~
+    SAY ~你若不想知道，<CHARNAME>，有个简单的办法——别问。~
     IF ~~ EXIT
   END
 
   IF ~~ R131
-    SAY ~Yes, he.  Do you have a problem with that?~
+    SAY ~是的，他。你对此有意见？~
     ++ ~Yes!  That's...that's disgusting!~ + R132
     ++ ~No, not at all.  I happen to think it's all kinds of awesome, actually.~ + R1311
     ++ ~Not really.  Just don't...do anything while I'm around.~ + R1312
@@ -2664,17 +2664,17 @@ APPEND ~LK#IYLJ~
   END
 
   IF ~~ R132
-    SAY ~Then I see no point in continued conversation.~
+    SAY ~那我看继续谈下去也没意义了。~
     IF ~~ DO ~SetGlobal("LK#IylosHappiness","GLOBAL",0) SetGlobal("LK#IylosTalksLess","GLOBAL",1)~ EXIT
   END
 
   IF ~~ R133
-    SAY ~Cute?~ = ~Perhaps.  Well, thank you, I suppose.  I did not mean to let such a thing slip, but at least you aren't terribly fazed by it.  Let us...let us continue on our journey, if we may.  This is not terribly familiar territory, and I- lets just get going.~
+    SAY ~可爱？~ = ~也许。嗯，我想谢谢你。我无意漏出这种事，可至少你没被它吓到。我们……如果可以，我们继续赶路吧。这一带不太熟，而我——我们就走吧。~
     IF ~~ EXIT
   END
 
   IF ~~ R134
-    SAY ~Do you have a problem with that?~
+    SAY ~你对此有意见？~
     ++ ~Yes!  That's...that's disgusting!~ + R132
     ++ ~No, not at all.  I happen to think it's all kinds of awesome, actually.~ + R1311
     ++ ~Not really.  Just don't...do anything while I'm around.~ + R1312
@@ -2686,116 +2686,116 @@ APPEND ~LK#IYLJ~
   END
 
   IF ~~ R1311
-    SAY ~Awesome?~ = ~Perhaps.  Well, thank you, I suppose.  I did not mean to let such a thing slip, but at least you aren't terribly fazed by it.  Let us...let us continue on our journey, if we may.  This is not terribly familiar territory, and I- lets just get going.~
+    SAY ~了不起？~ = ~也许。嗯，我想谢谢你。我无意漏出这种事，可至少你没被它吓到。我们……如果可以，我们继续赶路吧。这一带不太熟，而我——我们就走吧。~
     IF ~~ EXIT
   END
 
   IF ~~ R1312
-    SAY ~Hmph.  I did not mean to let such a thing slip, but at least you aren't terribly fazed by it.  Let us...let us continue on our journey, if we may.  This is not terribly familiar territory, and I- lets just get going.~
+    SAY ~哼。我无意漏出这种事，可至少你没被它吓到。我们……如果可以，我们继续赶路吧。这一带不太熟，而我——我们就走吧。~
     IF ~~ EXIT
   END
 
   IF ~~ R1313
-    SAY ~Hmph...~ = ~I don't require your pity, <CHARNAME>.  And that is--hardly the case.  Must we speak about this?  It is not exactly familiar territory, and I- lets just get going.~
+    SAY ~哼……~ = ~我不需要你的怜悯，<CHARNAME>。而且那——根本不是那么回事。我们非得谈这个吗？这可不是什么熟悉的地界，而我——我们就走吧。~
     IF ~~ EXIT
   END
 
   IF ~~ R1314
-    SAY ~That's--that's great, <CHARNAME>, but...ah...don't we have to get going?  Have we got somewhere we need to be?~ = ~We- really should get going.  About now.  Excuse me.~
+    SAY ~那——那太好了，<CHARNAME>，可……啊……我们不是得走吗？我们有要去的地方吗？~ = ~我们——真的该走了。就现在。失陪。~
     IF ~~ EXIT
   END
 
   IF ~~ R1315
-    SAY ~It isn't exactly something one broadcasts world over, <CHARNAME>.  Must we--speak of this?  I did not mean to let such a thing slip, but at least you aren't terribly fazed by it.  Let us...let us continue on our journey, if we may.  This is not terribly familiar territory, and I- lets just get going.~
+    SAY ~这不是什么能向全世界广播的事，<CHARNAME>。我们非得——谈这个吗？我无意漏出这种事，可至少你没被它吓到。我们……如果可以，我们继续赶路吧。这一带不太熟，而我——我们就走吧。~
     IF ~~ EXIT
   END
 
   IF ~~ R1316
-    SAY ~I've noticed.  It isn't exactly something one broadcasts world over, <CHARNAME>--but at least it is, perhaps, something we have in common.~ = ~Now, lets never speak of it again.~
+    SAY ~我注意到了。这不是什么能向全世界广播的事，<CHARNAME>——可至少，这也许是我们共有的一点。~ = ~现在，我们再也别提这事了。~
     IF ~~ EXIT
   END
 
   IF ~~ Relationship2
-    SAY ~Yes.  But I'm hardly about to tell you, <CHARNAME>, so begone.~
+    SAY ~是的。可我可不打算告诉你，<CHARNAME>，走开吧。~
     IF ~~ EXIT
   END
 
   // New content (10.4.08)
   IF ~~ situation
-    SAY ~My thoughts are my own business, and they would influence your own conclusions.  However, I feel something is amiss--what, I'm not sure.  We should keep our eyes open and ears to the ground, in any case.~
+    SAY ~我的想法是我自己的事，而且会影响你自己的结论。不过，我觉得有什么不对劲——是什么，我不确定。不管怎样，我们该睁大眼睛、留心脚下。~
     IF ~~ EXIT
   END
 
   IF ~~ tease1
-    SAY ~(He raises an eyebrow skeptically.) I'm not bald, <CHARNAME>. I shave my head each morning.~
+    SAY ~（他怀疑地挑起一边眉毛。）我不是秃子，<CHARNAME>。我每天早上都刮头。~
     ++ ~How come I've never seen you actually do it?~ + tease1_1
-    ++ ~If you say so.~ EXIT
+    ++ ~你这么说就这么吧。~ EXIT
   END
   
   IF ~~ tease1_1
-    SAY ~Each morning I wake up before the sunrise, while you are still snoring.  It always surprises me you do not swallow things in your sleep, with your mouth open like that.~
+    SAY ~我每天日出前就醒，那会儿你还在打呼。你睡觉张着嘴，居然没吞下什么东西，我总感到惊讶。~
     ++ ~Sounds like you've done a fair bit of "observing," Iylos...tell me; do you have a crush on me?~ + tease1_2
     ++ ~Hey! Well, at least I'm not the one wearing a dress.~ + tease1_3
     ++ ~Very funny.~ + tease1_4
   END
   
   IF ~~ tease1_2
-    SAY ~Hardly.  The very fact I'm speaking with you is some sort of miracle, I imagine; as I have said before, I would much rather be elsewhere.  Preferably without your presence to mar the atmosphere.~
+    SAY ~差得远。我跟你说话这件事本身就算某种奇迹了，我想；我说过，我更愿意在别处。最好是没你在场、免得坏了气氛。~
     IF ~~ EXIT
   END
   
   IF ~~ tease1_3
-    SAY ~You know full well this is no dress, Bhaalspawn.  If your only intent is to insult me, then I suggest you leave me be.  I would not deign to react to such idiocy.~
+    SAY ~你很清楚这不是裙子，巴尔之子。你若只想侮辱我，那我建议你别烦我。我不会降格去回应这种蠢话。~
     IF ~~ EXIT
   END
   
   IF ~~ tease1_4
-    SAY ~I rather thought so.~
+    SAY ~我也这么想。~
     IF ~~ EXIT
   END
   
   IF ~~ tease2
-    SAY ~What masterful wit, <CHARNAME>.  Perhaps next time you will compare me to a duck?  At least it might be mildly entertaining to watch you trip over your tongue.~
+    SAY ~真是妙语，<CHARNAME>。也许下次你会把我比作鸭子？至少看你被自己舌头绊倒还算有点意思。~
     IF ~~ EXIT
   END
   
   IF ~~ tease3
-    SAY ~(Iylos snorts derisively.) And here I thought you had some maturity.  How foolish of me.~
+    SAY ~（伊洛斯轻蔑地哼了一声。）我还以为你有几分成熟。我多蠢。~
     IF ~~ EXIT
   END
   
   IF ~~ paladins
-    SAY ~Paladins?  Righteous men with too little occuring between their ears, or at least, that is the case of many.  There are few paladins I have met who see the subtle greys, the tonal shifts which all too often occur, and that makes them unable to truly understand good and evil.  They see it in stark black and white, good and evil, when there is so much more at work.~
+    SAY ~圣武士？耳朵之间没多少东西的正直人，至少许多是这样。我见过的圣武士里，很少有能看见那些微妙的灰色、那些常常出现的色调变化的，这就让他们无法真正理解善恶。他们只看见生硬的黑与白，善与恶，而实际上有那么多别的因素在起作用。~
     IF ~~ EXIT
   END
   
   IF ~~ druids
-    SAY ~Of all people, I identify with druids the most.  They understand the need for solitude, what can be learnt from silence and contemplation and careful consideration.  Nature is a powerful and wondrous thing, and they understand its importance in the grand scheme of things.  I feel that they do more good than a lot of people, especially those who give no thought to what they kill.~
+    SAY ~所有人里，我最认同德鲁伊。他们懂得独处的必要，懂得从沉默、沉思与审慎里能学到什么。自然是强大而奇妙的东西，他们懂得它在万物大局里的重要。我觉得他们比很多人做得更多好事，尤其是那些对自己杀的东西毫不思考的人。~
     IF ~~ EXIT
   END
   
   IF ~~ bards
-    SAY ~I find them somewhat useless and annoying, with their constant songs and poetry.  I have little respect for those who do not spend their time appropriately.~
+    SAY ~我觉得他们有点没用又烦人，老是唱歌作诗。我对不把时间用在正处的人没什么敬意。~
     IF ~~ EXIT
   END
   
   IF ~~ berserkers
-    SAY ~I can identify with the rage they justify themselves with, but I don't think it is the correct way to channel rage.  Some berserkers believe that their rage is the most pure emotion, and in a way, I can see what they mean; but I do not think that it is the best and most efficient way to do battle.~
+    SAY ~我能认同他们用来为自己正名的那种狂怒，可我不觉得那是疏导狂怒的正确途径。有些狂战士认为他们的狂怒是最纯粹的情绪，某种意义上我明白他们的意思；可我不觉得那是最好的、最有效的战斗方式。~
     IF ~~ EXIT
   END
   
   IF ~~ magic
-    SAY ~Magic?  Is not each day a work of magic, <CHARNAME>?  There are so many different forms of magic, and yet you limit yourselves to one.  I believe magic is a very powerful force, and it can do great things.  But it can also do great evil, and corrupt.~ = ~So in retrospect, I'm in two minds about what *you* term as magic.  On one hand, it can be a force of great good and great evil, but on the other, it cheapens the miracles of every day.  Childbirth, life, death--these are miracles which occur constantly, and yet we do not regard them as such, because we are so preoccupied with the idea of magic.~ = ~Is that a good thing?  You tell me.~
+    SAY ~魔法？每一天不都是一件魔法之作吗，<CHARNAME>？魔法有那么多不同的形态，而你们却把自己限于一种。我相信魔法是极强大的力量，能做伟大的事。可它也能做极大的恶，也能腐化人。~ = ~所以回过头看，我对你们所谓的「魔法」有两种想法。一方面，它可以是极善与极恶的力量；另一方面，它让每一天的奇迹都变廉价了。生育、生、死——这些都是不断发生的奇迹，可我们不把它们当奇迹，因为我们太执着于「魔法」这个念头。~ = ~那是好事吗？你说呢。~
     IF ~~ EXIT
   END
   
   IF ~~ minsc
-    SAY ~He is a good man with little in the way of intelligence, but he has a great heart.  I'm not sure what to think of his--hamster, Boo, but I have seen a great many things, and it would not particularly surprise me if Minsc's announcements about him proved to be true.~
+    SAY ~他是个好人，没多少脑子，可有颗伟大的心。我不知道该怎么看他那只——仓鼠，布布，可我见过许多事，如果明斯克关于他的说法是真的，我也不会特别惊讶。~
     IF ~~ EXIT
   END
   
   IF ~~ thievery
-    SAY ~I do not agree with the idea of someone using a lockpick to enter a house uninvited, but I believe sometimes such a skill is necessary to one's survival.  While I may not agree with a thieve's doctrine, they can be useful, when the situation calls for it.~
+    SAY ~我不认同有人用撬锁工具不请自入，可我相信这种技能有时是活命所需。我虽不认同盗贼的信条，但在情形需要时，他们能派上用场。~
     IF ~~ EXIT
   END
 

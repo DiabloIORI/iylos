@@ -22,17 +22,17 @@ BEGIN ~LK#IYSP~
 BEGIN ~LK#IYLO~
 
   IF ~NumTimesTalkedTo(0)~ Intro
-    SAY ~<CHARNAME>, <PRO_SONDAUGHTER> of Gorion the Sage, Slayer of Sarevok Anchev, Destructor of Joneleth Irenicus...Bhaalspawn.~ [LK#IBLN]
+    SAY ~<CHARNAME>，智者葛立安的<PRO_SONDAUGHTER>，萨瑞沃克·安切夫的杀手，乔内莱斯·艾瑞尼卡斯的毁灭者……巴尔之子。~ [LK#IBLN]
     ++ ~Who are you?~ + Intro_1
     ++ ~Have I really gained so many titles?~ + Intro_2
-    ++ ~Those aren't exactly flattering titles, are they?  (sigh) Not much I can do about it now, I suppose...how can I help you?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + Intro_1
+    ++ ~这些称号不怎么好听，是吧？（叹气）我想现在也做不了什么……我能帮你什么？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + Intro_1
     ++ ~Yes, I'm a Bhaalspawn.  Do you have a problem with that?~ + Intro_3
-    ++ ~I see.  What business do you have with me, Lord...?~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + Intro_1
-    ++ ~Yes, yes, I am truly magnificent!  But you forgot Terror of the Sword Coast, Scourge of the Sea of Swords and the Savior of Baldur's Gate.  If you cannot remember that, Your Excellency will do.~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + Intro_1
+    ++ ~我明白了。你找我有什么事，大人……？~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",1)~ + Intro_1
+    ++ ~是，是，我确实了不起！可你忘了剑湾之恐怖、剑海之灾、博德之门之救主。你要是记不住这些，「阁下」也行。~ DO ~IncrementGlobal("LK#IylosHappiness","GLOBAL",-2)~ + Intro_1
   END
 
   IF ~~ Intro_1
-    SAY ~I am Iylos Mirdan, and I have been sent to join you by one who has been watching you closely.  I am to discover your motives and see if you are amiable to our interests.  I am a monk of no small regard--I'm quite sure I could help one such as you, Bhaalspawn.~ [LK#I202]
+    SAY ~我是伊洛斯·米尔丹，有一个一直在密切注视你的人派我来加入你。我要查明你的动机，看看你是否合我们的意。我是一位颇有分量的修士——我很确定自己能帮上你这样的人，巴尔之子。~ [LK#I202]
     ++ ~What are you trying to imply, monk?~ + Intro_11
     ++ ~Well, what are we standing around talking for!  Get in line, then.~ + Intro_111
     ++ ~I see.  Well, I have no need for an arrogant, annoying monk at the moment--shall I notify you when I do need one?~ + Intro_12
@@ -41,7 +41,7 @@ BEGIN ~LK#IYLO~
   END
 
   IF ~~ Intro_2
-    SAY ~I am Iylos Mirdan, and I have been sent to join you by one who has been watching you closely.  I am to discover your motives and see if you are amiable to our interests.  I am a monk of no small regard--I'm quite sure I could help one such as you, Bhaalspawn.~ [LK#I202]
+    SAY ~我是伊洛斯·米尔丹，有一个一直在密切注视你的人派我来加入你。我要查明你的动机，看看你是否合我们的意。我是一位颇有分量的修士——我很确定自己能帮上你这样的人，巴尔之子。~ [LK#I202]
     ++ ~What are you trying to imply, monk?~ + Intro_11
     ++ ~Well, what are we standing around talking for!  Get in line, then.~ + Intro_111
     ++ ~I see.  Well, I have no need for an arrogant, annoying monk at the moment--shall I notify you when I will need one?~ + Intro_12
@@ -50,7 +50,7 @@ BEGIN ~LK#IYLO~
   END
 
   IF ~~ Intro_3
-    SAY ~I am Iylos Mirdan, and I was sent by one who is watching you to join you, discover your motives, and to discover whether you are amiable to our interests.  I am a monk of no small regard--I'm quite sure I could help one such as you, Bhaalspawn.~ [LK#203]
+    SAY ~我是伊洛斯·米尔丹，一个注视着你的人派我来加入你、查明你的动机，并弄清你是否合我们的意。我是一位颇有分量的修士——我很确定自己能帮上你这样的人，巴尔之子。~ [LK#203]
     ++ ~What are you trying to imply, monk?~ + Intro_11
     ++ ~Well, what are we standing around talking for!  Get in line, then.~ + Intro_111
     ++ ~I see.  Well, I have a need for an arrogant, annoying monk at the moment--shall I notify you when I do need one?~ + Intro_12
@@ -59,7 +59,7 @@ BEGIN ~LK#IYLO~
   END
 
   IF ~~ Intro_11
-    SAY ~That you could use some help.  You are in a situation you know almost nothing about; you are being attacked from all sides, and you do not know who is friend and who is foe.  As I have said, I am a monk of no small influence; I know this area well, and can help you if you know a way out of this place.~ [LK#I204]  = ~I know of those that follow you, attempt to kill you.  Illasera, for one.~ [LK#I205]
+    SAY ~你需要帮手。你陷在一桩几乎一无所知的事里；四面受敌，分不清敌友。我说过，我是位颇有影响力的修士；我熟悉这片地方，只要你知道怎么离开这里，我就能帮你。~ [LK#I204]  = ~我知道有哪些人在追你、想杀你。比如伊拉萨拉。~ [LK#I205]
     ++ ~What's the catch?~ + Intro_111
     ++ ~You seem to speak truth...but what would you gain from joining me?~ + Intro_111
     ++ ~(Remain silent)~ + Intro_111
@@ -67,7 +67,7 @@ BEGIN ~LK#IYLO~
   END
 
   IF ~~ Intro_12
-    SAY ~Hmph.~ = ~You are in a situation you know almost nothing about; you are being attacked from all sides, and you do not know who is friend and who is foe.  As I have said, I am a monk of no small influence; I know this area well, and can help you if you know a way out of this place.~ [LK#I206]  = ~I know of those that follow you, attempt to kill you.  Illasera, for one.~ [LK#I205]
+    SAY ~哼。~ = ~你需要帮手。你陷在一桩几乎一无所知的事里；四面受敌，分不清敌友。我说过，我是位颇有影响力的修士；我熟悉这片地方，只要你知道怎么离开这里，我就能帮你。~ [LK#I206]  = ~我知道有哪些人在追你、想杀你。比如伊拉萨拉。~ [LK#I205]
     ++ ~What's the catch?~ + Intro_111
     ++ ~You seem to speak truth...but what would you gain from joining me?~ + Intro_111
     ++ ~(Remain silent)~ + Intro_111
@@ -75,7 +75,7 @@ BEGIN ~LK#IYLO~
   END
 
   IF ~~ Intro_13
-    SAY ~That is not your concern at the current time--you are in a situation you know almost nothing about; you are being attacked from all sides, and you do not know who is friend and who is foe.  As I have said, I am a monk of no small influence; I know this area well, and can help you if you know a way out of this place.~ [LK#I207]  = ~I know of those that follow you, attempt to kill you.  Illasera, for one.~ [LK#I205]
+    SAY ~这眼下不关你的事——你陷在一桩几乎一无所知的事里；四面受敌，分不清敌友。我说过，我是位颇有影响力的修士；我熟悉这片地方，只要你知道怎么离开这里，我就能帮你。~ [LK#I207]  = ~我知道有哪些人在追你、想杀你。比如伊拉萨拉。~ [LK#I205]
     ++ ~What's the catch?~ + Intro_111
     ++ ~You seem to speak truth...but what would you gain from joining me?~ + Intro_111
     ++ ~(Remain silent)~ + Intro_111
@@ -83,7 +83,7 @@ BEGIN ~LK#IYLO~
   END
 
   IF ~~ Intro_14
-    SAY ~You are in a situation you know almost nothing about; you are being attacked from all sides, and you do not know who is friend and who is foe.  As I have said, I am a monk of no small influence; I know this area well, and can help you if you know a way out of this place.~ [LK#I206]  = ~I know of those that follow you, attempt to kill you.  Illasera, for one.~ [LK#I205]
+    SAY ~你陷在一桩几乎一无所知的事里；四面受敌，分不清敌友。我说过，我是位颇有影响力的修士；我熟悉这片地方，只要你知道怎么离开这里，我就能帮你。~ [LK#I206]  = ~我知道有哪些人在追你、想杀你。比如伊拉萨拉。~ [LK#I205]
     ++ ~What's the catch?~ + Intro_111
     ++ ~You seem to speak truth...but what would you gain from joining me?~ + Intro_111
     ++ ~(Remain silent)~ + Intro_111
@@ -91,7 +91,7 @@ BEGIN ~LK#IYLO~
   END
 
   IF ~~ Intro_111
-    SAY ~I am here to judge if you are worthy of our help.  If I find that you are deserving of our aid, then I shall make certain that you receive any aid that you require.  You are free to refuse this assistance of course, but regardless of your decision, know that we *will* be watching you.~ [LK#I208]
+    SAY ~我来，是要判断你是否值得我们相助。若我判定你值得，我就会确保你得到所需的一切援助。你当然可以拒绝这份援手，但不管你怎么决定，要知道我们*会*盯着你。~ [LK#I208]
     ++ ~Fine!  Come with me...for now.~ + Intro_1111
     ++ ~Join with me, then.~ + Intro_1111
     ++ ~I...don't think so.  No thanks.~ + Intro_1112
@@ -100,7 +100,7 @@ BEGIN ~LK#IYLO~
   END
 
   IF ~~ Intro_112
-    SAY ~Yes, I know of Illasera.  I know of others who are trying to kill you, as well.~ [LK#I209]  = ~I am also here to judge if you are worthy of our help.  If I find that you are deserving of our aid, then I shall make certain that you receive any aid that you require.  You are free to refuse this assistance of course, but regardless of your decision, know that we *will* be watching you.~ [LK#I210]
+    SAY ~是的，我知道伊拉萨拉。我也知道另外一些想杀你的人。~ [LK#I209]  = ~我也来此判断你是否值得我们相助。若我判定你值得，我就会确保你得到所需的一切援助。你当然可以拒绝这份援手，但不管你怎么决定，要知道我们*会*盯着你。~ [LK#I210]
     ++ ~Fine!  Come with me...for now.~ + Intro_1111
     ++ ~Join with me, then.~ + Intro_1111
     ++ ~I...don't think so.  No thanks.~ + Intro_1112
@@ -109,27 +109,27 @@ BEGIN ~LK#IYLO~
   END
 
   IF ~~ Intro_1111
-    SAY ~You will not regret this decision.~ [LK#I211]   IF ~~ THEN DO ~JoinParty() SetGlobal("LK#IylosJoined","GLOBAL",1)~ EXIT
+    SAY ~你不会后悔这个决定。~ [LK#I211]   IF ~~ THEN DO ~JoinParty() SetGlobal("LK#IylosJoined","GLOBAL",1)~ EXIT
   END
 
   IF ~~ Intro_1112
-    SAY ~You are quite sure?~ [LK#I212]
+    SAY ~你很确定？~ [LK#I212]
     ++ ~Yes.~ + Intro_11121
     ++ ~Actually, I've changed my mind...you can come into the group as long as there is no foul play involved.  Deal?~ + Intro_11122
   END
 
   IF ~~ Intro_1113
-    SAY ~You are always free to make decisions, Bhaalspawn.~ [LK#I213]  = ~So, do you wish for help, or not?~ [LK#I214]
+    SAY ~你永远有作决定的自由，巴尔之子。~ [LK#I213]  = ~那么，你到底要不要帮助？~ [LK#I214]
     ++ ~I would appreciate the help.~ + Intro_1111
     ++ ~Bah, I do NOT wish any help from such as you.  Leave me be, monk!~ + Intro_1112
   END
 
   IF ~~ Intro_11121
-    SAY ~Fine.  Rest assured, I will be watching...I, and many others.  Goodbye, <CHARNAME>.~ [LK#I215]
+    SAY ~好。放心，我会盯着……我和许多别的人都会。再会，<CHARNAME>。~ [LK#I215]
     IF ~~ DO ~SetGlobal("LK#IylosLeftGood","GLOBAL",1) EscapeAreaMove("AR5500",958,1567,5)~ EXIT
   END
 
   IF ~~ Intro_11122
-    SAY ~Fine.  You will not regret this decision.~ [LK#I216]
+    SAY ~好。你不会后悔这个决定。~ [LK#I216]
     IF ~~ DO ~JoinParty() SetGlobal("LK#IylosJoined","GLOBAL",1)~ EXIT
   END
