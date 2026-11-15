@@ -127,11 +127,11 @@ Global("LK#IylosJaheira2","GLOBAL",0)
 ~
 THEN BLK#IYL IylosJaheira_2
 ~贾希拉，你为什么跟着<CHARNAME>？你生活里的危险已经够多了，何必再加上跟一个如今名声在外的神之裔同行的风险？~ [LK#I169] DO ~SetGlobal("LK#IylosJaheira2","GLOBAL",1)~
-== BJAHEI25 ~因为，伊洛斯，我相信<CHARNAME>做的是对的。真的，<PRO_HESHE>在阻止一场战争蔓延到剑湾之外更远的地方，阻止几百万人的死亡。我不明白，<PRO_HESHE>做了这么多好事，你为什么还这么不信任<PRO_HIMHER>。~
+== BJAHEI25 ~因为，伊洛斯，我相信<CHARNAME>做的是对的。真的，<PRO_HESHE>在阻止一场战争蔓延到剑湾之外更远的地方，阻止几百万人的死亡。我不明白，<PRO_HESHE>做了这么多好事，你为什么还这么不信任<PRO_HESHE>。~
 == BLK#IYL  ~你就那么确定<PRO_HISHER>血脉不会在日后、在更有胜算压倒<CHARNAME>本人的时候发作？~
 == BJAHEI25 ~我相信<CHARNAME>。~
 == BLK#IYL  ~而我相信我的直觉。~
-== BJAHEI25 ~那你也许该重新评估一下你所谓的「直觉」，伊洛斯。<CHARNAME>对任何人都不是威胁，我每天都把命交给<PRO_HIMHER>。你最好也这么做。~
+== BJAHEI25 ~那你也许该重新评估一下你所谓的「直觉」，伊洛斯。<CHARNAME>对任何人都不是威胁，我每天都把命交给<PRO_HESHE>。你最好也这么做。~
 EXIT
 
 // Haer'Dalis 2
@@ -173,7 +173,7 @@ THEN BLK#IYL IylosMazzy_2
 ~玛兹，你能跟我说说<CHARNAME>吗？~ [LK#I175] DO ~SetGlobal("LK#IylosMazzy","GLOBAL",2)~
 == BMAZZY25 ~你想知道什么，伊洛斯朋友？~
 == BLK#IYL  ~<CHARNAME>有没有——~
-== BMAZZY25 ~在你继续之前——伊洛斯，你若只想听关于<CHARNAME>的坏话，那就别问我。我对<PRO_HIMHER>只有敬意，不会污<PRO_HISHER>的名。~
+== BMAZZY25 ~在你继续之前——伊洛斯，你若只想听关于<CHARNAME>的坏话，那就别问我。我对<PRO_HESHE>只有敬意，不会污<PRO_HISHER>的名。~
 == BLK#IYL  ~即便如此，玛兹，我还是问——<CHARNAME>去过贝果斯特吗？~
 == BMAZZY25 ~我相信去过。你为什么问？~
 == BLK#IYL  ~贝果斯特是我出生的地方。~
@@ -434,12 +434,12 @@ AreaCheck("AR4500")
 Global("LK#IylosJaheira","GLOBAL",0)
 ~
 THEN BJAHEI25 IylosJaheira_1
-~伊洛斯，在口袋空间里你没什么好怕的。这是<CHARNAME>的庇护所；这里很安全。~ [LK#IBLN] DO ~SetGlobal("LK#IylosJaheira","GLOBAL",1)~
+~伊洛斯，在袖珍位面里你没什么好怕的。这是<CHARNAME>的庇护所；这里很安全。~ [LK#IBLN] DO ~SetGlobal("LK#IylosJaheira","GLOBAL",1)~
 == BLK#IYL  ~我明白，贾希拉，可是——~ [LK#I168]
 == BJAHEI25 ~那你为何蜷着身子，一有声响或动静就要弹起来？这里的一切都是<CHARNAME>要它在此才在此的。~
 == BLK#IYL  ~所以你还奇怪我为什么害怕吗，贾希拉。~
 == BJAHEI25 ~以西凡纳斯之名！你*还*在怀疑<CHARNAME>的动机？~
-== BLK#IYL  ~我不信任<PRO_HIMHER>，也没人给过我相信的理由。就这样吧，贾希拉——你不能凭你自己的观察就让我信任。我得自己去判断。~
+== BLK#IYL  ~我不信任<PRO_HESHE>，也没人给过我相信的理由。就这样吧，贾希拉——你不能凭你自己的观察就让我信任。我得自己去判断。~
 EXIT
 
 // Korgan 2
@@ -655,7 +655,7 @@ Global("LK#IylosViconia","GLOBAL",0)
 ~
 THEN BVICON25 IylosViconia_1
 ~你不说话吗，修士？是有只猫叼住了你的舌头，正用爪子拨弄？~ [LK#IBLN] DO ~SetGlobal("LK#IylosViconia","GLOBAL",1)~
-== BLK#IYL  ~你与我立身的一切为敌，卓尔。除非是讨水喝，或是求战中的援手，否则别跟我说话。~ [LK#I191]  = ~就算那样，我也不确定会答应。识相的话就离我远些，维康尼亚。我相信你珍爱的<CHARNAME>不会赞成我们动手，你又何必先替<PRO_HIMHER>挑起？~
+== BLK#IYL  ~你与我立身的一切为敌，卓尔。除非是讨水喝，或是求战中的援手，否则别跟我说话。~ [LK#I191]  = ~就算那样，我也不确定会答应。识相的话就离我远些，维康尼亚。我相信你珍爱的<CHARNAME>不会赞成我们动手，你又何必先替<PRO_HESHE>挑起？~
 == BVICON25 ~随你，rivvil……要知道，一个卓尔敌人，连我都不会希望许多人碰上。~
 == BLK#IYL  ~我想我愿意冒这个险。~
 == BVICON25 ~哦，你对我的了解真是*多*啊，rivvil……~

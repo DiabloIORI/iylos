@@ -615,7 +615,7 @@ APPEND LK#IYLJ
 
 // 5th PC Dialogue (Friendship)
   IF WEIGHT #-2 ~Global("LK#IylosTalks","GLOBAL",9) RealGlobalTimerExpired("LK#IylosTalksTimer","GLOBAL")~ PCD5
-    SAY ~<CHARNAME>，我……有些话想跟你说。~ [LK#I161]  = ~不！不，什么都别说。我现在不想听。~ [LK#I162]  = ~我对你的作为……令人遗憾。我一直冷漠、粗鲁、不友善，而这不是对待同伴该有的方式。~ = ~我不想相信你可能是人。我宁愿相信你是披着人皮的某种怪兽，随时会发作，把<PRO_HIMHER>身边的男女老少统统杀光。~ = ~我错了。你若不愿我再留在这队伍里，我理解，我只是想告诉你——我，我不是有意对你、对你的同伴这样无礼。~
+    SAY ~<CHARNAME>，我……有些话想跟你说。~ [LK#I161]  = ~不！不，什么都别说。我现在不想听。~ [LK#I162]  = ~我对你的作为……令人遗憾。我一直冷漠、粗鲁、不友善，而这不是对待同伴该有的方式。~ = ~我不想相信你可能是人。我宁愿相信你是披着人皮的某种怪兽，随时会发作，把<PRO_HESHE>身边的男女老少统统杀光。~ = ~我错了。你若不愿我再留在这队伍里，我理解，我只是想告诉你——我，我不是有意对你、对你的同伴这样无礼。~
     ++ ~为什么道歉，伊洛斯？早就原谅了。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD5_1
     ++ ~我留着你，是因为你是面好肉盾，我……我想你该知道这点。你若想走，也行。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD5_2
     ++ ~我明白了。那真不巧。你现在可以走了，伊洛斯。~ DO ~IncrementGlobal("LK#IylosTalks","GLOBAL",1) RealSetGlobalTimer("LK#IylosTalksTimer","GLOBAL",IYLOS_TIMER)~ + PCD5_3
@@ -1073,7 +1073,7 @@ APPEND LK#IYLJ
 // -------------------------------------
 // Scenery Interjection, Forest Area
   IF WEIGHT #-2 ~AreaCheck("AR6400") Global("LK#IylosTransport","GLOBAL",1)~ LK#IylosForestcomment
-    SAY ~于是你的口袋空间把我们直接送到了敌兵群中间——好战术，<CHARNAME>。也许你指望这突袭能让他们失灵什么的？~ [LK#IBLN] = ~不管怎样，我们现在得打！~
+    SAY ~于是你的袖珍位面把我们直接送到了敌兵群中间——好战术，<CHARNAME>。也许你指望这突袭能让他们失灵什么的？~ [LK#IBLN] = ~不管怎样，我们现在得打！~
     IF ~~ DO ~IncrementGlobal("LK#IylosTransport","GLOBAL",1)~ EXIT
   END
 
@@ -1568,7 +1568,7 @@ APPEND ~LK#IYLJ~
   END
 
   IF ~~ dale
-    SAY ~是的，去过。我挺喜欢谷地，虽然冷。我在路斯坎待过，还去过库尔达哈那个小镇——有朝一日我想再回去，那景色令人屏息。世界之脊确实很美……也一样凶险。这也许能解释我为什么这么喜欢它。~
+    SAY ~是的，去过。我挺喜欢谷地，虽然冷。我在陆斯坎待过，还去过库尔达哈那个小镇——有朝一日我想再回去，那景色令人屏息。世界之脊确实很美……也一样凶险。这也许能解释我为什么这么喜欢它。~
     IF ~~ EXIT
   END
 
@@ -1781,7 +1781,7 @@ APPEND ~LK#IYLJ~
   END
 
   IF ~~ WhatsNextForIylos
-    SAY ~我不太确定。也许回修道院待一阵，或者回沙漠。我觉得自己还没走够，想继续——也许再去一次谷地，或者去路斯坎。~
+    SAY ~我不太确定。也许回修道院待一阵，或者回沙漠。我觉得自己还没走够，想继续——也许再去一次谷地，或者去陆斯坎。~
     IF ~~ EXIT
   END
 
